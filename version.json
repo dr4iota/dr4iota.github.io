@@ -1,9 +1,9 @@
 {
-  "build_date": "2025-08-07T06:20:17+00:00",
-  "commit": "1ce3515346fd4a5a6b0a1583ea04651a92786ea7",
-  "commit_date": "2025-08-07T02:17:34-04:00",
+  "build_date": "2025-08-07T17:18:37+00:00",
+  "commit": "0b0c7b432e2f9ece9ac5e18c0f2058209c3dd26e",
+  "commit_date": "2025-08-07T13:18:03-04:00",
   "branch": "spike/omni-apps",
-  "last_local_change_date": "2025-08-07T02:17:34-04:00",
+  "last_local_change_date": "2025-08-07T13:17:17",
   "staged_changes": 0,
-  "workdir_changes": 0
+  "workdir_changes": 1
 }
