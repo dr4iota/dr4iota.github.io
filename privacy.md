@@ -1,3 +1,7 @@
+---
+layout: default
+title: Privacy Policy
+---
 ## Privacy Policy for Fantastic Fractals
 
 Effective date: 2025-08-12
