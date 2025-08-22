@@ -1,9 +1,9 @@
 {
-  "build_date": "2025-08-13T17:34:09+00:00",
-  "commit": "9ec199f1e9c8d89984d597558d3b148a6f1523fd",
-  "commit_date": "2025-08-13T13:10:05-04:00",
+  "build_date": "2025-08-22T13:09:24+00:00",
+  "commit": "9cddb8a1f3fe75b924ae8fe1650872bcb11b2360",
+  "commit_date": "2025-08-22T12:43:07+00:00",
   "branch": "spike/driota",
-  "last_local_change_date": "2025-08-13T13:10:05-04:00",
+  "last_local_change_date": "2025-08-22T13:07:26",
   "staged_changes": 0,
-  "workdir_changes": 0
+  "workdir_changes": 3
 }
