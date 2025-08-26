@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <title>Doctor Iota's Applications</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      color: #333;
+    }
+    .container {
+      background: #ffffff;
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 768px;
+    }
+    h1 {
+      color: #1c1e21;
+      font-size: 1.75rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    ul.applist {
+      list-style: none;
+      padding: 16px;
+      margin: 0 0 1.5rem 0;
+    }
+    ul.applist > li {
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #007bff;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 1.5rem 0;
+    }
+    p {
+      color: #666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    details {
+      padding-left: 1em;
+      padding-right: 1em;
+      margin-top: 0.5rem;
+    }
+    details summary {
+      font-style: italic;
+      cursor: pointer;
+    }
+    details summary:hover {
+      color: blue;
+    }
+
+    /* Compact Headings */
+    .tab-content h1, .tab-content h2, .tab-content h3, .tab-content h4 {
+        margin-top: 0.8rem;
+        margin-bottom: 0.4rem;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid #eee;
+    }
+    .tab-content p {
+        text-align: left;
+    }
+
+    /* Tabs */
+    .tab-container {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .tab-container input[type="radio"] {
+        display: none;
+    }
+    .tab-container label {
+        display: inline-block;
+        padding: 8px 16px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        border-radius: 4px 4px 0 0;
+        background-color: #f1f1f1;
+        margin-right: 4px;
+        font-size: 0.9em;
+        position: relative;
+        bottom: -1px;
+        transition: background-color 0.2s ease-in-out;
+    }
+    .tab-container label:hover {
+        background-color: #e0e0e0;
+    }
+    .tab-container input[type="radio"]:checked + label {
+        background-color: #fff;
+        border-color: #ccc;
+        border-bottom: 1px solid #fff;
+    }
+    .tab-content {
+        display: none;
+        order: 99;
+        width: 100%;
+        padding: 16px;
+        border: 1px solid #ccc;
+        border-radius: 0 4px 4px 4px;
+    }
+    .tab-container input[type="radio"]:checked + label + .tab-content {
+        display: block;
+    }
+  </style>
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Doctor Iota's Interactive Learning Site</h1>
+    </header>
+    <ul class="applist">
+<!-- APP_LINKS_START -->
+
+      <li>
+        <a href="./fractal/">Fantastic Fractals (fractal-web-0.1.1)</a>
+        <details open>
+          <summary>Explore the beauty of fractals with this interactive generator. Create and explore Mandelbrot, Julia, Newton, and other fractal sets in real-time.</summary>
+          <div class="tab-container"><input type="radio" id="tab-fractal-about" name="tabs-fractal" checked><label for="tab-fractal-about">About Fantastic Fractals</label><div class="tab-content"><h2>Fantastic Fractals — An Interactive Fractal Explorer</h2>
+<p>Fantastic Fractals lets you dive into the mesmerizing world of complex dynamics and mathematical art right in your browser. Switch instantly between classic and modern fractals—like Mandelbrot, Julia, and Newton—and explore them in real time with fluid pan and zoom. As you navigate, the app overlays precise complex coordinates and live view ranges, helping you connect visual patterns to their underlying math.</p>
+<h3>What you can explore</h3>
+<ul>
+<li><strong>Multiple fractal families</strong>: Start with Mandelbrot, Julia, and Newton (and more varieties as they’re added), each with distinct visual structure and mathematical character.</li>
+<li><strong>Rich color schemes</strong>: Pick from curated color palettes to reveal detail, shading, and structure in new ways.</li>
+<li><strong>Real-time interaction</strong>: Navigate smoothly; every movement updates a helpful overlay that includes current complex coordinates and view extents.</li>
+</ul>
+<h3>Intuitive controls that invite experimentation</h3>
+<ul>
+<li><strong>Parameter sliders</strong>: Tune fractal-specific parameters with responsive sliders designed for fine-grained control (including non-linear scaling where appropriate).</li>
+<li><strong>Complex parameters via control points</strong>: For fractals defined by complex constants, drag control points directly on the canvas to shape the set dynamically. Double‑click a control point to reset it.</li>
+<li><strong>Context-aware layout</strong>: On larger screens, controls sit to the left of the canvas; on phones in portrait mode, they adapt to the top—always within easy reach.</li>
+</ul>
+<h3>Helpful, math-aware guidance</h3>
+<ul>
+<li><strong>Inline math and documentation</strong>: Learn the theory behind each fractal with clear, readable math. Toggle a “Math” help modal tailored to the current fractal, or open a “Controls” guide for tips on interaction.</li>
+<li><strong>Live info overlay</strong>: See exact complex coordinates under the cursor, plus real and imaginary ranges of the current view, alongside a concise status line for the active fractal.</li>
+</ul>
+<h3>A focused, polished UI</h3>
+<ul>
+<li><strong>Streamlined toolbar</strong>: The header features compact drop-downs for fractal type and color scheme—icon-only when space is tight, descriptive when there’s room.</li>
+<li><strong>Dark mode support</strong>: Enjoy a thoughtfully styled dark theme for comfortable exploration day or night.</li>
+<li><strong>Share with a link</strong>: It’s easy to share exactly what you’re viewing.</li>
+</ul>
+<h3>Built for performance and portability</h3>
+<ul>
+<li><strong>High-performance rendering</strong>: Real-time visualization ensures responsive exploration even at deep zoom levels.</li>
+<li><strong>Fast and responsive</strong>: Quick to load with smooth interaction.</li>
+<li><strong>Desktop and mobile</strong>: Ready for desktop and mobile builds, bringing the same experience beyond the browser.</li>
+</ul>
+<h3>Who it’s for</h3>
+<ul>
+<li><strong>Curious explorers</strong>: Anyone captivated by visual complexity and emergent patterns.</li>
+<li><strong>Students and educators</strong>: A hands-on way to connect complex numbers, iterative systems, and geometry with compelling visuals.</li>
+<li><strong>Math and art enthusiasts</strong>: A canvas for creative rendering and mathematical experimentation.</li>
+</ul>
+<p>Whether you’re zooming into a Mandelbrot filament, reshaping a Julia set via a complex control point, or studying Newton basins with precise parameter control, Fantastic Fractals makes the deep structure of mathematics both approachable and beautiful.</p>
+</div><input type="radio" id="tab-fractal-essay" name="tabs-fractal" ><label for="tab-fractal-essay">A Short History</label><div class="tab-content"><h2>A Short History of Fractals</h2>
+<p>Have you ever looked at a snowflake up close, or noticed how a fern’s leaves look like tiny versions of the whole plant? That repeating, “pattern inside a pattern” idea is what fractals are all about.</p>
+<h3>Early Clues</h3>
+<p>Long before anyone had the word <em>fractal</em>, mathematicians were stumbling onto strange shapes that didn’t fit the neat rules of geometry. In the 1800s, people like <strong>Georg Cantor</strong>, <strong>Helge von Koch</strong>, and <strong>Giuseppe Peano</strong> started drawing odd curves and sets. These shapes were puzzling because they were jagged, infinitely detailed, or didn’t seem to follow the normal rules of lines, squares, and circles. At the time, most mathematicians thought of them as “monsters” or curiosities rather than something useful.</p>
+<ul>
+<li><strong>Cantor Set (1883):</strong> Imagine starting with a line, cutting out the middle third, and then doing the same to every piece left, over and over. What remains is tiny dust-like points.</li>
+<li><strong>Koch Snowflake (1904):</strong> Start with a triangle, keep adding little triangles to each side again and again, and you’ll get a snowflake-like shape with an infinitely long edge!</li>
+</ul>
+<h3>The Word “Fractal”</h3>
+<p>It wasn’t until the 1970s that these wild shapes got their modern name. A mathematician named <strong>Benoît Mandelbrot</strong> studied these “monsters” and realized they were more than curiosities. He called them <strong>fractals</strong>, from the Latin word <em>fractus</em>, meaning “broken” or “irregular.”</p>
+<p>Mandelbrot showed that fractals appear everywhere in nature: the branching of trees, the outlines of mountains, the swirls of clouds, even in your own blood vessels. Instead of being useless, fractals turned out to be one of the best ways to describe the messy, rough patterns of the real world.</p>
+<h3>Computers Make Them Beautiful</h3>
+<p>Before computers, drawing fractals by hand was almost impossible, since they repeat patterns over and over. But with computer graphics, Mandelbrot and others could “zoom in” endlessly and see the shapes blossom into stunning, colorful designs. The most famous of these is the <strong>Mandelbrot Set</strong>—a shape so rich that even today, people are still discovering new details when they zoom in.</p>
+<h3>Usefulness of Fractals</h3>
+<p>Fractals aren’t just pretty pictures. Scientists use them to understand things like coastlines, lightning, galaxy clusters, and even the stock market. Engineers use fractal ideas in antennas and image compression. Artists use them to make mesmerizing digital art.</p>
+<h3>Last Words...</h3>
+<p>Fractals show us that the world isn’t always smooth and simple. Nature likes to repeat itself in surprising, beautiful ways, and fractals help us see that order inside the chaos.</p>
+</div><input type="radio" id="tab-fractal-usage" name="tabs-fractal" ><label for="tab-fractal-usage">How to use</label><div class="tab-content"><p>This application allows you to explore the intricate beauty of various fractals.
+You can interact with the fractals in two main ways: by manipulating the view on
+the main fractal view and by adjusting parameters in the control panel.</p>
+<h3>Header Navigation Bar</h3>
+<p>The fractal type and color scheme can be changed using the dropdown menus in the
+header navigation bar.</p>
+<h3>Control Panel</h3>
+<p>The control panel, located on the left (or top on phones in portrait mode),
+provides the following options:</p>
+<ul>
+<li><strong>Parameters:</strong> Some fractals have additional parameters that can be adjusted
+with sliders. These parameters can dramatically change the fractal&#39;s shape.</li>
+<li><strong>Complex Parameters:</strong> Some fractals are defined by one or more complex
+numbers, which are displayed in the control panel. You can modify these
+parameters by interacting with the control points on the fractal view.</li>
+</ul>
+<h3>Interacting with the Fractal View</h3>
+<p>You can use mouse or touch screen to pan, zoom, and reset the fractal view.
+Some fractals have complex parameters that are shown as control points in
+the fractal view. You can change those parameters by moving them around.
+A few fractals even let you add or remove complex paraemters.</p>
+</div></div>
+        </details>
+      </li>
+    
+
+      <li>
+        <a href="./trikona/">Triangular Geometry (trikona-web-0.1.0)</a>
+        <details open>
+          <summary>An interactive geometry playground to explore the beauty of triangles. Discover and visualize special points like the centroid, circumcenter, incenter, and the Euler line in real-time.</summary>
+          <div class="tab-container"><input type="radio" id="tab-trikona-about" name="tabs-trikona" checked><label for="tab-trikona-about">About Triangular Geometry</label><div class="tab-content"><h2>Triangular Geometry — An Interactive Explorer</h2>
+<p>Welcome to Triangular Geometry! This app is a fun way to learn about the special points, lines, and circles associated with triangles. It&#39;s like a virtual geometry playground.</p>
+<p>With this tool, you can see how different &quot;centers&quot; of a triangle move as you change the triangle&#39;s shape.</p>
+<h3>What you can explore</h3>
+<ul>
+<li><strong>Different Triangle Centers:</strong> Learn about the Circumcenter, Incenter, Centroid, Orthocenter, and even the Nine-Point Center.</li>
+<li><strong>Special Lines:</strong> See the famous Euler Line that connects three of the centers.</li>
+<li><strong>Famous Circles:</strong> Discover the Circumcircle, Incircle, and the Nine-Point Circle.</li>
+<li><strong>Interactive Learning:</strong> Drag the corners of the triangle and watch how everything updates in real-time. This helps you build an intuition for the geometry.</li>
+</ul>
+<h3>Simple and Intuitive</h3>
+<ul>
+<li><strong>Easy Controls:</strong> Just drag the corners of the triangle to change its shape. Pan and zoom to get a closer look.</li>
+<li><strong>Clear Explanations:</strong> Each concept has a simple explanation to help you understand the math behind the visuals.</li>
+<li><strong>Clean Interface:</strong> A simple and clean look that lets you focus on the geometry.</li>
+</ul>
+<h3>Who it’s for</h3>
+<ul>
+<li><strong>Students:</strong> A great tool for anyone learning geometry. It makes abstract concepts visual and interactive.</li>
+<li><strong>Teachers:</strong> A helpful resource for demonstrating triangle properties in the classroom.</li>
+<li><strong>Anyone who is curious:</strong> If you love math, art, or just exploring cool patterns, you&#39;ll have fun with this app.</li>
+</ul>
+<p>This app makes learning geometry a hands-on experience. Enjoy exploring the beautiful world of triangles!</p>
+</div><input type="radio" id="tab-trikona-essay" name="tabs-trikona" ><label for="tab-trikona-essay">A Short History</label><div class="tab-content"><h2>A Short History of Triangles</h2>
+<p>A long time ago, people noticed that triangles seemed almost magical. They are the simplest shapes made of straight lines, yet they keep showing up everywhere: in the beams of bridges, the roofs of houses, the sails of ships, even in nature’s crystals and mountain peaks. But what makes triangles even more fascinating is what happens <strong>inside</strong> them.</p>
+<h3>The First Explorers of Triangles</h3>
+<p>Over two thousand years ago, in ancient Greece, mathematicians like <strong>Euclid</strong> and <strong>Pythagoras</strong> studied triangles carefully. They measured sides, compared angles, and proved amazing theorems. But some wondered: if you draw special lines inside a triangle, where do they meet? Do they meet at all? And if they do, is that point special?</p>
+<h3>Four Famous Centers</h3>
+<p>Over the centuries, mathematicians discovered that triangles don’t just have one “center”—they have <strong>several</strong>, each with its own meaning.</p>
+<ol>
+<li><p><strong>The Centroid (The Balancing Point)</strong>
+Imagine you cut out a triangle from cardboard. If you tried to balance it on your finger, the exact spot where it balances is called the <strong>centroid</strong>. It is found where the three medians (lines from a corner to the middle of the opposite side) meet.
+Fun fact: The Greeks already knew about this, but it was carefully studied in later centuries when scientists were exploring balance, levers, and physics.</p>
+</li>
+<li><p><strong>The Circumcenter (The Circle-Maker)</strong>
+Long ago, people loved circles. They noticed that every triangle can fit perfectly inside a circle, with all three corners touching the circle. The center of that circle is called the <strong>circumcenter</strong>. You find it where the perpendicular bisectors of the sides meet.
+Ancient astronomers and sailors cared a lot about this, because circles and triangles helped them map the stars and navigate the seas.</p>
+</li>
+<li><p><strong>The Incenter (The Secret Circle Inside)</strong>
+Later, mathematicians asked: can we also fit a circle <strong>inside</strong> a triangle, just touching all three sides? Yes! The center of this circle is called the <strong>incenter</strong>, where the angle bisectors meet. Builders and artists in the Middle Ages found this fascinating, because it gave perfect symmetry for designs.</p>
+</li>
+<li><p><strong>The Orthocenter (The Perpendicular Meeting Place)</strong>
+Another curious point is where the three altitudes (the “height” lines dropped from each corner) meet. This is the <strong>orthocenter</strong>. It doesn’t always sit inside the triangle—it can wander outside! This strange behavior puzzled mathematicians like <strong>Euler</strong>, an 18th-century genius who studied it deeply.</p>
+</li>
+</ol>
+<h3>The Web of Triangle Centers</h3>
+<p>By the 1700s and 1800s, mathematicians like <strong>Euler</strong> and <strong>Gergonne</strong> discovered that these centers are not random—they are connected in surprising ways. For example, Euler found that three of them (the centroid, circumcenter, and orthocenter) always lie on the same straight line, now called the <strong>Euler line</strong>.</p>
+<p>Later, people realized there are not just four, but <em>hundreds</em> of possible triangle centers, each with its own story. Today, mathematicians have named and cataloged thousands of them!</p>
+<h3>The Nine-Point Circle: A Circle of Wonders</h3>
+<p>By the 18th century, mathematicians like <strong>Leonhard Euler</strong> began connecting these centers in surprising ways. One of the most astonishing discoveries is the <strong>nine-point circle</strong>.</p>
+<p>What is it? For any triangle, if you mark:</p>
+<ul>
+<li>the midpoints of the three sides,</li>
+<li>the feet of the three altitudes (where the altitudes touch the sides),</li>
+<li>and the midpoints of the segments from each corner to the orthocenter,</li>
+</ul>
+<p>you get <strong>nine points</strong>. Amazingly, all nine lie perfectly on one circle!</p>
+<p>Even more magical: the center of this nine-point circle lies on the same line (the <strong>Euler line</strong>) as the centroid, circumcenter, and orthocenter. It’s as if the triangle is whispering, “All my secrets are connected.”</p>
+<h3>Last Words...</h3>
+<p>Studying triangle centers wasn’t just a game. These ideas helped with architecture, navigation, astronomy, physics, and even computer graphics today. Triangles are the building blocks of 3D models, and their centers help with calculations of balance, rotation, and symmetry.</p>
+</div><input type="radio" id="tab-trikona-usage" name="tabs-trikona" ><label for="tab-trikona-usage">How to use</label><div class="tab-content"><p>This application lets you explore the fascinating geometry of triangles. You can interact with the triangle by moving its vertices and adjusting the view.</p>
+<h3>Header Navigation Bar</h3>
+<p>The type of geometric property to display can be changed using the dropdown menu in the header navigation bar.</p>
+<h3>Interacting with the Triangle View</h3>
+<p>You can use mouse or touch screen to pan, zoom, and reset the triangle view.
+You can also change the shape of the triangle by moving its three corners (vertices).
+Just tap or click a vertex and drag it to a new position.</p>
+</div></div>
+        </details>
+      </li>
+    
+    <!-- APP_LINKS_END -->
+    </ul>
+    <hr>
+    <footer>
+      <p>More apps and games are coming soon. © 2025 Doctor Iota.
+        <a href="./privacy.md"><small>Privacy policy</small></a>
+      </p>
+    </footer>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
+</html>
