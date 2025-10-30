@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>Huarong Dao — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/huarongdao.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Huarong Dao — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/huarongdao.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Huarong Dao — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=huarongdao">Open in Grid Puzzle Games →</a></div>
+    <h1>Huarong Dao — Grid Puzzle Games</h1>
+    <p><strong>Huarong Dao</strong> (華容道 huá róng dào, &quot;the Huarong Trail&quot;) is China&#39;s great
+    sliding-block puzzle: walk the big 2×2 block from the top of a 4×5 board out
+    through the exit at the bottom, past nine blockers, with only two empty cells
+    of room to breathe.</p>
+    <h2>The story</h2>
+    <p>The year is 208 AD. The warlord <strong>Cao Cao</strong>, beaten at the Battle of Red
+    Cliffs, flees with a handful of riders down a narrow muddy trail called
+    Huarong Dao. Waiting there is the general <strong>Guan Yu</strong> — who owes Cao Cao an
+    old debt of mercy from years before. In the novel <em>Romance of the Three
+    Kingdoms</em>, Guan Yu weighs duty against gratitude, sighs, and lets him pass.
+    The puzzle restages that escape: the 2×2 block is Cao Cao, the five long
+    blocks are generals (Guan Yu is the one lying crosswise in most openings),
+    the four small squares are soldiers, and the exit is his road home.</p>
+    <h2>The 32 openings</h2>
+    <p>Tradition passed down dozens of starting positions, each with a poetic
+    four-character name — 橫刀立馬 &quot;blade crosswise, halting the horse,&quot; 水泄不通
+    &quot;not even water seeps through,&quot; 峰迴路轉 &quot;the peaks turn, the road winds.&quot;
+    Many are everyday Chinese idioms, so each level&#39;s help page glosses its name
+    character by character — solve the set and you leave with a small vocabulary
+    of real Chinese. This collection carries all 32 classical openings from the
+    standard piece set (one 2×2, five 1×2, four 1×1), ordered easiest to hardest:
+    from 比翼橫空 at 28 steps to 峰迴路轉 at 138.</p>
+    <h2>How to play</h2>
+    <p>Drag a block (or tap it and use the arrows) to slide it into empty space —
+    nothing lifts, nothing rotates. Win by walking Cao Cao onto the marked 2×2
+    exit. The step counter uses the classical count: one piece sliding any
+    distance, turns included, is <strong>one step</strong>, so a perfect 橫刀立馬 game reads
+    exactly 81. <strong>Hint</strong> always knows a step-shortest continuation from wherever
+    you are.</p>
+    <h2>The math</h2>
+    <p>Each opening&#39;s minimum step count was long folklore, settled only when
+    computers exhaustively mapped the state space — about 65,000 essentially
+    different positions once identical pieces are treated as interchangeable.
+    The solver behind Hint does the same search live. Two counting conventions
+    coexist: classical <em>steps</em> (this game&#39;s counter, 81 for 橫刀立馬) and
+    one-cell <em>slides</em> (116 for the same layout) — and the shortest path under
+    one metric is generally not shortest under the other. The general theory of
+    sliding blocks is covered in the Klotski family&#39;s help page; the short
+    version is that these ten little blocks hide a genuinely deep search problem.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

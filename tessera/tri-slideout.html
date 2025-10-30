@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>Tri Slide-Out — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/tri-slideout.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tri Slide-Out — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/tri-slideout.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tri Slide-Out — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=tri-slideout">Open in Grid Puzzle Games →</a></div>
+    <h1>Tri Slide-Out — Grid Puzzle Games</h1>
+    <p><strong>Tri Slide-Out</strong> is a sliding-block puzzle with a new move. Nearly-full boards
+    of triangular blocks jam a hexagon; one target block has to reach the exit. As
+    in Klotski, you free it by shuffling everyone else out of the way — but here a
+    block can do something no square block can: <strong>tumble</strong>. Rather than only
+    gliding, it can roll over one of its own edges and land, mirrored, on the other
+    side. That single verb is the game.</p>
+    <h2>Where it comes from</h2>
+    <p>The sliding-block family — Klotski, Huarong Dao, Rush Hour — has always lived on
+    the square grid, where a block can only slide. Move the same idea onto the
+    triangular lattice and something new becomes possible: a block sitting against
+    an empty triangle can <em>flip</em> across the shared edge, pivoting into the gap. A
+    single triangle can&#39;t even change which way it points by sliding — only a
+    tumble can turn it over. Every board here is machine-generated and then
+    <strong>certified</strong> by the solver, so the step count printed in each level&#39;s notes is
+    a true minimum, not a guess.</p>
+    <h2>How to play</h2>
+    <p>Drag a block to slide it along the six lattice directions; it stops at the walls
+    and at other blocks. To tumble, select a block and tap an empty triangle right
+    beside it — it rolls across the shared edge and lands mirrored. Bring the target
+    block to its marked exit to win. Moves are counted <strong>Hua-Rong-Dao style</strong>:
+    sliding one block several steps in a row is a single move, and so is one tumble.
+    <strong>Hint</strong> shows a best next move, and <strong>Solve</strong> plays the whole certified-shortest
+    solution when a jam looks hopeless.</p>
+    <h2>The math</h2>
+    <p>Like every sliding-block puzzle, this one is deceptively deep — the same family
+    that mathematicians proved is &quot;monstrously hard&quot; (PSPACE-complete) on large
+    boards. These boards are small enough to search completely, so the solver walks
+    every reachable arrangement and reports the shortest path with certainty. The
+    results are surprising: on a hexagon of just sixteen triangles, the hardest
+    level here needs <strong>60 moves</strong> — in spirit beyond Huarong Dao&#39;s classic 81-step
+    openings, packed into a fraction of the space. So when a level takes you
+    thirty-plus steps, you are not doing it wrong; some tumbles really are that far.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

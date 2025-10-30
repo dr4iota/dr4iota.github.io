@@ -1,0 +1,11 @@
+{
+  "app": "gallery",
+  "channels": {
+    "play": {
+      "url": "https://play.google.com/store/apps/details?id=xyz.driota.fractal"
+    },
+    "oid": {},
+    "fire": {},
+    "winstore": {}
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>Omino Fill — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/fill.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Omino Fill — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/fill.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Omino Fill — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=fill">Open in Grid Puzzle Games →</a></div>
+    <h1>Omino Fill — Grid Puzzle Games</h1>
+    <p><strong>Omino Fill</strong> is the oldest packing challenge there is: here are some
+    shapes, here is a board — now cover every square, with no gaps and nothing
+    sticking out. The pieces are <em>polyominoes</em>: shapes glued together from little
+    squares. A domino is two squares. Glue five together in every possible way and
+    you get exactly twelve shapes — the famous <strong>pentominoes</strong>, and the stars of
+    this game.</p>
+    <h2>Where it comes from</h2>
+    <p>People have played fitting-shapes puzzles for centuries, but the modern story
+    starts in 1953, when the mathematician Solomon W. Golomb gave polyominoes
+    their name and started asking sharp questions like &quot;which shapes can tile
+    which boxes?&quot; His book made the twelve pentominoes world-famous, and you can
+    still find them in toy shops today in games like Katamino.</p>
+    <h2>How to play</h2>
+    <p>Drag a piece from the tray onto the board. Tap it (or press <code>R</code>) to rotate,
+    and flip it when the level allows — some pieces are &quot;handed,&quot; like a left and
+    right shoe. The board is a workbench: you may park pieces loosely and even let
+    them overlap while you think (overlaps glow red). You win the moment every
+    cell is covered exactly once. A good start: fill the corners and edges first —
+    they are the fussiest spots — and save your most flexible pieces for last.
+    Stuck? <strong>Hint</strong> places one correct piece; <strong>Solve</strong> finishes the whole board.</p>
+    <h2>The math</h2>
+    <p>First trick: count. The twelve pentominoes bring <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">12</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">5</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">60</span></span></span></span> squares,
+    so they can only hope to fill a board with exactly 60 cells — like 6×10 or
+    3×20. Second trick: color. Paint the board like a checkerboard and count black
+    and white cells; many pieces must always cover a fixed mix of colors, so some
+    boards can be proven <em>impossible</em> before you place a single piece!</p>
+    <p>Whether the pieces really fit is called an <strong>exact cover</strong> problem, and it is
+    genuinely hard — computers solve it by very fast, very organized
+    trial-and-error. That search is exactly what runs when you press Solve.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

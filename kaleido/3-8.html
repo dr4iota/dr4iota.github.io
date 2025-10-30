@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/gallery/images/kaleido/app-icon-96.webp">
+  <title>{3,8} Triangles — Tiling Patterns &amp; Symmetry</title>
+  <meta name="description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <link rel="canonical" href="https://driota.xyz/kaleido/3-8.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{3,8} Triangles — Tiling Patterns &amp; Symmetry">
+  <meta property="og:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta property="og:url" content="https://driota.xyz/kaleido/3-8.html">
+  <meta property="og:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{3,8} Triangles — Tiling Patterns &amp; Symmetry">
+  <meta name="twitter:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta name="twitter:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-kaleido">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/kaleido/?item=3-8">Open in Tiling Patterns &amp; Symmetry →</a></div>
+    <h1>{3,8} Triangles — Tiling Patterns &amp; Symmetry</h1>
+    <h3>{3,8} — triangles, eight around every vertex</h3>
+    <p>One more triangle at every vertex than <code>{3,7}</code>, and that single extra copy is worth
+    looking at closely, because it is the smallest change you can make to a tiling.</p>
+    <p>Six equilateral triangles fit exactly around a point on a flat floor: 6 × 60° = 360°.
+    Seven need extra room, which is <code>{3,7}</code>. Eight need more room still, and that is this
+    scene. Nothing else about the recipe changed — same shape, same rule, one more copy.</p>
+    <p>The test is <code>(3 − 2) × (8 − 2)</code> = 1 × 6 = 6, more than 4, so the tiling is hyperbolic.
+    The product classifies the tiling; it is not a measurement of curvature. Every
+    hyperbolic scene in the app uses the same standard curvature. What the extra copy buys
+    is room, and the room is paid for by the corner angle: eight equal corners must fill
+    360°, so each triangle&#39;s corners are 45° rather than the 60° of a flat triangle.</p>
+    <p>Its symmetry is <code>*832</code>.</p>
+    <p>Because eight is even, the tiles here can be <strong>two-colored</strong> like a chessboard, which
+    <code>{3,7}</code> cannot manage with its seven. It is also the dual of <code>{8,3}</code>: put a dot at the
+    center of every octagon there, join dots in neighboring octagons, and you draw this.</p>
+    <p><strong>Try it:</strong> open <code>{3,7}</code> and count the triangles around one vertex, then open this
+    scene and count again. Then look at the size of one triangle in each. The tiles here are
+    larger, because a 45° corner takes more of the plane than a 51.4° one.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.226 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

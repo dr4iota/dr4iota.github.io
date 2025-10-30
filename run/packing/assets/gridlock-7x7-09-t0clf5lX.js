@@ -1,0 +1,43 @@
+const e=`id: gridlock-7x7-09
+title: 7×7 · 9
+genus: gridlock
+order: 353
+par: 13
+space: tessera
+board: { p: 4, q: 4 }
+region:
+  mask:
+    - "#######.."
+    - "#######.."
+    - "#######.."
+    - "#########"
+    - "#######.."
+    - "#######.."
+    - "#######.."
+marks: { goal: [[7, 3], [8, 3]] }
+pieces:
+  - { id: red, cells: [[0, 0], [1, 0]], lattice: true, symmetry: fixed, supply: unlimited }
+  - { id: truckV, cells: [[0, 0], [0, 1], [0, 2]], lattice: true, symmetry: fixed,
+      supply: unlimited }
+  - { id: truckH, cells: [[0, 0], [1, 0], [2, 0]], lattice: true, symmetry: fixed,
+      supply: unlimited }
+  - { id: carV, cells: [[0, 0], [0, 1]], lattice: true, symmetry: fixed, supply: unlimited }
+  - { id: carH, cells: [[0, 0], [1, 0]], lattice: true, symmetry: fixed, supply: unlimited }
+rules:
+  motion: slide
+  slide: { axisLock: true }
+  terminal: at-goal
+  onWin: freeze
+  supply:
+    kind: roster
+    layout:
+      - { piece: red, at: [0, 3], target: true }
+      - { piece: truckV, at: [2, 1] }
+      - { piece: truckH, at: [2, 0] }
+      - { piece: truckH, at: [0, 5] }
+      - { piece: carV, at: [5, 4] }
+      - { piece: truckV, at: [5, 1] }
+      - { piece: carV, at: [3, 4] }
+      - { piece: carH, at: [5, 0] }
+      - { piece: carV, at: [6, 3] }
+`;export{e as default};

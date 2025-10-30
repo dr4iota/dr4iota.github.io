@@ -1,0 +1,1 @@
+import{j as r}from"./react-vendor-DGo2L9b6.js";import{f as a}from"./driota-common-view-CXGy9QB7.js";import{M as e}from"./markdown-DJoa4a53.js";function i({content:n}){return r.jsx(e,{allowedElements:["p","strong","em","a"],unwrapDisallowed:!0,components:{a,p:({children:o})=>r.jsx(r.Fragment,{children:o})},children:n})}export{i as default};

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>Hex Fill — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/hex-fill.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hex Fill — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/hex-fill.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hex Fill — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=hex-fill">Open in Grid Puzzle Games →</a></div>
+    <h1>Hex Fill — Grid Puzzle Games</h1>
+    <p><strong>Hex Fill</strong> is the oldest packing challenge moved onto the honeycomb: here are
+    some shapes, here is a patch of hexagons — now cover every one of them, with no
+    gaps and nothing sticking out. The pieces are <em>polyhexes</em>: shapes glued together
+    from regular hexagons, edge to edge, the way a bee builds.</p>
+    <h2>Where it comes from</h2>
+    <p>The honeycomb is one of only three ways to tile the flat plane with a single
+    regular shape — squares, triangles, hexagons, and nothing else. Nature picked it
+    first: a bee&#39;s comb walls off the most storage for the least wax, a fact
+    conjectured by the Greek geometer Pappus around 300 AD and only <em>proved</em> in 1999,
+    by Thomas Hales.</p>
+    <p>The pieces came much later. Polyhexes were cataloged alongside the polyominoes
+    in the recreational-mathematics boom of the 1960s — one monohex, one dihex, three
+    trihexes, seven tetrahexes, twenty-two pentahexes. They are friendlier to fit
+    than polyominoes for one reason worth knowing before you start: a hexagon has
+    six neighbors instead of four, so a piece has six turns available and far more
+    ways to nestle.</p>
+    <h2>How to play</h2>
+    <p>Drag a piece from the tray onto the board. Tap it (or press <code>R</code>) to rotate — six
+    turns, not four — and flip it when the level allows. The board is a workbench:
+    park pieces loosely and even let them overlap while you think (overlaps glow
+    red). You win the moment every hexagon is covered exactly once. A good start:
+    the rim cells are the fussiest, because a hexagon on the edge of the patch has
+    fewer neighbors to reach into. <strong>Hint</strong> places one correct piece; <strong>Solve</strong>
+    finishes the board.</p>
+    <h2>The math</h2>
+    <p>The counting argument works as it always does — the pieces must bring exactly as
+    many hexagons as the board has cells — but the <em>coloring</em> argument that makes
+    square and triangular boards yield so readily is weaker here. A square grid is
+    two-colorable like a chessboard, and a triangular grid splits into up-triangles
+    and down-triangles, so many impossible boards can be ruled out by parity alone.
+    The honeycomb is also two-colorable, but polyhexes tend to cover both colors
+    evenly, so parity rarely settles anything and the search has to be run.</p>
+    <p>That search is <strong>exact cover</strong> — the same problem Omino Fill and Iamond Fill
+    solve, on a third lattice — and it is what runs when you press Solve.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>Slide In — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/slidein.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Slide In — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/slidein.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Slide In — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=slidein">Open in Grid Puzzle Games →</a></div>
+    <h1>Slide In — Grid Puzzle Games</h1>
+    <p><strong>Slide In</strong> is a fill puzzle where you can&#39;t just drop a piece where it
+    belongs — you have to <em>slide</em> it there. Each piece starts in the <strong>loading
+    zone</strong> beside the board; from there you nudge it one cell at a time into the
+    region, blocked by the walls and by pieces already parked. You pick the piece,
+    the orientation, and the path; the board decides what&#39;s still reachable.</p>
+    <h2>The idea</h2>
+    <p>Think of it as Omino Fill with one extra rule: every piece must arrive by
+    sliding. That rule changes everything — <strong>order matters</strong>. A spot that is easy
+    to reach now may be walled off once its neighbors are filled, and a deep
+    pocket may need another piece parked first as a stepping stone. You reorient a
+    piece only while it is still in the loading zone; once it slides onto the board
+    it keeps its facing.</p>
+    <h2>How to play</h2>
+    <p>Stage a piece from the tray into the loading zone, turn it to the orientation
+    you want (where the level allows), then slide it into the region — a cell at a
+    time, by dragging or with the on-screen keys — until it rests where you need
+    it. A staged piece can go back to the tray if you change your mind. You win
+    when the region is completely filled. Plan from the tight spots outward: fill
+    the cells hardest to reach into while their paths are still open.</p>
+    <h2>The math</h2>
+    <p>Slide In glues two classic problems together. The <em>filling</em> half is exact
+    cover, just like Omino Fill: every cell covered exactly once. The <em>sliding</em>
+    half adds reachability: a placement only counts if the piece can be slid there
+    from the loading zone through the cells still free. So a solution is not just a
+    set of placements — it is a <strong>sequence</strong>, a correct order of arrivals. Puzzles
+    where moves must happen in the right order are exactly the kind computers find
+    deep (their cousins, the sliding-block puzzles, are among the hardest known),
+    which is why a small board of gliding pieces can tie your brain in a very
+    satisfying knot.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

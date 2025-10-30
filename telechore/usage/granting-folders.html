@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Granting folders — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.6.0 — <a href="../changes.html#v0-6-0">what's new in it</a>.</p>
+<h1 id="granting-folders">Granting folders</h1>
+<p>On Android the app cannot browse your storage on its own, so “Open a folder…”
+opens the system&#39;s folder picker, starting in Documents. The folder you choose
+is shared with the app, and Android remembers that across restarts.</p>
+<p>The app asks for no storage permission. It can read only the folders you
+choose.</p>
+<h2 id="what-that-means-in-practice">What that means in practice</h2>
+<ul>
+<li><strong>A folder you choose is starred.</strong> It gets its own row under Starred, so
+opening it again never needs the picker. You can remove the row like any
+other. The folder stays shared with the app.</li>
+<li><strong>To stop sharing a folder, remove the folder itself</strong> — eject the card it
+is on, sign out of the account that serves it, or delete it. Android has no
+screen for withdrawing access to a single folder. The row stays in Starred,
+marked “denied”. Tapping it says the folder is no longer shared and offers
+“Choose again”, which opens the picker at that folder. Tap “Use this
+folder” and “Allow” to share it again.
+If a page from that folder is already open, browsing further into it reports
+the file as not found, instead of saying the folder is no longer shared.
+This is a known issue.</li>
+<li><strong>Places lists only what is always there.</strong> On Android that is these pages,
+and “Cache”, the copies this device keeps of your servers (see
+<a href="offline.html">Files offline</a>). Folders you choose go to Starred instead, so
+Places stays the same on every launch.</li>
+</ul>
+<h2 id="files">Files</h2>
+<p>“Files” is a folder that belongs to the app. It is private to the app, and it
+lasts until the app is uninstalled. It is listed in Places. Files that other
+apps hand over go there, by “Save to Telechore” or “Save to Files”
+(<a href="opening-from-other-apps.html">Opening files from other apps</a>). “Delete” on a
+row removes the file, after asking. “Download” asks where to save a copy, so
+a download does not add a file to Files. A copy that an older version of the
+app saved in Files is still listed.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-11-12 03:40 UTC from Telechore 0.6.0; the site at 50f2dc91, 29 commits after v0.6.0, with treesight 5324b01.</p>
+</footer>
+</body>
+</html>

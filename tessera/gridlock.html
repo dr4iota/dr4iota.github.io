@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>Gridlock — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/gridlock.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gridlock — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/gridlock.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gridlock — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=gridlock">Open in Grid Puzzle Games →</a></div>
+    <h1>Gridlock — Grid Puzzle Games</h1>
+    <p><strong>Gridlock</strong> is rush-hour traffic squeezed into a little parking lot. Cars and
+    trucks sit bumper to bumper, every vehicle can only drive straight ahead or
+    straight back along its own length, and one red car needs to reach the exit on
+    the right. Nobody can turn — you clear the way by shuffling everyone else
+    forward and backward until a lane opens.</p>
+    <h2>Where it comes from</h2>
+    <p>The game is best known as <strong>Rush Hour</strong>, created by the Japanese puzzle
+    inventor Nob Yoshigahara and published as a plastic board with sliding cars in
+    1996. It descends from the same family as Klotski and Huarong Dao, with one
+    sharp new rule: each block is a <em>vehicle</em> that moves only along its own
+    length. That single restriction changes the whole feel — instead of walking a
+    gap around the board, you are threading a needle through traffic that can
+    only rock back and forth.</p>
+    <h2>How to play</h2>
+    <p>Drag a vehicle to drive it, or select it and use the arrows — it stops at the
+    walls and at other vehicles. Win by driving the red car out through the gate.
+    Look at the vehicles standing across the red car&#39;s row: each one must end up
+    parked fully above or fully below that row, and making room for <em>them</em> — and
+    for the cars behind them — is the real puzzle. <strong>Hint</strong> shows a best next
+    move whenever the jam looks hopeless.</p>
+    <h2>The math</h2>
+    <p>The one-direction rule looks like it should tame the puzzle, but it doesn&#39;t:
+    mathematicians proved that Rush Hour on bigger boards is just as hard as the
+    other sliding-block puzzles (PSPACE-complete, the same &quot;monstrously hard&quot;
+    family). The classic 6×6 lot is small enough for computers, though — a
+    complete sweep of every legal board found that the very hardest starting
+    positions need <strong>93 moves</strong>, counting one vehicle driving any distance as one
+    move — the same classical count as this app&#39;s steps counter. So when a level
+    here takes you thirty-plus steps, you are not doing it wrong; some jams really
+    are that deep.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

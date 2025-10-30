@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Reading PDFs and pictures — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.6.0 — <a href="../changes.html#v0-6-0">what's new in it</a>.</p>
+<h1 id="reading-pdfs-and-pictures">Reading PDFs and pictures</h1>
+<p>A PDF opens in Telechore&#39;s own viewer, the same on every device: the pages one
+under another at the width of the window, in the app&#39;s light or dark colours.
+In dark mode the text and lines take the dark theme&#39;s colours and keep their
+hue. Figures and scans that are mostly white turn dark too, their colours
+kept; photographs keep theirs (see “Darken figures and scans” below). The
+page you are on shows at the bottom right while you scroll. Words can be
+selected and copied. Scanned pages are drawn too, including black-and-white
+scans and faxes (JBIG2 and CCITT) and JPEG 2000 pictures.</p>
+<p>A PDF you have read before opens where you left it: the same view, page, place
+and zoom. A new one opens at Full width, at the top.</p>
+<p>“Source”, beside “Preview” in the header, shows the PDF&#39;s size, date and
+version, and the start of the file in hex.</p>
+<h2 id="zoom-and-pan">Zoom and pan</h2>
+<p>The same as in <a href="terminal.html">the terminal</a>:</p>
+<ul>
+<li><strong>Pinch</strong> to zoom, and <strong>drag with two fingers</strong> to move around a page
+larger than the window. One finger scrolls only the way the pages run: up
+and down, or across in “Whole page”, so the page does not slide sideways
+while you read.</li>
+<li>On a computer, <strong>Ctrl+wheel</strong> zooms (<strong>Cmd</strong> on a Mac, and a trackpad&#39;s
+pinch), <strong>Ctrl+drag</strong> moves the page, and the plain wheel scrolls. A drag
+with the mouse selects words. <strong>Ctrl+=</strong> and <strong>Ctrl+−</strong> zoom a step.</li>
+</ul>
+<h2 id="reset-view">Reset view</h2>
+<p><strong>Hold two fingers still</strong> on the page until the note at the top says
+<em>Release to reset view</em>, then lift them; or <strong>Ctrl+double-click</strong>, or
+<strong>Ctrl+0</strong>. Each reset moves to the next of three views, keeping the line
+you are reading:</p>
+<ol>
+<li>“Full width” — the page across the window, as it opens.</li>
+<li>“Margins cut” — each page with the paper around its text cut away, so
+the words fill the window. With “Single column view” on, this view is
+“Single column” instead (see below).</li>
+<li>“Whole page” — each page whole in the window, the pages side by side.
+Swipe with one finger, or use the wheel or the arrow keys, to turn a page;
+it stops on one page at a time. Zoomed in, one finger moves freely along
+the pages.</li>
+</ol>
+<p>A view that would look the same as one before it is passed over. After you
+zoom or move, the next reset goes back to Full width. The three views are
+also in the “Options” menu.</p>
+<h2 id="options">Options</h2>
+<p>“Options”, in the header between “Full screen” and “Send”, opens the
+PDF&#39;s menu. The button is marked “PDF”.</p>
+<ul>
+<li>“Single column view” — see below.</li>
+<li>“Heads, feet and page numbers” — shown or hidden in the Margins cut and
+Single column views. Hidden, each page is still a box of its own.</li>
+<li>“Darken figures and scans” — in dark mode only, for this file; greyed
+out in light mode. On, a
+picture that is mostly white, or drawn in a few flat colours, such as a
+chart or a scanned page, turns dark with its colours kept. Off, pictures
+keep their own colours.</li>
+<li>“Mode” — the three views: “Full width”, “Margins cut” or “Single
+column”, and “Whole page”. Where the menu is narrow they read “Width”,
+“No margins” or “Column”, and “Page”.</li>
+</ul>
+<h2 id="single-column-view">Single column view</h2>
+<p>For papers and magazines set in two or three columns. Each column is shown at
+the full width of the window, one after another in reading order, so you read
+straight down without zooming or moving across. A title or a figure across the
+columns comes first, as on the page; running heads and page numbers go above
+and below. One page&#39;s parts stay in one box, with a dashed line between them.</p>
+<p>It is chosen for each file in “Options”, and Telechore remembers the choice.
+It is greyed out for a file it cannot help: one with a single column
+throughout, or one whose layout cannot be read. Switching it on moves to the
+Single column view at once. Switching it off goes back to Margins cut.</p>
+<p>Telechore finds the columns itself, page by page. It aims to leave a page whole
+rather than cut it wrongly, so an unusual page may stay as it is.</p>
+<p>Single column view is part of <strong>Pro</strong>. A copy from an app store can use it on
+<strong>28 PDFs</strong> for free. A file uses one of those 28 the first time you switch
+the view on, and switching it off does not give that one back. The menu says
+how many are left, and “Unlock Pro” on that line opens the offer. With Pro,
+or in a copy you installed from a downloaded file, there is no limit. See
+<em>The free edition and Pro</em> in <a href="servers.html">Servers</a>.</p>
+<h2 id="links">Links</h2>
+<p>A link to a website or an email address opens in your browser or mail app, as
+a link in a Markdown file does. A link to another page of the PDF goes there.
+Links to anything else — a file, a program — are not followed.</p>
+<h2 id="pictures">Pictures</h2>
+<p>A picture opens the same way: zoom and move it as a PDF, and “Reset view”
+goes on to the next of three views, each centred:</p>
+<ol>
+<li>“Fit” — the whole picture in the window, as it opens.</li>
+<li>“Fill” — the picture covering the window. The part that does not fit is
+a drag away.</li>
+<li>“Actual size” — the picture at 100 %, one of its pixels to a pixel of the
+app&#39;s page, as a browser shows it at 100 %.</li>
+</ol>
+<p>A view that would look the same as one before it is passed over.</p>
+<h2 id="full-screen">Full screen</h2>
+<p>“Full screen”, beside “Refresh” in the header, shows the PDF or the
+picture alone, on the whole screen. A tap shows a button to leave at the top
+right, the file&#39;s name, size and date at the top left, and at the bottom
+right the page you are on. For a picture that corner shows its size in pixels
+and its view (<em>4032 × 3024</em>, <em>Fill · 140 %</em>). A tap while those are showing
+hides them all. For a PDF the tap also shows, at the bottom left, the
+“Options” button and the three views, one tap each. On a phone the page
+stays clear of the status bar and the camera cutout until you scroll or zoom.
+Zoom and reset view work as before. To leave, tap the button, press <strong>Esc</strong>
+or <strong>F11</strong>, or Back.</p>
+<h2 id="what-it-does-not-do-yet">What it does not do yet</h2>
+<p>Telechore cannot open a PDF that asks for a password, and it says so.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-11-12 03:40 UTC from Telechore 0.6.0; the site at 50f2dc91, 29 commits after v0.6.0, with treesight 5324b01.</p>
+</footer>
+</body>
+</html>

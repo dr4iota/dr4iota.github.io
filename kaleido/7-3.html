@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/gallery/images/kaleido/app-icon-96.webp">
+  <title>{7,3} Heptagons — Tiling Patterns &amp; Symmetry</title>
+  <meta name="description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <link rel="canonical" href="https://driota.xyz/kaleido/7-3.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{7,3} Heptagons — Tiling Patterns &amp; Symmetry">
+  <meta property="og:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta property="og:url" content="https://driota.xyz/kaleido/7-3.html">
+  <meta property="og:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{7,3} Heptagons — Tiling Patterns &amp; Symmetry">
+  <meta name="twitter:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta name="twitter:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-kaleido">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/kaleido/?item=7-3">Open in Tiling Patterns &amp; Symmetry →</a></div>
+    <h1>{7,3} Heptagons — Tiling Patterns &amp; Symmetry</h1>
+    <h3>{7,3} — seven-sided tiles, three to a corner</h3>
+    <p>This tiling cannot exist on a flat surface, and working out why is the quickest way
+    to understand the whole curved half of this app.</p>
+    <p>A regular heptagon has corners of about 128.6°. Put three of them around a point and
+    you get about 385.7°. A complete turn is 360°. You are over by 25.7° — there is not
+    enough room. On a flat floor, three heptagons overlap.</p>
+    <p>Unless the floor has extra room. On a surface curved like a saddle at every point,
+    there <em>is</em> more room around a point than a flat plane has, and the three heptagons
+    fit exactly. That surface is the hyperbolic plane, and this is its most famous
+    tiling.</p>
+    <p>The shorthand <code>{7,3}</code> means &quot;7-sided tiles, 3 around each corner&quot;. The general test
+    for which world a tiling <code>{p,q}</code> lives in is a single product:</p>
+    <ul>
+    <li>multiply <code>(p − 2)</code> by <code>(q − 2)</code>;</li>
+    <li>less than 4, and the tiling wraps onto a sphere;</li>
+    <li>exactly 4, and it lies flat;</li>
+    <li>more than 4, and it is hyperbolic.</li>
+    </ul>
+    <p>For <code>{7,3}</code> that is 5 × 1 = 5, which is more than 4. Hyperbolic, and only just —
+    this is one of the gentlest curved tilings there is.</p>
+    <p>Its symmetry group is <code>*732</code>: mirrors crossing at a 7-fold corner (each heptagon&#39;s
+    center), a 3-fold corner (where three heptagons meet) and a 2-fold corner (the
+    middle of each edge). Compare it with the flat <code>*632</code> and you can see exactly what
+    changed — the 6 became a 7, and that one step was enough to leave the flat plane
+    behind for good.</p>
+    <p>Every heptagon in the picture is the same size as every other one. The ones near the
+    rim look tiny, but that is the picture distorting, not the tiles shrinking. If you
+    travel toward them they grow to fill your screen, and new tiny ones appear beyond,
+    forever.</p>
+    <p><strong>Try it:</strong> travel toward one of the tiny heptagons near the rim. It grows as it
+    approaches the center, proving that the display made it look small even though it was
+    always the same geometric size.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.226 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

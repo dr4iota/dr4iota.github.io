@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/gallery/images/kaleido/app-icon-96.webp">
+  <title>Rectangles — Tiling Patterns &amp; Symmetry</title>
+  <meta name="description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <link rel="canonical" href="https://driota.xyz/kaleido/pmm.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rectangles — Tiling Patterns &amp; Symmetry">
+  <meta property="og:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta property="og:url" content="https://driota.xyz/kaleido/pmm.html">
+  <meta property="og:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rectangles — Tiling Patterns &amp; Symmetry">
+  <meta name="twitter:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta name="twitter:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-kaleido">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/kaleido/?item=pmm">Open in Tiling Patterns &amp; Symmetry →</a></div>
+    <h1>Rectangles — Tiling Patterns &amp; Symmetry</h1>
+    <h3>The rectangular kaleidoscope</h3>
+    <p>The plainest kaleidoscope there is: a rectangle of mirrors, and nothing else.</p>
+    <p>There are mirrors along all four edges of a master rectangle — but unlike the square
+    kaleidoscope, none along its diagonals, because a rectangle&#39;s diagonal is not a
+    mirror unless the rectangle is a square. Reflect that one rectangle across its edges
+    and it covers the plane.</p>
+    <p>Its name is <code>*2222</code>: four corners, every one of them a <strong>2</strong>-fold corner, meaning
+    a half turn brings the pattern back. Four twos, no more.</p>
+    <p>This one is worth visiting precisely because it is the least ornamental. With so few
+    symmetries, a drawing you make here stays recognizable as the thing you drew, where
+    the hexagonal kaleidoscope would have spun it into a rosette. It is the mildest
+    surface in the app to draw on.</p>
+    <p>It also demonstrates something easy to miss: the rectangle can be <em>any</em> proportion.
+    Stretch it and the symmetry is unchanged, which is why this group covers brick walls,
+    tiled corridors and window panes alike.</p>
+    <p>That freedom is real, and this scene is the only one in the app that has it — <code>{4,4}</code>
+    needs a square lattice, since nothing else carries 4-fold symmetry, and both <code>p6m</code>
+    scenes need a triangular one. The proportion here is the <strong>golden ratio</strong>, about 1.618
+    to 1, chosen for being unmistakably not square. Any other number would give the same
+    <code>*2222</code>; the app once used 1, and the result was a scene labeled &quot;rectangular&quot; that
+    looked exactly like the square one.</p>
+    <p>Note also what is <em>not</em> in the list of flat scenes&#39; names. <code>{3,6}</code>, <code>{4,4}</code> and <code>{6,3}</code>
+    carry <code>{p,q}</code> symbols; this one carries a group name instead, because a rectangle is not
+    a regular polygon and has no such symbol. It is here anyway: the seventeen wallpaper
+    groups, not the three regular tilings, are the real classification of flat repeating
+    patterns — and fourteen of the seventeen have no <code>{p,q}</code> name either.</p>
+    <p><strong>Try it:</strong> draw one off-center mark. It stays easier to recognize here than in the
+    square or hexagonal scenes. Then switch scenes without changing the mark and watch
+    extra mirrors turn it into a more complicated design.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.226 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

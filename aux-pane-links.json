@@ -1,0 +1,110 @@
+{
+  "sections": [
+    {
+      "label": "Follow",
+      "title": "Follow & support",
+      "icon": "Heart",
+      "href": "https://driota.xyz",
+      "items": [
+        {
+          "label": "YT",
+          "title": "YouTube",
+          "icon": "YouTube",
+          "href": "https://www.youtube.com/@driota"
+        },
+        {
+          "label": "IG",
+          "title": "Instagram",
+          "icon": "Instagram",
+          "href": "https://www.instagram.com/driota.xyz/"
+        },
+        {
+          "label": "TT",
+          "title": "TikTok",
+          "icon": "TikTok",
+          "href": "https://www.tiktok.com/@driota.xyz"
+        },
+        {
+          "label": "Note",
+          "title": "Drop a Note",
+          "icon": "PencilSquare",
+          "href": "https://driota.xyz/feedback.html"
+        },
+        {
+          "label": "BMaC",
+          "title": "Buy Me a Coffee",
+          "icon": "BuyMeACoffee",
+          "href": "https://www.buymeacoffee.com/driota"
+        },
+        {
+          "label": "Patreon",
+          "icon": "Patreon",
+          "href": "https://www.patreon.com/driota"
+        }
+      ]
+    }
+  ],
+  "messages": {
+    "gallery": {
+      "title": "Try it »",
+      "text": "What lies deeper in the Mandelbrot set? Zoom in live with **Fantastic Fractals**.",
+      "link": {
+        "web": "https://driota.xyz/fractal/",
+        "play": "https://play.google.com/store/apps/details?id=xyz.driota.fractal",
+        "fire": "https://www.amazon.com/dp/B0FNGZB5TN"
+      }
+    },
+    "gallery/kaleido": {
+      "title": "Try it »",
+      "text": "Can one doodle cover the whole floor? Draw once and watch it repeat in **Tiling Kaleidoscope**.",
+      "link": {
+        "web": "https://driota.xyz/kaleido/",
+        "play": "https://play.google.com/store/apps/details?id=xyz.driota.fractal"
+      }
+    },
+    "academy": {
+      "title": "Try it »",
+      "text": "Do you know triangles have many interesting centers? Meet them, with step-by-step proofs, in **Triangle Geometry**.",
+      "link": {
+        "web": "https://driota.xyz/trikona/",
+        "play": "https://play.google.com/store/apps/details?id=xyz.driota.trikona",
+        "fire": "https://www.amazon.com/dp/B0G1L2GJ98"
+      }
+    },
+    "packing": {
+      "title": "Try it »",
+      "text": "Can these pieces fill the board? Fill, slide and drop them in **Grid Puzzles**, even on curved boards.",
+      "link": {
+        "web": "https://driota.xyz/tessera/",
+        "play": "https://play.google.com/store/apps/details?id=xyz.driota.packing"
+      }
+    },
+    "telechore": {
+      "title": "Try it »",
+      "text": "Tired of panning around two-column PDFs? **Telechore** shows and scrolls one column at a time.",
+      "link": {
+        "web": "https://driota.xyz/telechore/",
+        "winstore": "https://apps.microsoft.com/detail/9NNCCS7Z1DPK",
+        "play": "https://play.google.com/store/apps/details?id=xyz.driota.telechore"
+      }
+    },
+    "telechore/keyboard": {
+      "title": "Try it »",
+      "text": "Keyboard covering your SSH session? **Telechore**'s keyboard floats over the terminal.",
+      "link": {
+        "web": "https://driota.xyz/telechore/",
+        "winstore": "https://apps.microsoft.com/detail/9NNCCS7Z1DPK",
+        "play": "https://play.google.com/store/apps/details?id=xyz.driota.telechore"
+      }
+    },
+    "telechore/lens": {
+      "title": "Try it »",
+      "text": "Terminal too small on your phone? Zoom, pan and look through a lens in **Telechore**.",
+      "link": {
+        "web": "https://driota.xyz/telechore/",
+        "winstore": "https://apps.microsoft.com/detail/9NNCCS7Z1DPK",
+        "play": "https://play.google.com/store/apps/details?id=xyz.driota.telechore"
+      }
+    }
+  }
+}

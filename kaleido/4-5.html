@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/gallery/images/kaleido/app-icon-96.webp">
+  <title>{4,5} Squares — Tiling Patterns &amp; Symmetry</title>
+  <meta name="description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <link rel="canonical" href="https://driota.xyz/kaleido/4-5.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{4,5} Squares — Tiling Patterns &amp; Symmetry">
+  <meta property="og:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta property="og:url" content="https://driota.xyz/kaleido/4-5.html">
+  <meta property="og:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{4,5} Squares — Tiling Patterns &amp; Symmetry">
+  <meta name="twitter:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta name="twitter:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-kaleido">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/kaleido/?item=4-5">Open in Tiling Patterns &amp; Symmetry →</a></div>
+    <h1>{4,5} Squares — Tiling Patterns &amp; Symmetry</h1>
+    <h3>{4,5} — squares, five to a corner</h3>
+    <p>The most disorienting tiling in the app, because everything in the picture is a
+    <em>square</em> and squares are supposed to be well behaved.</p>
+    <p>Four squares around a point make a perfect flat corner — 4 × 90° = 360°, the
+    chessboard. So five squares around a point needs a whole extra right angle of room
+    per corner, which a flat plane cannot supply and this one can.</p>
+    <p>The test: <code>(4 − 2) × (5 − 2)</code> = 2 × 3 = 6, more than 4. Hyperbolic. And note it is
+    the same 6 as <code>{5,4}</code>, its dual — pentagons four to a corner, squares five to a
+    corner, one structure seen two ways.</p>
+    <p>Its symmetry is <code>*542</code>, shared with <code>{5,4}</code> for the same reason.</p>
+    <p>The &quot;squares&quot; are worth staring at. More precisely, they are <strong>regular hyperbolic
+    quadrilaterals</strong>: four equal sides and four equal angles. The <code>{p,q}</code> naming
+    tradition calls them squares because they have four sides, even though their corners
+    are 72°, not the 90° required of a square in flat high-school geometry. Nothing here
+    is bent or cheating. A quadrilateral&#39;s angles do not have to total 360° in a curved
+    plane.</p>
+    <p>The <strong>Panels</strong> pattern cuts every corner off. Each square becomes an octagon, and a
+    new pentagon fills the space around every old corner. This is called a <strong>truncation</strong>:
+    it changes one regular tiling into a tiling made from two kinds of regular shape.</p>
+    <p><strong>Try it:</strong> switch between Tile outline and Panels. Follow one old square corner and
+    identify the new pentagon that replaces it.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.226 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

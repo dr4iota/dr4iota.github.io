@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/gallery/images/kaleido/app-icon-96.webp">
+  <title>{6,3} Hexagons — Tiling Patterns &amp; Symmetry</title>
+  <meta name="description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <link rel="canonical" href="https://driota.xyz/kaleido/6-3.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{6,3} Hexagons — Tiling Patterns &amp; Symmetry">
+  <meta property="og:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta property="og:url" content="https://driota.xyz/kaleido/6-3.html">
+  <meta property="og:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{6,3} Hexagons — Tiling Patterns &amp; Symmetry">
+  <meta name="twitter:description" content="Wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta name="twitter:image" content="https://driota.xyz/run/gallery/images/kaleido/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-kaleido">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/kaleido/?item=6-3">Open in Tiling Patterns &amp; Symmetry →</a></div>
+    <h1>{6,3} Hexagons — Tiling Patterns &amp; Symmetry</h1>
+    <h3>{6,3} — hexagons, three to a corner</h3>
+    <p>The honeycomb: three regular hexagons meet at every corner, 3 × 120° = 360° exactly.
+    One of only three ways to tile a flat floor with a single regular shape.</p>
+    <p>Its symmetry group, <code>p6m</code>, is also the richest a flat repeating pattern can have —
+    nothing on a flat surface has more. That group is shared with the triangular tiling
+    <code>{3,6}</code>, which is this tiling&#39;s <strong>dual</strong>: put a dot at the center of every hexagon
+    here, join dots in neighboring hexagons, and you have drawn it. Same mirrors, same
+    fundamental triangle, a different answer to where one tile ends. Switch between the
+    two scenes and watch the heavy lines move from hexagons to triangles while the fine
+    mirror net beneath stays exactly where it was.</p>
+    <p>Look at any hexagon in the picture. Mirror lines pass through its center like the
+    spokes of a wheel, cutting it into twelve identical triangles. Every one of those
+    triangles is a reflection of its neighbors, and the whole infinite pattern is
+    built from a single one of them.</p>
+    <p>Its name in orbifold notation is <code>*632</code>. The star means &quot;this pattern has mirror
+    lines&quot;, and the three digits are the three kinds of corner where mirrors cross:</p>
+    <ul>
+    <li>a <strong>6</strong>-fold corner at the center of each hexagon — the two edges of the master
+    triangle meet at 30°, and the pattern comes back every sixth of a turn;</li>
+    <li>a <strong>3</strong>-fold corner where three hexagons touch — a third of a turn;</li>
+    <li>a <strong>2</strong>-fold corner at the middle of each hexagon edge — a half turn.</li>
+    </ul>
+    <p>Those three numbers are not a coincidence. A triangle with corner angles of 30°, 60°
+    and 90° tiles the plane by reflection and has exactly those three rotation orders.
+    Twelve copies make one hexagon.</p>
+    <p>Honeybees build in hexagons, and for a good reason. If a flat surface must be split
+    into equal-area cells, a honeycomb uses the least total wall. People guessed this
+    for two thousand years. It was finally proved in 1999.</p>
+    <p><strong>Try it:</strong> choose the line-only pattern and find all three kinds of special point.
+    Turn the pattern around each one. A sixth, a third, and a half turn should bring the
+    lines back to where they began.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.226 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/gallery/images/fractal/app-icon-96.webp">
+  <title>Indra's pearls — Fantastic Fractal Explorer</title>
+  <meta name="description" content="Explore the beauty of generated fractals interactively.">
+  <link rel="canonical" href="https://driota.xyz/fractal/indra-pearls.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Indra's pearls — Fantastic Fractal Explorer">
+  <meta property="og:description" content="Explore the beauty of generated fractals interactively.">
+  <meta property="og:url" content="https://driota.xyz/fractal/indra-pearls.html">
+  <meta property="og:image" content="https://driota.xyz/run/gallery/images/fractal/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Indra's pearls — Fantastic Fractal Explorer">
+  <meta name="twitter:description" content="Explore the beauty of generated fractals interactively.">
+  <meta name="twitter:image" content="https://driota.xyz/run/gallery/images/fractal/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-fractal">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/fractal/?item=indra-pearls">Open in Fantastic Fractal Explorer →</a></div>
+    <h1>Indra's pearls — Fantastic Fractal Explorer</h1>
+    <h3>Indra&#39;s pearls</h3>
+    <p>Take four disks in two pairs. Each pair makes one <em>map</em>, a rule that moves every point of the
+    plane: it takes everything outside one disk of the pair and squeezes it into the other disk,
+    turning it as it goes. Run backward, the same map takes everything outside the second disk
+    into the first. The maps are <em>Möbius maps</em>, which send circles to circles.</p>
+    <p>Because the outside of a disk holds the other three disks, squeezing it into its partner puts
+    a small copy of each of those three inside the partner. Then each small copy holds three
+    smaller copies, and so on, without end: 4 disks, then 12 copies inside them, then 36, each
+    generation three times the last. (With more maps there are more disks, and each holds a copy
+    of every disk but the one it is paired with.) The pattern repeats inside itself the way every
+    pearl in Indra&#39;s net reflects every other pearl. The net is an image from Buddhist philosophy,
+    and Mumford, Series and Wright named their 2002 book about these pictures, <em>Indra&#39;s Pearls</em>,
+    after it.</p>
+    <p>Every point of the plane is folded back out of the disks. If it lies in a disk, it is moved
+    by the map that undoes the squeeze which filled that disk, and this repeats until the point
+    lies outside all the disks. Points that get out are colored by how many steps they took and
+    by where they came out, which gives the colors their swirl. The points that never get out
+    form the <em>limit set</em>, the pearls, drawn black.</p>
+    <p>The disks never overlap, and in this case the limit set is a dust: it is so finely scattered
+    that no two of its points are joined by a line inside it. The maps and everything built from
+    them make a <em>Schottky group</em>, after Friedrich Schottky, who studied such groups in the 1870s.
+    Robert Fricke and Felix Klein drew pictures like these by hand in their books on the subject
+    around 1900.</p>
+    <h3>Parameters</h3>
+    <h4>GUI Parameters</h4>
+    <ul>
+    <li><strong>Iterations</strong>: How many steps a point may take before it counts as one of the pearls.</li>
+    <li><strong>Generators</strong>: How many maps there are, from 2 to 4. Each map has a pair of disks.</li>
+    <li><strong>Disk radius</strong>: The size of the disks, all the same. It is made smaller when the disks
+    would overlap, so they can come almost to touch.</li>
+    <li><strong>Twist</strong>: The angle, in degrees, by which each map turns what it moves. The copies inside
+    each disk turn with it.</li>
+    </ul>
+    <h4>Control Points</h4>
+    <ul>
+    <li><strong>Source 1</strong> and <strong>Target 1</strong>, <strong>Source 2</strong> and <strong>Target 2</strong>, …: The centers of the disks,
+    in pairs. Each map takes the outside of its source disk into its target disk. At the start
+    the first pair lies on the horizontal and the second on the vertical.</li>
+    </ul>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.226 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

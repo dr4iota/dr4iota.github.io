@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>Place &amp; Clear — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/clear.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Place &amp; Clear — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/clear.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Place &amp; Clear — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=clear">Open in Grid Puzzle Games →</a></div>
+    <h1>Place &amp; Clear — Grid Puzzle Games</h1>
+    <p><strong>Place &amp; Clear</strong> is packing that never ends — unless you let the board fill up.
+    Pieces keep coming, the board stays the same size, and the only way to make
+    room is to <em>complete</em> something: a full row, a full column, or a full box.
+    Whatever you complete vanishes, and the space is yours again.</p>
+    <h2>Where it comes from</h2>
+    <p>This family took off on phones with <em>1010!</em> in 2014: a 10×10 board, three
+    pieces at a time, place them anywhere you like. Later games like <em>Woodoku</em>
+    crossed it with a Sudoku grid, so the nine 3×3 boxes clear too. It sits right
+    between Tetris (clearing lines) and classic packing (placing pieces wherever
+    you choose) — Tetris with the falling, and the panic, removed.</p>
+    <p>The same idea moves onto the triangular grid, where a &quot;line&quot; is a lane of
+    triangles: <strong>Tri Ten</strong> clears full lanes, <strong>Tri Cages</strong> adds outlined regions
+    that clear the moment they fill, and <strong>Hexa Merge</strong> clears whenever six
+    triangles complete a hexagon — the fusion is the whole point.</p>
+    <h2>How to play</h2>
+    <p>You are dealt pieces in the tray; drag them anywhere they fit. Fill a whole
+    row or column (or, in <strong>Boxes</strong> levels, a 3×3 box) and it clears instantly —
+    clearing several at once scores extra. The game ends when none of your pieces
+    fits anywhere. Two habits keep you alive: keep one big open area instead of
+    many small nooks, and never bury a single empty cell — a lonely hole only
+    comes back when its entire row, column, or box completes around it. Before
+    placing a big piece, ask: &quot;where will the <em>next</em> big piece go?&quot;</p>
+    <h2>The math</h2>
+    <p>Think of it as a race. Every piece adds its squares to the board; every clear
+    removes a full line of them. If squares arrive faster than you clear, the
+    board slowly drowns — so good play is really about keeping your <em>clearing
+    rate</em> up, which means building rows and columns that finish together.</p>
+    <p>Even the game-over check is mathematics: &quot;does any piece fit anywhere?&quot; is a
+    little packing search — every piece, every rotation, every open spot — the
+    same kind of search the Omino Fill solver runs. When it comes up empty, the board
+    is provably stuck, not just crowded.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

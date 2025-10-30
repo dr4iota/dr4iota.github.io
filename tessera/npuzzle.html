@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>N-Puzzles — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/npuzzle.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="N-Puzzles — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/npuzzle.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="N-Puzzles — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=npuzzle">Open in Grid Puzzle Games →</a></div>
+    <h1>N-Puzzles — Grid Puzzle Games</h1>
+    <p>The <strong>15 Puzzle</strong> is the original sliding-tile game: fifteen numbered tiles,
+    one empty cell, and a simple demand — put the numbers back in order. Tiles
+    can&#39;t be lifted; they can only slide into the gap. It looks easy. It is not.
+    And it once drove the whole world slightly crazy.</p>
+    <p>This app gathers the whole family under one roof: the classic 4×4 alongside
+    smaller 8- and 11-tile boards and larger 19- and 24-tile grids, <strong>triangular</strong>
+    boards where a tile <em>flips</em> across its shared edge into the gap instead of
+    sliding, and <strong>hyperbolic</strong> boards where the ring around the middle holds twelve
+    tiles instead of eight. Same demand every time — get the numbers back in order.</p>
+    <h2>Where it comes from</h2>
+    <p>The puzzle appeared around 1874, credited to Noyes Palmer Chapman, a
+    postmaster in New York State. By 1880 the &quot;Fifteen Puzzle&quot; was a full-blown
+    mania in America and Europe — newspapers wrote about employers banning it
+    from offices. Its most famous story is a trick: the puzzle showman Sam Loyd
+    claimed he had invented it, and offered <strong>$1,000</strong> to anyone who could solve
+    a version where only the 14 and 15 were swapped. His money was perfectly
+    safe — that position is <em>impossible</em>, and mathematicians had already proved
+    it.</p>
+    <h2>How to play</h2>
+    <p>Tap any tile next to the empty cell and it slides in — or drag a tile, or
+    select one and nudge it with the arrow keys or <code>WASD</code>; tiles flow through the
+    gap. (On a triangular board, a tile beside the gap <em>flips</em> across the shared
+    edge into it.) You win when the tiles read back in order.
+    Solve it in layers: finish the top row first, then the left column, and
+    never touch them again — the rest becomes a smaller, easier puzzle. The last
+    two rows are the tricky part: you must rotate tiles <em>in pairs</em> around the
+    gap. Every shuffle you are dealt is solvable, and <strong>Hint</strong> will show a good
+    next move whenever you are stuck.</p>
+    <h2>The math</h2>
+    <p>Why was Loyd&#39;s $1,000 safe? Every slide swaps the gap with one tile, and if
+    you track the swaps carefully, a hidden pattern — called <em>parity</em> — never
+    changes. Exactly <strong>half</strong> of all possible arrangements can reach the solved
+    picture; the other half, including Loyd&#39;s 14–15 swap, can never get there, no
+    matter how long you try. This app shuffles by actually sliding tiles randomly
+    from the solved board, so your start is always on the solvable side.</p>
+    <p>The solvable half is still enormous — about ten <em>trillion</em> positions, and the
+    very worst ones need 80 moves. Computers cracked the puzzle by being smart,
+    not fast: the Hint search estimates how far each tile is from home (walking
+    distance, no diagonals — the &quot;Manhattan distance,&quot; like walking city blocks)
+    and explores the most promising moves first. The little 3×3 version of this
+    idea is the first search problem many computer scientists ever study.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

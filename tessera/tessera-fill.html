@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>Hyperbolic Fill — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/tessera-fill.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hyperbolic Fill — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/tessera-fill.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hyperbolic Fill — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=tessera-fill">Open in Grid Puzzle Games →</a></div>
+    <h1>Hyperbolic Fill — Grid Puzzle Games</h1>
+    <p><strong>Tessera Fill</strong> is the oldest packing challenge, moved onto a board that is
+    not flat: here are some shapes, here is a board — now cover every tile, with no
+    gaps and nothing sticking out. The pieces are <em>polycells</em>: shapes glued
+    together from the board&#39;s own tiles, the way polyominoes are glued from
+    squares. What is new is the board. It is a patch of a <strong>regular tiling</strong> named
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span><span class="mclose">}</span></span></span></span> — <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span>-sided tiles, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span></span></span></span> of them meeting at every corner — and most of
+    those tilings do not fit on a flat page at all.</p>
+    <h2>The tiles are all the same size</h2>
+    <p>This is the one thing worth knowing before you start. On <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">5</span><span class="mclose">}</span></span></span></span> the tiles
+    near the rim look tiny, and they are not: <strong>every tile of the board is the same
+    tile</strong>, the same size and the same shape. What shrinks them is the <em>map</em>.</p>
+    <p>The board is drawn in the <strong>Poincaré disk</strong>, which squeezes an infinite curved
+    plane into a circle — so everything that moves away from the middle is drawn
+    smaller and smaller, and the edge of the circle is infinitely far away. A world
+    map does the same thing in reverse when it inflates Greenland.</p>
+    <p>You do not have to take this on faith. Double-tap any empty tile: the board
+    glides until <em>that</em> tile is the big one in the middle, arriving at full size,
+    and the tile you started from shrinks away toward the rim. Nothing changed
+    shape. You moved.</p>
+    <h2>Where it comes from</h2>
+    <p>Five squares will not meet at a corner on a flat table — four already use up
+    all <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">360°</span></span></span></span>. They meet perfectly well in the <strong>hyperbolic plane</strong>, where a
+    triangle&#39;s angles add to less than <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">180°</span></span></span></span> and there is, in a sense, more room
+    than Euclid allowed. Mathematicians spent the nineteenth century arguing about
+    whether such a geometry could exist; Beltrami settled it in 1868 by building a
+    <em>model</em> of it inside an ordinary disk, and Poincaré&#39;s version of that disk is
+    the one whose name stuck — and the one you are looking at.</p>
+    <p>It reached the public through art. In 1957 the geometer H. S. M. Coxeter sent
+    M. C. Escher a paper containing a figure of a hyperbolic tiling; Escher, who
+    had been hunting for a way to draw infinity inside a finite frame, recognized
+    exactly what he needed. The <strong>Circle Limit</strong> woodcuts followed — fish and
+    angels and devils, shrinking forever toward a boundary they never reach, each
+    one the same size as all the others.</p>
+    <h2>How to play</h2>
+    <p>Drag a piece from the tray onto the board — it hangs from its middle, so what
+    sits under your finger is where the piece will land. Tap it (or press <code>R</code>) to
+    rotate, and flip it when the level allows, since some pieces are &quot;handed,&quot; like
+    a left and right shoe. The board is a workbench: park pieces loosely and even
+    let them overlap while you think (overlaps glow red). You win the moment every
+    tile is covered exactly once.</p>
+    <p>Two gestures belong to the board rather than the pieces. Double-tap an empty
+    tile to bring it to the middle. Drag with two fingers — Shift-drag with a mouse
+    — to travel across the plane. Both move the <em>board</em>, not a camera, which is why
+    distant tiles arrive at full size instead of merely getting bigger.</p>
+    <p>One oddity is real, and deliberate. Carry a piece in a loop and bring it back
+    to where it started: it comes home <strong>turned</strong>. That is not a bug — it is the
+    curvature, which you have just measured with your finger. On the flat boards
+    ({4,4} and {6,3}) the same loop brings it back exactly as it left.</p>
+    <h2>The math</h2>
+    <p>Whether <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span><span class="mclose">}</span></span></span></span> is flat or curved is one comparison: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span></span> against
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span>. Equal to <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> and the tiling is flat — that is <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">4</span><span class="mclose">}</span></span></span></span> squares,
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mclose">}</span></span></span></span> hexagons, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">6</span><span class="mclose">}</span></span></span></span> triangles, and no others. Greater than <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> and it
+    is hyperbolic, which is nearly all of them.</p>
+    <p>Curved boards get big fast. The rings of a flat board grow by a fixed amount —
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">16</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">24</span></span></span></span> tiles — but on <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">5</span><span class="mclose">}</span></span></span></span> they <em>multiply</em>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>, then <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">12</span></span></span></span>, then
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">48</span></span></span></span>, four times over at every step. Almost all of such a board is near its
+    edge, which is exactly why a good hyperbolic level stays small.</p>
+    <p>One more gift of the curvature: here, <strong>angles determine area</strong>. A flat square
+    can be any size you like, but a <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">5</span><span class="mclose">}</span></span></span></span> tile — a square whose corners are
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">72°</span></span></span></span> instead of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">90°</span></span></span></span> — has exactly one possible area, fixed by how much its
+    angles fall short of the flat total. That <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">18°</span></span></span></span> shortfall at each corner <em>is</em>
+    the tile. It is also why the tiles cannot quietly be different sizes, however
+    convincingly the map draws them.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

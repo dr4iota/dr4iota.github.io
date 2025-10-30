@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/gallery/images/fractal/app-icon-96.webp">
+  <title>Lattice pearls — Fantastic Fractal Explorer</title>
+  <meta name="description" content="Explore the beauty of generated fractals interactively.">
+  <link rel="canonical" href="https://driota.xyz/fractal/lattice-pearls.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lattice pearls — Fantastic Fractal Explorer">
+  <meta property="og:description" content="Explore the beauty of generated fractals interactively.">
+  <meta property="og:url" content="https://driota.xyz/fractal/lattice-pearls.html">
+  <meta property="og:image" content="https://driota.xyz/run/gallery/images/fractal/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lattice pearls — Fantastic Fractal Explorer">
+  <meta name="twitter:description" content="Explore the beauty of generated fractals interactively.">
+  <meta name="twitter:image" content="https://driota.xyz/run/gallery/images/fractal/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-fractal">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/fractal/?item=lattice-pearls">Open in Fantastic Fractal Explorer →</a></div>
+    <h1>Lattice pearls — Fantastic Fractal Explorer</h1>
+    <h3>Lattice pearls</h3>
+    <p>Stand four mirrors around a square, so that the square&#39;s reflections tile the whole plane, and
+    put one round mirror, a disc, inside it. A flat mirror reflects a point across a line; a round
+    mirror <em>inverts</em> it: a point inside the disc goes to the point outside it on the same ray from
+    the center, at distance <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">/</span><span class="mord mathnormal">d</span></span></span></span> when it was at distance <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span>, where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span></span></span></span> is the radius.</p>
+    <p>Every point of the plane is first reflected back into the square, the cell. If it lands
+    inside the disc, it is inverted out of it, reflected back into the cell again, and so on. Most
+    points get out after a few steps, and they are colored by how many steps they took and by
+    where they left the disc. The points that never get out form the <em>limit set</em>, drawn black.</p>
+    <p>The disc&#39;s reflections in the mirrors fill the plane with copies of it, one in every cell.
+    Inverting in the disc shrinks all those copies into small discs inside it, and they in turn
+    hold smaller copies, and so on: rings of pearls inside pearls. While the disc keeps clear of
+    the mirrors, the limit set is a fine dust. Bring the disc up to a mirror and the pearls crowd
+    together near the point where they touch, where points need more and more steps to get out.</p>
+    <p>With <strong>Mirrors</strong> at 1, only the two upright mirrors are kept, and the picture repeats along a
+    band instead of in both directions.</p>
+    <h3>Parameters</h3>
+    <h4>GUI Parameters</h4>
+    <ul>
+    <li><strong>Iterations</strong>: How many inversions a point may take before it counts as staying.</li>
+    <li><strong>Mirrors</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> for the four mirrors around the square (a lattice), <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> for the two
+    upright ones only (a frieze).</li>
+    </ul>
+    <h4>Control Points</h4>
+    <ul>
+    <li><strong>Center</strong>: The center of the disc. It stays inside the cell <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">−</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>.</li>
+    <li><strong>Rim</strong>: A point on the edge of the disc; its distance from the center is the radius,
+    which stays between <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.02</span></span></span></span> and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>.</li>
+    </ul>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.226 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

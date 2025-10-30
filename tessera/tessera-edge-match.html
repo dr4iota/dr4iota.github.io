@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/packing/images/tessera/app-icon-96.webp">
+  <title>Hyperbolic Edge Match — Grid Puzzle Games</title>
+  <meta name="description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <link rel="canonical" href="https://driota.xyz/tessera/tessera-edge-match.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hyperbolic Edge Match — Grid Puzzle Games">
+  <meta property="og:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta property="og:url" content="https://driota.xyz/tessera/tessera-edge-match.html">
+  <meta property="og:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hyperbolic Edge Match — Grid Puzzle Games">
+  <meta name="twitter:description" content="Fill, mosaic, slide, merge, drop and clear puzzles on flat and curved boards.">
+  <meta name="twitter:image" content="https://driota.xyz/run/packing/images/tessera/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-tessera">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://driota.xyz/feedback.html">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/tessera/?group=tessera-edge-match">Open in Grid Puzzle Games →</a></div>
+    <h1>Hyperbolic Edge Match — Grid Puzzle Games</h1>
+    <p><strong>Curved Edge Match</strong> is the MacMahon puzzle — tiles painted per edge, laid so
+    that every shared edge shows the same color on both sides — on boards that are
+    not flat.</p>
+    <h2>The colors ride the tile</h2>
+    <p>This sounds too obvious to say, and it is the whole difficulty: <strong>turn a tile
+    and its colors turn with it.</strong> A tile is not &quot;red on top&quot;; it is red on <em>one
+    of its own edges</em>, and which way that edge faces depends on how you have
+    turned it and, on a curved board, on where it sits.</p>
+    <p>That second part is the new one. On a flat board you can think in terms of a
+    fixed compass — this edge faces north — and carry that idea anywhere on the
+    board. A curved board has no compass. Carry a heading around a closed loop in
+    the hyperbolic plane and it comes back <strong>turned</strong>, by an amount equal to the
+    area you walked around. So &quot;north&quot; is not something the board can offer.</p>
+    <p>What the game does instead is carry each tile&#39;s own frame with it. The seam
+    test never asks which way an edge faces in some global sense; it asks only what
+    the two tiles facing each other actually show. That question always has an
+    answer, on any board.</p>
+    <h2>Why some tile sets cannot work</h2>
+    <p>Edge-matching is unforgiving in a way that packing is not. A set of tiles can
+    be perfectly reasonable — the right number, the right colors — and still admit
+    no arrangement at all.</p>
+    <p>The honeycomb level is a case in point. Seven tiles whose colors simply
+    alternate around each hexagon cannot be made to agree anywhere on the board;
+    the alternating pattern fights itself. Mixing in tiles that are split — three
+    edges of one color, three of the other, in a run — makes the board solvable.
+    Every level here was checked by the solver before it shipped, so a board that
+    cannot be finished never reaches you.</p>
+    <h2>Odd numbers of edges</h2>
+    <p>A pentagon has five sides, and five will not divide evenly into anything. You
+    cannot paint a pentagon in halves, or in stripes that come out even; three and
+    two is as close as it gets. So each of a tile&#39;s five turns shows a genuinely
+    different arrangement, where a square tile&#39;s four turns include a repeat if it
+    happens to be painted symmetrically.</p>
+    <p>More distinct turns means more to try, and less that your eye can rule out at a
+    glance.</p>
+    <h2>Where it comes from</h2>
+    <p>Percy MacMahon, an English mathematician and army officer, cataloged the
+    edge-colored tile sets that carry his name in <em>New Mathematical Pastimes</em>
+    (1921) — the 24 three-colored triangles, the 24 squares. The puzzles were his
+    recreation from a career spent on partitions and combinatorics. He worked in
+    the plane. The curved boards are what happens when you keep his rule and take
+    away his compass.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-11-25 17:11 UTC · v0.6.0-preview.190 · 52adeb11</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>
