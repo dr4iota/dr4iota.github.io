@@ -1,0 +1,63 @@
+{
+  "sections": [
+    {
+      "title": "Fantastic Fractals 0.2.0",
+      "items": [
+        {
+          "text": "[Browser App]",
+          "href": "https://driota.xyz/fractal/"
+        },
+        {
+          "text": "[Binary Download]",
+          "href": "https://github.com/dr4iota/dr4iota.github.io/releases/tag/fractal-latest"
+        },
+        {
+          "text": "[Google Play]",
+          "href": "https://play.google.com/store/apps/details?id=xyz.driota.fractal"
+        },
+        {
+          "text": "[Amazon Store]",
+          "href": "https://www.amazon.com/Doctor-Iota-Fantastic-Fractals/dp/B0FNGZB5TN"
+        }
+      ]
+    },
+    {
+      "title": "Triangular Geometry 0.1.0",
+      "items": [
+        {
+          "text": "[Browser WebApp]",
+          "href": "https://driota.xyz/trikona/"
+        },
+        {
+          "text": "[Binary Download]",
+          "href": "https://github.com/dr4iota/dr4iota.github.io/releases/tag/trikona-latest"
+        },
+        {
+          "text": "[Google Play]",
+          "href": "https://play.google.com/store/apps/details?id=xyz.driota.trikona"
+        }
+      ]
+    },
+    {
+      "title": "Support Us",
+      "items": [
+        {
+          "text": "Buy Me a Coffee",
+          "href": "https://www.buymeacoffee.com/driota"
+        },
+        {
+          "text": "Patreon",
+          "href": "https://www.patreon.com/driota"
+        },
+        {
+          "text": "iOS and Mac OS Apps",
+          "href": "https://driota.xyz/ios.html"
+        },
+        {
+          "text": "Drop a Note",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog"
+        }
+      ]
+    }
+  ]
+}
