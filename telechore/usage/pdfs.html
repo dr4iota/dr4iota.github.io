@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Reading PDFs and pictures — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.5.2 — <a href="../changes.html#v0-5-2">what's new in it</a>.</p>
+<h1 id="reading-pdfs-and-pictures">Reading PDFs and pictures</h1>
+<p>A PDF opens in Telechore&#39;s own viewer, the same on every device: the pages one
+under another at the width of the window, in the app&#39;s light or dark colours.
+In dark mode the text and lines take the dark theme&#39;s colours and keep their
+hue; the pictures in the PDF keep theirs. The page you are on shows at the
+bottom right while you scroll. Words can be selected and copied. Scanned
+pages are drawn too, including black-and-white scans and faxes (JBIG2 and
+CCITT) and JPEG 2000 pictures.</p>
+<p><strong>Source</strong>, beside <strong>Preview</strong> in the header, shows the PDF&#39;s size, date and
+version, and the start of the file in hex.</p>
+<h2 id="zoom-and-pan">Zoom and pan</h2>
+<p>The same as in <a href="terminal.html">the terminal</a>:</p>
+<ul>
+<li><strong>Pinch</strong> to zoom, and <strong>drag with two fingers</strong> to move around a page
+larger than the window. One finger scrolls.</li>
+<li>On a computer, <strong>Ctrl+wheel</strong> zooms (<strong>Cmd</strong> on a Mac, and a trackpad&#39;s
+pinch), <strong>Ctrl+drag</strong> moves the page, and the plain wheel scrolls.
+<strong>Ctrl+=</strong> and <strong>Ctrl+−</strong> zoom a step.</li>
+</ul>
+<h2 id="reset-view">Reset view</h2>
+<p><strong>Hold two fingers still</strong> on the page until the note at the top says
+<em>Release to reset view</em>, then lift them; or <strong>Ctrl+double-click</strong>, or
+<strong>Ctrl+0</strong>. Each reset goes on to the next of three views, keeping the page
+you are reading:</p>
+<ol>
+<li><strong>Full width</strong> — the page across the window, as it opens.</li>
+<li><strong>Margins cut</strong> — the paper around the text cut away on all four sides, so
+the words fill the window and the pages run on with little between them.
+Zooming and moving keep the cut.</li>
+<li><strong>Whole page</strong> — the whole page in the window at once.</li>
+</ol>
+<p>A view that would look the same as one before it is passed over: on a phone
+held upright the whole page is the full width, so a reset goes between Full
+width and Margins cut. After you zoom or move, the next reset goes back to
+Full width.</p>
+<h2 id="links">Links</h2>
+<p>A link to a website or an email address opens in your browser or mail app, as
+a link in a Markdown file does. A link to another page of the PDF goes there.
+Links to anything else — a file, a program — are not followed.</p>
+<h2 id="pictures">Pictures</h2>
+<p>A picture opens the same way: zoom and move it as a PDF, and <strong>Reset view</strong>
+goes on to the next of three views, each centred:</p>
+<ol>
+<li><strong>Fit</strong> — the whole picture in the window, as it opens.</li>
+<li><strong>Fill</strong> — the picture covering the window, the rest of it a drag away.</li>
+<li><strong>Actual size</strong> — the picture at 100 %, one of its pixels to a pixel of the
+app&#39;s page, as a browser shows it at 100 %.</li>
+</ol>
+<p>A view that would look the same as one before it is passed over.</p>
+<h2 id="full-screen">Full screen</h2>
+<p><strong>Full screen</strong>, beside <strong>Refresh</strong> in the header, shows the PDF or the
+picture alone, on the whole screen. A tap shows the way out at the top right,
+the file&#39;s name, size and date at the top left, and at the bottom right the
+page you are on, or for a picture its size in pixels and its view (<em>4032 ×
+3024</em>, <em>Fill · 140 %</em>); a tap while they show hides them all. On a phone, nothing
+is under the status bar or the cutout until you scroll or zoom. Zoom and
+Reset view work as before. To leave, tap the way out, press <strong>Esc</strong> or
+<strong>F11</strong>, or Back.</p>
+<h2 id="what-it-does-not-do-yet">What it does not do yet</h2>
+<p>A PDF with a password says it cannot be opened.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-11-07 00:48 UTC from Telechore 0.5.2; the site at 965a8c91, 9 commits after v0.5.2, with treesight 9f4a8cd.</p>
+</footer>
+</body>
+</html>

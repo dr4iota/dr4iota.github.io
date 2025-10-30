@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Opening files from other apps — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.5.2 — <a href="../changes.html#v0-5-2">what's new in it</a>.</p>
+<h1 id="opening-files-from-other-apps">Opening files from other apps</h1>
+<h2 id="on-android">On Android</h2>
+<p>On Android, Telechore is offered for <strong>PDF</strong> and <strong>Markdown</strong> files in another
+app&#39;s <strong>Open with</strong> list and in its <strong>Share</strong> sheet, as two entries:</p>
+<ul>
+<li><strong>View in Telechore</strong> shows the file on its own, with no tree, marked <strong>Not
+saved</strong>: Telechore shows a copy that goes when you leave it. <strong>Save to
+Files</strong>, at the top left, keeps the copy in Files and shows it there.
+<strong>Start</strong>, beside it, goes to the start page and drops the copy.</li>
+<li><strong>Save to Telechore</strong> keeps the file in <strong>Files</strong> straight away and shows it
+there. A file of the same name with the same contents is the copy already
+there; one with other contents is kept beside it as <em>name (2)</em>.</li>
+</ul>
+<p>Telechore is never made the default. Android&#39;s <strong>Always</strong> makes it so, and
+you can change that in Android&#39;s settings for the app.</p>
+<p>If a folder is open in Telechore, it is closed: the file takes its place, and
+the folder is in Recent. <strong>Back</strong> goes back to the app the file came from.</p>
+<p>A Markdown file arrives on its own, so a picture or another file it links to
+beside it is not there to show.</p>
+<p>Files you no longer want in <strong>Files</strong> can be removed with <strong>Delete</strong> on their
+row; there is no Trash on a phone, so it asks first.</p>
+<h2 id="on-a-computer">On a computer</h2>
+<p>On Windows, Linux and macOS, Telechore is offered in <strong>Open with</strong> for PDF,
+Markdown and Mermaid files (<code>.mmd</code>, <code>.mermaid</code>; not on macOS yet). It is never
+made the default; your system&#39;s own setting does that. On a Linux desktop with
+nothing else set to open Markdown, the system may pick Telechore for it until
+you choose another.</p>
+<p>The file is opened where it is, not copied, and shown on its own:</p>
+<ul>
+<li>If nothing is open in Telechore — including when it was not running — it
+opens in the main window, with <strong>Show folder</strong> and <strong>Start</strong> at the top left.</li>
+<li>Otherwise it opens in a window of its own, with <strong>Show folder</strong> and <strong>Main
+window</strong>. Opening the same file again brings its window to the front.</li>
+</ul>
+<p><strong>Show folder</strong> shows the file&#39;s folder as a tree, with the file still open; a
+PDF or a picture, whose page has room for nothing else, gives way to its
+folder&#39;s list, with the file&#39;s row lit. In the main window the folder then goes
+into Recent. A Markdown file&#39;s
+pictures and links to files beside it work, since its folder is there.</p>
+<h2 id="sending-a-file-to-another-app">Sending a file to another app</h2>
+<p>On Android, a file&#39;s <strong>Send</strong> menu, at the right of its header, holds <strong>Open
+with…</strong> and <strong>Share…</strong>: the first offers the apps that open such a file, the
+second the system&#39;s share sheet. A file on a server is fetched first. Telechore
+is not offered to itself. The same menu holds <strong>Download…</strong> and <strong>Print…</strong>.</p>
+<p>A key&#39;s public line has <strong>Share</strong> beside <strong>Copy Public Key</strong>, on the Servers
+page, for sending it to another app without the clipboard.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-11-07 00:48 UTC from Telechore 0.5.2; the site at 965a8c91, 9 commits after v0.5.2, with treesight 9f4a8cd.</p>
+</footer>
+</body>
+</html>
