@@ -1,0 +1,94 @@
+{
+  "sections": [
+    {
+      "title": "Mobile",
+      "items": [
+        {
+          "label": "Join for Preview",
+          "info": "Join Google Group to get Android apps from Google Play (preview release)",
+          "icon": "Android",
+          "href": "https://groups.google.com/g/driota"
+        },
+        {
+          "label": "Coming Soon",
+          "info": "We are waiting for a modern apple silicon to build",
+          "icon": "iOS",
+          "href": "https://driota.xyz/ios.html"
+        }
+      ]
+    },
+    {
+      "title": "Fractals",
+      "icon": "GlobeAlt",
+      "href": "https://driota.xyz/fractal/",
+      "items": [
+        {
+          "label": "Play Store",
+          "note": "↑Join↑",
+          "info": "Free app. Click \"Join for Preview\" above first — required for preview access.",
+          "icon": "GooglePlay",
+          "href": "https://play.google.com/store/apps/details?id=xyz.driota.fractal"
+        },
+        {
+          "label": "Amazon",
+          "icon": "ShoppingBag",
+          "href": "https://www.amazon.com/dp/B0FNGZB5TN"
+        }
+      ]
+    },
+    {
+      "title": "Triangles",
+      "icon": "GlobeAlt",
+      "href": "https://driota.xyz/trikona/",
+      "items": [
+        {
+          "label": "Play Store",
+          "note": "↑Join↑",
+          "info": "Paid app ($3.14). Click \"Join for Preview\" above first — required for preview access.",
+          "icon": "GooglePlay",
+          "href": "https://play.google.com/store/apps/details?id=xyz.driota.trikona"
+        },
+        {
+          "label": "Amazon",
+          "icon": "ShoppingBag",
+          "href": "https://www.amazon.com/dp/B0G1L2GJ98"
+        }
+      ]
+    },
+    {
+      "title": "Support Us",
+      "items": [
+        {
+          "label": "YouTube",
+          "icon": "YouTube",
+          "href": "https://www.youtube.com/@driota"
+        },
+        {
+          "label": "Instagram",
+          "icon": "Instagram",
+          "href": "https://www.instagram.com/driota.xyz/"
+        },
+        {
+          "label": "TikTok",
+          "icon": "TikTok",
+          "href": "https://www.tiktok.com/@driota.xyz"
+        },
+        {
+          "label": "Drop a Note",
+          "icon": "PencilSquare",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog"
+        },
+        {
+          "label": "Buy Me a Coffee",
+          "icon": "BuyMeACoffee",
+          "href": "https://www.buymeacoffee.com/driota"
+        },
+        {
+          "label": "Patreon",
+          "icon": "Patreon",
+          "href": "https://www.patreon.com/driota"
+        }
+      ]
+    }
+  ]
+}
