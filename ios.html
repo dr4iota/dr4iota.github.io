@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Building for macOS & iOS</title>
+  <style>
+    :root{
+      --bg: #0b1020;
+      --fg: #e9edf5;
+      --muted: #b7c0d1;
+      --accent: #7aa2ff;
+      --accent-2: #79f2d0;
+      --card: #151b3a;
+      --shadow: 0 10px 30px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+    *{box-sizing: border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    .container{max-width: 1000px; margin: 0 auto; padding: 24px}
+    .card{background: var(--card); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); margin-bottom:24px}
+    h1{font-size: clamp(28px, 4vw, 44px); line-height:1.15; margin: 0 0 12px}
+    p.lead{font-size: clamp(16px, 2vw, 19px); color: var(--muted); margin: 0 0 18px}
+    ul{margin:0 0 18px 20px}
+    .facts{display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 14px}
+    .fact{background: var(--card); border-radius:14px; padding:18px}
+    .fact h3{margin:0 0 6px; font-size:16px}
+    .fact p{margin:0; color: var(--muted); font-size:14px}
+    .why{display:grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 26px 0 6px;}
+    .why .item{background: var(--card); border-radius:14px; padding:18px}
+    .why .item h4{margin:0 0 8px; font-size:16px}
+    .why .item p{margin:0; color: var(--muted); font-size:14px}
+    a{color: var(--accent-2); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    footer{margin:36px 0 20px; color: var(--muted); font-size:14px; text-align:center}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="card">
+      <h1>Building for Apple Platforms</h1>
+      <p class="lead">Currently, macOS builds are limited to Intel (x86_64). Our existing Mac cannot run the modern Apple toolchain, so creating or testing iOS apps is not possible, nor can we produce universal Apple-silicon macOS binaries.</p>
+      <p>We will need to obtain a new Apple Silicon Mac once sufficient funding is available. This will allow us to:</p>
+      <ul>
+        <li>Build and ship <strong>universal</strong> macOS apps (Apple Silicon + Intel).</li>
+        <li>Develop, test, and publish <strong>iOS apps</strong> for iPhone and iPad.</li>
+        <li>Maintain an <strong>up-to-date</strong> toolchain for security, performance, and compatibility.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>At a glance</h2>
+      <div class="facts">
+        <div class="fact">
+          <h3>Current Limitation</h3>
+          <p>macOS builds are <strong>Intel-only</strong>; no iOS builds.</p>
+        </div>
+        <div class="fact">
+          <h3>Root Cause</h3>
+          <p>The development Mac is <strong>too outdated</strong> for modern Apple SDKs.</p>
+        </div>
+        <div class="fact">
+          <h3>Solution</h3>
+          <p>Acquire an <strong>Apple Silicon</strong> Mac to access modern toolchains.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="item">
+        <h4>Reach more users</h4>
+        <p>Universal binaries ensure smooth performance on M-series Macs while still supporting Intel users.</p>
+      </div>
+      <div class="item">
+        <h4>Build for iOS</h4>
+        <p>We can finally compile, test, and ship apps for iPhone and iPad.</p>
+      </div>
+      <div class="item">
+        <h4>Improve quality</h4>
+        <p>Modern SDKs enable better security, accessibility, and reliability for everyone.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Leave a note or comment</h2>
+      <p style="font-size:13px; color: var(--muted); line-height:1.5;">
+        • Drop a note: <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog" target="_blank">Google form</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>Committed to transparency and delivering great apps on Apple platforms.</p>
+    </footer>
+  </div>
+</body>
+</html>
+

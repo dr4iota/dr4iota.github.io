@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Files offline — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.6.0 — <a href="../changes.html#v0-6-0">what's new in it</a>.</p>
+<h1 id="files-offline">Files offline</h1>
+<p>What you open on a server is stored on this device for a while, so you can
+browse when the server cannot be reached, and a file that has not changed is
+not fetched again. A file you mark “Keep offline” stays until you remove it.
+A file you only opened can be dropped when this device needs the room.</p>
+<h2 id="a-folders-rows">A folder&#39;s rows</h2>
+<p>Everything you can do with a file or folder is on its row.</p>
+<ul>
+<li><strong>The icon is “Keep offline”.</strong> The bookmark on the icon is outlined while
+the file or folder is not kept, and filled while it is. Tap the icon to
+switch. A file&#39;s own page has the same button. A grey bookmark means the
+item is kept because its folder is kept, or that the server has changed a
+kept copy since this device stored it. That bookmark cannot be switched
+from the row.</li>
+<li><strong>A line under the row</strong> says what this device has. It says “Offline”, and
+when, for a copy you keep, or “Cached”, and when, for a file you only
+opened. Next to that, “Forget” removes the copy on this device. Nothing on
+the server changes. When the server has a newer file, “Update” at the end
+of the line fetches it without opening it.</li>
+<li><strong>Keeping a folder</strong> keeps that folder and everything in it. Telechore
+counts the folder first, then says how many files that is and how much
+space they take, and asks you to confirm. Hidden files and folders (names
+starting with <code>.</code>), <code>node_modules</code>, disk images and files a program
+generated are left out. A folder bigger than 2 GB on Android, or 10 GB on a
+computer, is refused, and so is one that would leave this device with too
+little room. Files added or changed on the server are fetched the next time
+you open their folder. When those changes add up to more than 50 MB,
+“Update” on the folder&#39;s line fetches them. A file that could not be
+fetched is named on that line, with “Try again”. “Forget” on that line
+removes the folder&#39;s copies.</li>
+<li>“Download” (the arrow at the end of the row) saves a copy where you
+choose: a folder on a desktop, and the system&#39;s “Save to…” sheet on
+Android.</li>
+<li>“Delete” (the bin) deletes the file, or an empty folder, from the
+server. It asks every time. A copy you kept offline stays, in Cache.</li>
+</ul>
+<p>In the sidebar&#39;s tree, a bookmark after a name marks what you keep offline.</p>
+<h2 id="when-the-server-cannot-be-reached">When the server cannot be reached</h2>
+<p>If the connection drops while a folder is open — on Android this happens a
+few seconds after the app leaves the screen — the next page you open connects
+again. The status bar says <em>Reconnecting to …</em> until it has. If the
+connection needs a password or passphrase again, one that is not saved, or a
+one-time code, it asks on the page you are on.</p>
+<p>A folder on that server then opens from the copy on this device. Across the
+page it says <em>cannot be reached</em>, and it says when that copy was made.
+Folders you never opened, and files you never fetched, are grey. “Try again”
+connects once the network is back.</p>
+<h2 id="cache">Cache</h2>
+<p>“Cache”, in Places, lists the servers this device holds files from. Inside a
+server, each folder that has a copy is one row, named by its path on the
+server. A long path is shown with the start cut off, as in <code>… › pi › src</code>.
+Open that row to see the copies. A server&#39;s row says how much it holds in
+all, across how many folders and files, and how much of that is only cached
+and can be freed. The server&#39;s row, and each folder&#39;s row, shows when its
+newest copy arrived. “Forget” and “Keep offline” work here too. “Clear…” on a
+server&#39;s row removes everything held from that server.</p>
+<p>Files you only opened are removed when they take more than 500 MB (200 MB on
+Android), oldest first. Android may also remove them when it needs room.
+Files you keep offline are never removed for you. When a file has changed on
+the server, its copy says so. It is refreshed the next time you open the file
+there, or when you press “Update” on its line.</p>
+<h2 id="each-server">Each server</h2>
+<p>On the server&#39;s “Server” tab, “Cache this server&#39;s files” is the switch for
+this. Turn it off and nothing from that server is stored on this device.
+Below the switch, the page says how much the cache takes here, with “Clear
+cache…”. Deleting a server removes its cache.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-11-12 03:40 UTC from Telechore 0.6.0; the site at 50f2dc91, 29 commits after v0.6.0, with treesight 5324b01.</p>
+</footer>
+</body>
+</html>

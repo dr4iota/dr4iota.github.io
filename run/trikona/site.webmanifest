@@ -1,0 +1,20 @@
+{
+  "name": "Animated Geometry Proofs",
+  "short_name": "ιGeometry",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1f5f5b",
+  "theme_color": "#1f5f5b",
+  "icons": [
+    {
+      "src": "images/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

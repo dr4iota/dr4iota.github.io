@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Opening files from other apps — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.6.0 — <a href="../changes.html#v0-6-0">what's new in it</a>.</p>
+<h1 id="opening-files-from-other-apps">Opening files from other apps</h1>
+<h2 id="on-android">On Android</h2>
+<p>On Android, another app&#39;s “Open with” list and its share sheet offer
+Telechore for PDF and Markdown files, as two entries:</p>
+<ul>
+<li>“View in Telechore” shows the file on its own, with no tree. The page is
+marked “Not saved”. Telechore is showing a copy, and that copy disappears
+when you leave it. “Save to Files”, at the top left, keeps the copy in
+Files and shows it there. “Start”, beside it, goes to the start page and
+drops the copy.</li>
+<li>“Save to Telechore” puts the file in “Files” straight away and shows it
+there. If Files already has a file of the same name and the same contents,
+that existing copy is the one you see. If the name matches but the contents
+differ, the new file is kept beside it as <em>name (2)</em>.</li>
+</ul>
+<p>Telechore never sets itself as the default app. Choosing Android&#39;s “Always”
+does, and you can change that in Android&#39;s settings for Telechore.</p>
+<p>If a folder is already open, Telechore closes it. The file takes its place,
+and the folder is left in Recent. “Back” returns to the app the file came
+from.</p>
+<p>A Markdown file arrives on its own, so a picture or another file it links to,
+sitting beside it, is not there to show.</p>
+<p>Files you no longer want in “Files” can be removed with “Delete” on their
+row. There is no Trash on a phone, so “Delete” asks first.</p>
+<h2 id="on-a-computer">On a computer</h2>
+<p>On Windows, Linux and macOS, “Open with” offers Telechore for PDF, Markdown
+and Mermaid files (<code>.mmd</code> and <code>.mermaid</code>; Mermaid is not offered on macOS
+yet). Telechore never sets itself as the default. Your system&#39;s own setting
+does that. On a Linux desktop, if nothing else is set to open Markdown, the
+system may choose Telechore until you pick another app.</p>
+<p>The file is opened where it is, not copied, and shown on its own:</p>
+<ul>
+<li>If nothing is open in Telechore, including when Telechore was not running,
+the file opens in the main window. “Show folder” and “Start” are at the
+top left.</li>
+<li>Otherwise the file opens in a window of its own, with “Show folder” and
+“Main window”. Opening the same file again brings that window to the front.</li>
+</ul>
+<p>“Show folder” shows the file&#39;s folder as a tree, with the file still open. A
+PDF or a picture has no room on its page for a tree, so the page changes to
+the folder&#39;s list, with that file&#39;s row highlighted. In the main window the
+folder then goes into Recent. Pictures in a Markdown file, and its links to
+files beside it, work once the folder is open.</p>
+<h2 id="sending-a-file-to-another-app">Sending a file to another app</h2>
+<p>On Android, “Send” at the right of a file&#39;s header holds “Open with…” and
+“Share…”. “Open with…” lists the apps that open this kind of file. “Share…”
+opens the system&#39;s share sheet. A file on a server is fetched first.
+Telechore does not offer itself. The same menu also holds “Download…” and
+“Print…”.</p>
+<p>On the Servers page, next to “Copy Public Key”, a key&#39;s public text has
+“Share”, for sending that public key to another app without using the
+clipboard.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-11-12 03:40 UTC from Telechore 0.6.0; the site at 50f2dc91, 29 commits after v0.6.0, with treesight 5324b01.</p>
+</footer>
+</body>
+</html>

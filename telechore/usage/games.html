@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Games — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.6.0 — <a href="../changes.html#v0-6-0">what's new in it</a>.</p>
+<h1 id="games">Games</h1>
+<p>Telechore includes Termoasis&#39;s console games, such as 2048, Sudoku, Mines,
+Snake and Life. They are drawn with the characters of a terminal. They run in
+the app itself, with no server and no connection, on every platform.</p>
+<p>“Games” is the last section of the start page, and of the sidebar. It has one
+row, “Termoasis console games”, which opens the welcome menu.</p>
+<h2 id="the-welcome-menu-and-the-picker">The welcome menu and the picker</h2>
+<p>The welcome menu lists every game by kind: puzzles, arcade games and
+simulations. Move to a game and press “Play” (or Enter) to start it.</p>
+<p>The name at the top of the page is also the picker. Tap it to switch to any
+game, including in the middle of one, or to go back to “Welcome”. “Up”, to
+the left of the name (or the first item in “⋯”), quits the game and returns
+to the welcome menu, still on the game you left.</p>
+<h2 id="playing">Playing</h2>
+<p>On a touch screen each game draws its own keys under the board, or beside it
+when the screen is held sideways. The arrows are on the right, the game&#39;s own
+actions (Undo, Restart, Place, Drop…) are on the left, and games that take
+numbers have a number pad. With a keyboard, those on-screen keys are hidden
+and the game&#39;s keyboard shortcuts work. “Keys” in the header shows or hides
+the on-screen keys either way.</p>
+<p>Some games are steered by a finger on the board. In Paddles, drag to move the
+paddle.</p>
+<h2 id="levels-and-modes">Levels and modes</h2>
+<p>A game&#39;s levels, difficulty or mode — Warehouse&#39;s levels, Mines&#39; difficulty,
+Chaos&#39;s mode — is a stepper. “‹” and “›” step through the choices, and a tap
+on the current value lists them all. The stepper sits in the header when
+there is room. Otherwise it sits in a band under the header, or beside the
+keys when the screen is turned sideways. “⋯” lists every setting the game
+has, and each one opens its list. The game&#39;s own keys still work. On a
+command line, <code>set level 12</code> does the same.</p>
+<p>“Help” shows the game&#39;s own help: its keys, and the commands it takes.
+“Command” opens a line for one command, such as <code>family julia</code> in Fractals
+or <code>pattern glider</code> in Life. Each game&#39;s help says which commands it has.</p>
+<p>If a game needs more room than the screen has, it is drawn smaller, down to a
+font that can still be read. If it still does not fit, it says how much room
+it needs. Mines on Expert, on a phone held upright, is the case you are most
+likely to see.</p>
+<p>When the header has room, “Keep”, “Keys”, “Help” and “Command” sit in it. On
+a narrow screen they are behind “⋯”, or beside the level control under the
+header. With the screen turned sideways, they sit at the top of the keys when
+there is room.</p>
+<h2 id="keeping-a-game">Keeping a game</h2>
+<p>“Keep” (the anchor) in the header keeps a game running while you go
+elsewhere, in the same way “Keep” keeps a terminal. Leave the page, press
+“Up”, or pick another game, and the kept game waits where you left it. You
+come back to it from the strip of “Kept” games on the welcome menu, or from a
+terminal&#39;s list. A game you did not keep closes when you leave it. A game
+that has ended is replaced by the next one.</p>
+<p>Kept games do not count towards the number of terminals the free edition may
+keep running, and quitting the app does not ask about them.</p>
+<p>A kept game lasts only as long as the app does. Closing the app, or Android
+closing it in the background, ends the game, just as that ends a kept
+terminal. What a game has saved stays: every game&#39;s best score.</p>
+<h2 id="in-a-browser">In a browser</h2>
+<p>The same games can be played on Telechore&#39;s website, under “Play”, in any
+current browser. Saves there stay in the browser.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-11-12 03:40 UTC from Telechore 0.6.0; the site at 50f2dc91, 29 commits after v0.6.0, with treesight 5324b01.</p>
+</footer>
+</body>
+</html>

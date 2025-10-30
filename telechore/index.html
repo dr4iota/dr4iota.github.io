@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- How `./build.sh website DIR` knows a copy of this site. -->
+<meta name="driota-site" content="telechore">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Telechore — file viewer and SSH terminal</title>
+<meta name="description" content="Telechore: a file viewer and an SSH terminal. Browse folders as a tree and read PDFs, Markdown and code, on this device or on a server, and work in its terminal, on Android, Windows and Linux.">
+<!-- What a chat or a feed shows for a shared link. The one absolute address
+     on the page: a preview is fetched from elsewhere, so a relative one would
+     name nothing (docs/website.md). -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Telechore — file viewer and SSH terminal">
+<meta property="og:description" content="PDFs, Markdown and code, on the device or a server over SSH, and a terminal made for a touch screen. Android, Windows and Linux.">
+<meta property="og:url" content="https://driota.xyz/telechore/">
+<meta property="og:image" content="https://driota.xyz/telechore/img/feature.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body>
+<!-- Written to site/index.html by tools/site/build.mjs from tools/site/index.html.
+     Links are relative, so this works at driota.xyz/telechore/ whichever way
+     it is hosted (docs/website.md). img/ and usage/ are written by the same
+     script, and the list between the usage-nav markers: app/usage/README.md's
+     list, of the version the site describes. -->
+<header class="bar">
+  <a class="brand" href="./"><img src="img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="usage/">Usage</a>
+  <a href="changes.html">What's new</a>
+  <a href="play/">Play</a>
+  <a href="feedback.html">Feedback</a>
+  <a href="https://github.com/dr4iota/treesight/releases">Releases</a>
+</header>
+<main>
+<h1>Telechore</h1>
+<!-- The main store listing's opening, in the order the app grew: a file
+     browser, its servers over SSH, the terminal, then PDFs (the user, 11
+     November 2026; docs/store/listing/description-play.txt). -->
+<p class="lead">A file viewer and an SSH terminal for your phone or desktop:
+read PDFs, Markdown and code on your device or on your own servers.</p>
+<p>Browse any folder as a tree, on this device or on a server over SSH, and
+read the file you pick, rendered: code with highlighting, Markdown with
+diagrams and math, pictures and PDFs. When you need to work on the server,
+you can open a terminal there over the same connection, with the keys a phone
+keyboard lacks, or a full keyboard with the phone on its side. A PDF laid out
+in two or three columns can be read one column at a time. There is nothing to
+install on the server.</p>
+<p class="topics"><span class="label">Features:</span>
+  <a href="#files">Read files</a> <span class="sep" aria-hidden="true">|</span>
+  <a href="#terminal">Terminal</a> <span class="sep" aria-hidden="true">|</span>
+  <a href="#servers">Servers and keys</a> <span class="sep" aria-hidden="true">|</span>
+  <a href="#pdf">PDFs</a></p>
+
+<img class="hero" src="img/feature.png" width="1024" height="500"
+     alt="Telechore's terminal with its own keyboard on a tablet, and two phones showing the same PDF in full width and in single column view">
+
+<h2 id="get">Get Telechore</h2>
+<div class="get">
+  <a class="button primary" href="https://play.google.com/store/apps/details?id=xyz.driota.telechore">Google Play — Android</a>
+  <a class="button primary" href="https://apps.microsoft.com/detail/9NNCCS7Z1DPK">Microsoft Store — Windows</a>
+  <a class="button" href="https://github.com/dr4iota/treesight/releases">Download for Linux</a>
+</div>
+<p class="note">Download for Linux goes to the releases on GitHub, which carry
+Telechore for Linux — a <code>.deb</code>, an <code>.rpm</code>, and the
+plain binary — beside treesight. A copy from a store
+is the free edition: two servers, and two terminals kept running, on Google
+Play, four of each on the Microsoft Store, and single column view on 28 PDFs;
+on both, Pro lifts them for one payment with no subscription. The latest release is <a href="changes.html#v0-6-0">0.6.0</a>, from 10 November 2026;
+<a href="changes.html">What's new</a> in each version.</p>
+
+<!-- The store posters' cards, each beside its screenshot, in four sections,
+     written by the build from docs/store/posters.yaml (docs/website.md). -->
+<section class="topic" id="files">
+<h2>Read files</h2>
+<p class="lead-in">Browse a folder as a tree and read the selected file beside it, on this device or on a server over SSH.</p>
+<div class="feature upright">
+  <div><h3>Browse a server's files</h3>
+  <p>Its folders as a tree, the file you pick beside it.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/phone/browse-files-dark.png">
+    <img src="img/phone/browse-files-light.png" width="1080" height="2424" loading="lazy" alt="Browse a server's files" style="aspect-ratio: 1080 / 2060">
+  </picture>
+</div>
+<div class="feature flip">
+  <div><h3>Read a server's Markdown, formatted</h3>
+  <p>Diagrams, math and tables drawn; code highlighted, PDFs and pictures too.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/desktop/open-files-dark.png">
+    <img src="img/desktop/open-files-light.png" width="1442" height="932" loading="lazy" alt="Read a server's Markdown, formatted">
+  </picture>
+</div>
+<div class="feature upright">
+  <div><h3>Keep a server's folder offline</h3>
+  <p>Keep a copy on your device and read it with no connection.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/phone/offline-folder-dark.png">
+    <img src="img/phone/offline-folder-light.png" width="1080" height="2424" loading="lazy" alt="Keep a server's folder offline" style="aspect-ratio: 1080 / 2060">
+  </picture>
+</div>
+</section>
+<section class="topic" id="terminal">
+<h2>Terminal</h2>
+<p class="lead-in">Open a terminal on that server, in the folder you are browsing, and keep it running while you look at the files.</p>
+<div class="feature">
+  <div><h3>A full keyboard for the terminal</h3>
+  <p>Turn the phone on its side. Laptop keys, or Coder keys with every symbol on a key of its own.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/phone/keyboards-a-dark.png">
+    <img src="img/phone/keyboards-a-light.png" width="2424" height="1080" loading="lazy" alt="A full keyboard for the terminal">
+  </picture>
+</div>
+<div class="feature upright flip">
+  <div><h3>Esc, Tab, Ctrl, Alt and the arrows</h3>
+  <p>The keys a phone keyboard is missing, above it or floating.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/phone/extra-keys-dark.png">
+    <img src="img/phone/extra-keys-light.png" width="1080" height="2424" loading="lazy" alt="Esc, Tab, Ctrl, Alt and the arrows" style="aspect-ratio: 1080 / 2060">
+  </picture>
+</div>
+<div class="feature">
+  <div><h3>Fix the terminal's size, then zoom or pan</h3>
+  <p>Full-screen programs keep their layout while the keyboard comes and goes.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/phone/terminal-size-a-dark.png">
+    <img src="img/phone/terminal-size-a-light.png" width="2424" height="1080" loading="lazy" alt="Fix the terminal's size, then zoom or pan">
+  </picture>
+</div>
+<div class="feature flip">
+  <div><h3>See a big terminal whole</h3>
+  <p>The part you work in at full size, the rest squeezed toward the edges.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/desktop/lens-dark.png">
+    <img src="img/desktop/lens-light.png" width="1442" height="932" loading="lazy" alt="See a big terminal whole">
+  </picture>
+</div>
+<div class="feature">
+  <div><h3>Search everything the terminal printed</h3>
+  <p>Every match in the terminal is highlighted, all the way back.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/desktop/search-output-dark.png">
+    <img src="img/desktop/search-output-light.png" width="1442" height="932" loading="lazy" alt="Search everything the terminal printed">
+  </picture>
+</div>
+</section>
+<section class="topic" id="servers">
+<h2>Servers and keys</h2>
+<p class="lead-in">Make an SSH key here and install it on a server in one step, or use the keys and ssh config you already have.</p>
+<div class="feature">
+  <div><h3>Server settings in one window</h3>
+  <p>Pick an SSH server from the list; its address, login, terminal and files open beside it.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/desktop/server-settings-dark.png">
+    <img src="img/desktop/server-settings-light.png" width="1442" height="932" loading="lazy" alt="Server settings in one window">
+  </picture>
+</div>
+<div class="feature flip">
+  <div><h3>Log in by key, agent or password</h3>
+  <p>Make a key here, or use ssh-agent, Pageant and your ~/.ssh/config.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/desktop/keys-you-have-dark.png">
+    <img src="img/desktop/keys-you-have-light.png" width="1442" height="932" loading="lazy" alt="Log in by key, agent or password">
+  </picture>
+</div>
+<div class="feature upright">
+  <div><h3>Copy server settings</h3>
+  <p>By QR code, to another phone or computer, with no account.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/phone/copy-settings-dark.png">
+    <img src="img/phone/copy-settings-light.png" width="1080" height="2424" loading="lazy" alt="Copy server settings" style="aspect-ratio: 1080 / 2060">
+  </picture>
+</div>
+</section>
+<section class="topic" id="pdf">
+<h2>PDFs</h2>
+<p class="lead-in">A PDF laid out in two or three columns can be shown one column at a time, and in dark mode its figures and scans can darken too.</p>
+<div class="feature upright">
+  <div><h3>PDFs in columns, one at a time</h3>
+  <p>Whole pages side by side, or each column at the full width of the screen.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/phone/pdf-columns-dark.png">
+    <img src="img/phone/pdf-columns-light.png" width="1080" height="2424" loading="lazy" alt="PDFs in columns, one at a time" style="aspect-ratio: 1080 / 2060">
+  </picture>
+</div>
+<div class="feature flip">
+  <div><h3>Whole pages, side by side</h3>
+  <p>A swipe turns one page. On its side, the phone shows several at once.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/phone/pdf-whole-a-dark.png">
+    <img src="img/phone/pdf-whole-a-light.png" width="2424" height="1080" loading="lazy" alt="Whole pages, side by side">
+  </picture>
+</div>
+<div class="feature upright">
+  <div><h3>Figures across the columns</h3>
+  <p>A chart that spans the page stays whole, at full width. In dark mode it darkens too.</p></div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="img/phone/pdf-figures-dark.png">
+    <img src="img/phone/pdf-figures-light.png" width="1080" height="2424" loading="lazy" alt="Figures across the columns" style="aspect-ratio: 1080 / 2254">
+  </picture>
+</div>
+</section>
+<div class="feature-rows">
+  <div><h3>Nothing to install on the server</h3>
+  <p>A standard SSH server is enough, reached directly or through a jump host.</p></div>
+  <div><h3>No account, no tracking</h3>
+  <p>The only traffic is the SSH connection you open, and the store you installed it from.</p></div>
+</div>
+
+<h2 id="videos">Videos</h2>
+<p>Filmed on Android: what Telechore can do, how to start, and PDFs in
+columns, each beside a Short of under a minute.</p>
+<!-- The build puts each video's id and title from docs/store/video/<name>.yaml
+     in place of __YOUTUBE_<name>__ and __YOUTUBE_TITLE_<name>__ (docs/website.md).
+     A row is a video and its Short, side by side on a wide screen. -->
+<div class="videos pair">
+  <figure>
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/mDnSbH_e6ac?rel=0"
+      title="Telechore: an SSH client built for touch screens" loading="lazy" allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></div>
+    <figcaption>What it can do.</figcaption>
+  </figure>
+  <figure class="short">
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/tN5cOFmz42Y?rel=0"
+      title="Telechore: SSH with a full phone keyboard" loading="lazy" allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></div>
+    <figcaption>The features in under a minute.</figcaption>
+  </figure>
+</div>
+<div class="videos pair">
+  <figure>
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/ONE899ns7yQ?rel=0"
+      title="Telechore tutorial: getting started with SSH" loading="lazy" allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></div>
+    <figcaption>Getting started, on a phone on its side.</figcaption>
+  </figure>
+  <figure class="short">
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/zeqX-YZm9lQ?rel=0"
+      title="Telechore: getting started" loading="lazy" allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></div>
+    <figcaption>Getting started in under a minute.</figcaption>
+  </figure>
+</div>
+<div class="videos pair">
+  <figure>
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/mgxBG7c9xRA?rel=0"
+      title="Telechore: read a PDF in columns on your phone" loading="lazy" allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></div>
+    <figcaption>PDFs in columns, one column at a time.</figcaption>
+  </figure>
+  <figure class="short">
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/Zk6vC9edKwE?rel=0"
+      title="Read a two-column PDF on your phone" loading="lazy" allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></div>
+    <figcaption>The same in under a minute.</figcaption>
+  </figure>
+</div>
+
+<h2 id="usage">Using Telechore</h2>
+<p>The same pages the app carries under <strong>Usage</strong>, for
+Telechore 0.6.0.</p>
+<!-- usage-nav -->
+<ul class="pages">
+  <li><a href="usage/servers.html">Servers</a> — saving a server, choosing how it logs in, and its keys and host keys.</li>
+  <li><a href="usage/terminal.html">The terminal</a> — a shell on the machine you are browsing, and keeping it running when you leave it.</li>
+  <li><a href="usage/games.html">Games</a> — Termoasis's console games, kept running the way a terminal is, and played in a browser.</li>
+  <li><a href="usage/offline.html">Files offline</a> — what this device keeps of a server, the “Keep offline” control, and the “Cache” place.</li>
+  <li><a href="usage/granting-folders.html">Granting folders</a> — how opening a folder works on Android, where the app cannot browse storage on its own.</li>
+  <li><a href="usage/opening-folders.html">Opening folders</a> — the start page, Places, Starred and Recent.</li>
+  <li><a href="usage/tree-and-pane.html">Tree and sidebar</a> — the two halves of the window.</li>
+  <li><a href="usage/reading-files.html">Reading files</a> — what gets rendered.</li>
+  <li><a href="usage/pdfs.html">Reading PDFs and pictures</a> — the viewers, their zoom, their views, and full screen.</li>
+  <li><a href="usage/opening-from-other-apps.html">Opening files from other apps</a> — “View in Telechore” and “Save to Telechore” on Android, “Open with” on a computer, and sending a file to another app.</li>
+  <li><a href="usage/preferences.html">Preferences</a> — theme, line numbers, the sidebar, zoom, printing.</li>
+  <li><a href="usage/keyboard.html">Keyboard</a> — every shortcut there is.</li>
+  <li><a href="usage/licenses.html">Licences</a> — the open-source software Telechore is built with, and its licences.</li>
+</ul>
+<!-- /usage-nav -->
+
+<h2 id="games">Games</h2>
+<!-- No count: it went stale the first time a game was added (Turmites,
+     0.5.1). The list is the menu's. -->
+<p>Telechore carries Termoasis's console games, such as 2048, Sudoku, Mines,
+Snake and Life, under <b>Games</b> in its pane, run in
+the app and kept, like a terminal, if you want one to go on while you are
+elsewhere. They play here too, in the browser, by the same engine.</p>
+<!-- The games load only when asked for: a front page should not fetch an
+     engine for every visitor. Without script, the link goes to the play page. -->
+<div class="game-slot" id="game-slot">
+  <a class="button primary" href="play/" id="play-here">Play here</a>
+  <a class="button" href="play/">The play page</a>
+</div>
+<script>
+  document.getElementById('play-here').addEventListener('click', (event) => {
+    event.preventDefault();
+    const frame = document.createElement('div');
+    frame.className = 'game-frame';
+    frame.innerHTML = '<iframe src="play/frame.html" title="Termoasis\'s games"></iframe>';
+    document.getElementById('game-slot').replaceChildren(frame);
+    frame.querySelector('iframe').focus();
+  });
+</script>
+
+<h2 id="treesight">Just the file browser</h2>
+<p>Telechore is built on <a href="https://github.com/dr4iota/treesight">treesight</a>,
+an open-source tree browser for the folders on your own machine, without
+servers or the terminal. Its
+<a href="https://github.com/dr4iota/treesight/releases">releases</a> carry
+treesight on its own, and Telechore's Linux build.</p>
+</main>
+<footer class="foot">
+  <p><a href="https://driota.xyz/privacy.html">Privacy</a> ·
+  Support: <a href="mailto:driota.xyz@gmail.com">driota.xyz@gmail.com</a> ·
+  <a href="https://driota.xyz/">driota.xyz</a></p>
+  <p>Built 2026-11-12 03:40 UTC from Telechore 0.6.0; the site at 50f2dc91, 29 commits after v0.6.0.</p>
+</footer>
+</body>
+</html>
