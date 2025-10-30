@@ -1,0 +1,19 @@
+/* Generated from per-app app-meta.yaml accent fields. */
+
+body.app-example,
+.app-card.app-example { --accent: #475569; --accent-strong: #475569; }
+
+body.app-fractal,
+.app-card.app-fractal { --accent: #7c3aed; --accent-strong: #7c3aed; }
+
+body.app-trikona,
+.app-card.app-trikona { --accent: #0d9488; --accent-strong: #0d9488; }
+
+@media (prefers-color-scheme: dark) {
+  body.app-example,
+  .app-card.app-example { --accent: #94a3b8; --accent-strong: #475569; }
+  body.app-fractal,
+  .app-card.app-fractal { --accent: #a78bfa; --accent-strong: #7c3aed; }
+  body.app-trikona,
+  .app-card.app-trikona { --accent: #2dd4bf; --accent-strong: #0d9488; }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/trikona/images/app-icon-96.webp">
+  <title>Triangle Similarity Tests — Triangular Geometry</title>
+  <meta name="description" content="Learn triangular geometry with interactive visuals and animated proofs.">
+  <link rel="canonical" href="https://driota.xyz/trikona/triangle-similarity.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Triangle Similarity Tests — Triangular Geometry">
+  <meta property="og:description" content="Learn triangular geometry with interactive visuals and animated proofs.">
+  <meta property="og:url" content="https://driota.xyz/trikona/triangle-similarity.html">
+  <meta property="og:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Triangle Similarity Tests — Triangular Geometry">
+  <meta name="twitter:description" content="Learn triangular geometry with interactive visuals and animated proofs.">
+  <meta name="twitter:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+</head>
+<body class="app-trikona">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/trikona/?name=triangle-similarity">Open in Triangular Geometry →</a></div>
+    <h1>Triangle Similarity Tests</h1>
+    <p><em>An interactive demonstration of the three main tests for triangle similarity: AA, SSS (proportional), and SAS (proportional).</em></p>
+    <p><strong>Prerequisites:</strong> <a href="#name=triangle-congruence">triangle-congruence</a> · <strong>Difficulty:</strong> beginner</p>
+    <p>Two triangles are <strong>similar</strong> when they have the same shape but possibly
+    different sizes: equal corresponding angles and proportional sides, written
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span></span></span></span>.</p>
+    <p><strong>Strategy:</strong> there are three tests for similarity — <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">AA</span></span></span></span> (two equal angles),
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span> (three proportional sides), and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span> (two proportional sides with the
+    included angle equal). The animation walks through each, plus the parallel
+    line case and how similarity compares with congruence.</p>
+    <h2>What are Similar Triangles?</h2>
+    <p>Similar triangles have the same shape but may be different sizes. Symbol: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span></span></span></span> means &quot;triangle ABC is similar to triangle DEF.&quot;</p>
+    <h2>Test 1: AA (Angle-Angle)</h2>
+    <p>If two angles of one triangle equal two angles of another, the triangles are similar. (The third angle is automatically equal since angles sum to 180°.)</p>
+    <h2>Test 2: SSS Similarity (Proportional Sides)</h2>
+    <p>If all three pairs of corresponding sides are proportional (same ratio), the triangles are similar.</p>
+    <h2>Test 3: SAS Similarity (Proportional Sides + Included Angle)</h2>
+    <p>If two pairs of sides are proportional AND the included angle is equal, the triangles are similar. The angle must be BETWEEN the two sides!</p>
+    <h2>Special Case: Parallel Lines</h2>
+    <p>When a line is parallel to one side of a triangle, it creates a smaller similar triangle inside. Parallel lines create equal corresponding angles!</p>
+    <h2>Similarity vs Congruence</h2>
+    <p>Similar triangles have the same shape (equal angles, proportional sides). Congruent triangles have the same shape AND same size. All congruent triangles are similar, but not all similar triangles are congruent!</p>
+    <h2>Summary - The Three Similarity Tests</h2>
+    <p>The three similarity tests:</p>
+    <ul>
+    <li><strong>AA</strong>: Two angles equal (most common)</li>
+    <li><strong>SSS Similarity</strong>: Three sides proportional</li>
+    <li><strong>SAS Similarity</strong>: Two sides proportional + included angle equal</li>
+    </ul>
+    <p>Similar = same shape. Congruent = same shape AND size!</p>
+    <p>Triangle similarity means two triangles have the same shape but possibly
+    different sizes. You can prove similarity using:</p>
+    <ul>
+    <li><strong>AA</strong>: Two angles equal (most common test)</li>
+    <li><strong>SSS Similarity</strong>: Three sides proportional (all ratios equal)</li>
+    <li><strong>SAS Similarity</strong>: Two sides proportional and included angle equal</li>
+    </ul>
+    <p>Remember:</p>
+    <ul>
+    <li>Similar triangles have equal angles and proportional sides</li>
+    <li>Congruent triangles are similar with a scale factor of 1</li>
+    <li>Parallel lines often create similar triangles</li>
+    </ul>
+    <h2>Notes</h2>
+    <p>Two triangles are <strong>similar</strong> if they have the same shape but not
+    necessarily the same size: all corresponding angles are equal, all
+    corresponding sides are proportional, and one triangle is a scaled version
+    of the other.</p>
+    <p><strong>Symbol</strong>: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span></span></span></span> (read &quot;triangle <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span></span></span></span> is
+    similar to triangle <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span></span></span></span>&quot;).</p>
+    <p><strong>Important</strong>: all congruent triangles are similar (same size implies same
+    shape), but not all similar triangles are congruent (same shape does not
+    imply same size).</p>
+    <p><strong>Special case — parallel lines.</strong> A line drawn parallel to one side of a
+    triangle cuts off a smaller triangle similar to the original: the parallel
+    creates equal corresponding angles, so the two triangles match by <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">AA</span></span></span></span>.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© 2025 Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-06-09 00:40 UTC · 0a5b59c2</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

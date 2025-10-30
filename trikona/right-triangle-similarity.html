@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/trikona/images/app-icon-96.webp">
+  <title>Right Triangle Similarity and Congruence: the HL Theorem — Triangular Geometry</title>
+  <meta name="description" content="Learn triangular geometry with interactive visuals and animated proofs.">
+  <link rel="canonical" href="https://driota.xyz/trikona/right-triangle-similarity.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Right Triangle Similarity and Congruence: the HL Theorem — Triangular Geometry">
+  <meta property="og:description" content="Learn triangular geometry with interactive visuals and animated proofs.">
+  <meta property="og:url" content="https://driota.xyz/trikona/right-triangle-similarity.html">
+  <meta property="og:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Right Triangle Similarity and Congruence: the HL Theorem — Triangular Geometry">
+  <meta name="twitter:description" content="Learn triangular geometry with interactive visuals and animated proofs.">
+  <meta name="twitter:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+</head>
+<body class="app-trikona">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/trikona/?name=right-triangle-similarity">Open in Triangular Geometry →</a></div>
+    <h1>Right Triangle Similarity and Congruence: the HL Theorem</h1>
+    <p><em>An interactive demonstration of the Hypotenuse-Leg (HL) theorem for right triangles. Shows both HL congruence and HL similarity, which are special cases that work for right triangles but not for general triangles.</em></p>
+    <p><strong>Prerequisites:</strong> <a href="#name=triangle-congruence">triangle-congruence</a>, <a href="#name=triangle-similarity">triangle-similarity</a> · <strong>Difficulty:</strong> intermediate</p>
+    <p>The <strong>Hypotenuse-Leg (HL)</strong> theorem is a special case that works only for
+    right triangles: if the <strong>hypotenuse</strong> and one <strong>leg</strong> of one right triangle
+    are equal (or proportional) to those of another, the triangles are congruent
+    (or similar).</p>
+    <p><strong>Strategy:</strong> show two right triangles sharing a right angle, an equal (or
+    proportional) hypotenuse, and one equal (or proportional) leg; then use the
+    Pythagorean theorem to recover the third side, giving SSS congruence or
+    similarity.</p>
+    <h2>HL Congruence</h2>
+    <p>The <strong>Hypotenuse-Leg (HL)</strong> theorem is a congruence test for right
+    triangles: if the hypotenuse and one leg of a right triangle equal
+    those of another, the triangles are congruent.</p>
+    <h2>Why HL Congruence Works</h2>
+    <p>By the Pythagorean theorem, if the hypotenuse and one leg are equal,
+    the remaining leg must also be equal — giving SSS congruence.</p>
+    <h2>HL Similarity</h2>
+    <p>The HL similarity theorem extends the idea: if the hypotenuse and one
+    leg of a right triangle are <strong>proportional</strong> to those of another, the
+    triangles are similar.</p>
+    <h2>Why HL Similarity Works</h2>
+    <p>By the Pythagorean theorem, if the hypotenuse and one leg scale by
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span></span></span></span>, the remaining leg must scale by <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span></span></span></span> too — giving SSS similarity.</p>
+    <h2>Summary — HL Theorem</h2>
+    <p>The HL theorem is SSA for right triangles. The right angle eliminates
+    the ambiguity that makes SSA fail for general triangles.</p>
+    <ul>
+    <li><strong>HL Congruence:</strong> Equal hypotenuse + Equal leg → Congruent</li>
+    <li><strong>HL Similarity:</strong> Proportional hypotenuse + Proportional leg → Similar</li>
+    </ul>
+    <p>The <strong>Hypotenuse-Leg (HL)</strong> theorem is a powerful tool specifically for right
+    triangles:</p>
+    <ul>
+    <li><strong>HL Congruence</strong>: Right angle + Equal hypotenuse + Equal leg → Triangles
+    are congruent</li>
+    <li><strong>HL Similarity</strong>: Right angle + Proportional hypotenuse + Proportional leg
+    → Triangles are similar</li>
+    </ul>
+    <h3>Key Insight</h3>
+    <p>HL is essentially SSA, but the right angle removes the ambiguity that makes
+    SSA fail for general triangles. By the Pythagorean theorem, if the hypotenuse
+    and one leg are equal (or proportional), the other leg must also be equal (or
+    proportional) — so all three sides match!</p>
+    <h2>Notes</h2>
+    <p>For general triangles, <strong>SSA (Side-Side-Angle)</strong> is ambiguous: the same
+    three measurements can produce two different triangles. HL is the special
+    case of SSA that DOES work, because the right angle (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">90°</span></span></span></span>) removes that
+    ambiguity. Once the hypotenuse, one leg, and the right angle are fixed,
+    exactly <strong>one</strong> triangle fits.</p>
+    <h3>HL Congruence</h3>
+    <p>For two right triangles to be congruent by HL:</p>
+    <ol>
+    <li>Both triangles must be right triangles</li>
+    <li>The hypotenuses are equal in length</li>
+    <li>One pair of corresponding legs are equal in length</li>
+    </ol>
+    <h3>HL Similarity</h3>
+    <p>For two right triangles to be similar by HL:</p>
+    <ol>
+    <li>Both triangles must be right triangles</li>
+    <li>The hypotenuses are proportional (have the same ratio)</li>
+    <li>One pair of corresponding legs are proportional (same ratio)</li>
+    </ol>
+    </article>
+    <hr>
+    <footer>
+      <p>© 2025 Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-06-09 00:40 UTC · 0a5b59c2</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/trikona/images/app-icon-96.webp">
+  <title>Triangular Geometry</title>
+  <meta name="description" content="Learn triangular geometry with interactive visuals and animated proofs.">
+  <link rel="canonical" href="https://driota.xyz/trikona/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Triangular Geometry">
+  <meta property="og:description" content="Learn triangular geometry with interactive visuals and animated proofs.">
+  <meta property="og:url" content="https://driota.xyz/trikona/">
+  <meta property="og:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Triangular Geometry">
+  <meta name="twitter:description" content="Learn triangular geometry with interactive visuals and animated proofs.">
+  <meta name="twitter:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+</head>
+<body class="app-trikona">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <header class="hero hero-split">
+      <div>
+        <h1>Triangular Geometry</h1>
+        <p class="lede">Learn triangular geometry with interactive visuals and animated proofs.</p>
+        <ul class="chips">
+          <li>Browser</li>
+          <li>Desktop</li>
+          <li>Mobile</li>
+        </ul>
+      </div>
+      <img class="hero-art" src="/run/trikona/images/app-icon-192.webp" alt="Triangular Geometry icon" width="96" height="96">
+    </header>
+    <div class="cta-row">
+      <a class="btn primary" href="/run/trikona/">Open Triangular Geometry →</a>
+      <a class="btn secondary" href="./app-usage.html">Usage</a>
+      <a class="btn secondary" href="./app-about.html">About</a>
+    </div>
+    <div class="cta-platforms">
+    <a class="cta-platform cta-platform--planned" title="Not yet on the App Store. Click for status details." href="https://driota.xyz/ios.html"><svg class="cta-platform-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>App Store (coming soon)</a>
+    <a class="cta-platform" title="Preview release. Join the driota Google Group (link at the top of the page) first, then install." href="https://play.google.com/store/apps/details?id=xyz.driota.trikona"><svg class="cta-platform-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>Google Play (preview)</a>
+    <a class="cta-platform" href="https://www.amazon.com/dp/B0G1L2GJ98"><svg class="cta-platform-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z"/></svg>Amazon</a>
+    </div>
+    <p class="cta-platforms-note">Android preview install requires joining the <a href="https://groups.google.com/g/driota">Google Group</a> first.</p>
+    <div class="strip-frame">
+      <button type="button" class="strip-nav strip-nav--prev" aria-label="Scroll back"></button>
+      <section class="sample-strip" aria-label="Sample pages">
+        <a class="sample-card" href="/run/trikona/?name=pythagorean-theorem">
+          <img src="/images/preview/trikona/pythagorean-theorem.webp" alt="Pythagorean theorem dissection" title="Pythagorean theorem dissection" loading="lazy" decoding="async">
+        </a>
+        <a class="sample-card" href="/run/trikona/?name=simson-line-proof">
+          <img src="/images/preview/trikona/simson-line-proof.webp" alt="Simson line construction" title="Simson line construction" loading="lazy" decoding="async">
+        </a>
+        <a class="sample-card" href="/run/trikona/?name=ninepointcircle-intro">
+          <img src="/images/preview/trikona/ninepointcircle-intro.webp" alt="Nine-point circle" title="Nine-point circle" loading="lazy" decoding="async">
+        </a>
+      </section>
+      <button type="button" class="strip-nav strip-nav--next" aria-label="Scroll forward"></button>
+      <script>(function(){
+        var frame = document.currentScript.closest('.strip-frame');
+        var strip = frame.querySelector('.sample-strip');
+        function page(dir){ strip.scrollBy({ left: dir * strip.clientWidth * 0.9, behavior: 'smooth' }); }
+        frame.querySelector('.strip-nav--prev').addEventListener('click', function(){ page(-1); });
+        frame.querySelector('.strip-nav--next').addEventListener('click', function(){ page(1); });
+      })();</script>
+    </div>
+    <section class="video-tour" aria-label="Intro tour: Triangular Geometry">
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/1p4UONYYCo8?rel=0"
+          title="Intro tour: Triangular Geometry"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="essay prose">
+    <h2>A Short History of Triangles</h2>
+    <p>A long time ago, people noticed that triangles seemed almost magical. They are the simplest shapes made of straight lines, yet they keep showing up everywhere: in the beams of bridges, the roofs of houses, the sails of ships, even in nature’s crystals and mountain peaks. But what makes triangles even more fascinating is what happens <strong>inside</strong> them.</p>
+    <h3>The First Explorers of Triangles</h3>
+    <p>Over two thousand years ago, in ancient Greece, mathematicians like <strong>Euclid</strong> and <strong>Pythagoras</strong> studied triangles carefully. They measured sides, compared angles, and proved amazing theorems. But some wondered: if you draw special lines inside a triangle, where do they meet? Do they meet at all? And if they do, is that point special?</p>
+    <h3>Four Famous Centers</h3>
+    <p>Over the centuries, mathematicians discovered that triangles don’t just have one “center”—they have <strong>several</strong>, each with its own meaning.</p>
+    <ol>
+    <li><p><strong>The Centroid (The Balancing Point)</strong>
+    Imagine you cut out a triangle from cardboard. If you tried to balance it on your finger, the exact spot where it balances is called the <strong>centroid</strong>. It is found where the three medians (lines from a corner to the middle of the opposite side) meet.
+    Fun fact: The Greeks already knew about this, but it was carefully studied in later centuries when scientists were exploring balance, levers, and physics.</p>
+    </li>
+    <li><p><strong>The Circumcenter (The Circle-Maker)</strong>
+    Long ago, people loved circles. They noticed that every triangle can fit perfectly inside a circle, with all three corners touching the circle. The center of that circle is called the <strong>circumcenter</strong>. You find it where the perpendicular bisectors of the sides meet.
+    Ancient astronomers and sailors cared a lot about this, because circles and triangles helped them map the stars and navigate the seas.</p>
+    </li>
+    <li><p><strong>The Incenter (The Secret Circle Inside)</strong>
+    Later, mathematicians asked: can we also fit a circle <strong>inside</strong> a triangle, just touching all three sides? Yes! The center of this circle is called the <strong>incenter</strong>, where the angle bisectors meet. Builders and artists in the Middle Ages found this fascinating, because it gave perfect symmetry for designs.</p>
+    </li>
+    <li><p><strong>The Orthocenter (The Perpendicular Meeting Place)</strong>
+    Another curious point is where the three altitudes (the “height” lines dropped from each corner) meet. This is the <strong>orthocenter</strong>. It doesn’t always sit inside the triangle—it can wander outside! This strange behavior puzzled mathematicians like <strong>Euler</strong>, an 18th-century genius who studied it deeply.</p>
+    </li>
+    </ol>
+    <h3>The Web of Triangle Centers</h3>
+    <p>By the 1700s and 1800s, mathematicians like <strong>Euler</strong> and <strong>Gergonne</strong> discovered that these centers are not random—they are connected in surprising ways. For example, Euler found that three of them (the centroid, circumcenter, and orthocenter) always lie on the same straight line, now called the <strong>Euler line</strong>.</p>
+    <p>Later, people realized there are not just four, but <em>hundreds</em> of possible triangle centers, each with its own story. Today, mathematicians have named and cataloged thousands of them!</p>
+    <h3>The Nine-Point Circle: A Circle of Wonders</h3>
+    <p>By the 18th century, mathematicians like <strong>Leonhard Euler</strong> began connecting these centers in surprising ways. One of the most astonishing discoveries is the <strong>nine-point circle</strong>.</p>
+    <p>What is it? For any triangle, if you mark:</p>
+    <ul>
+    <li>the midpoints of the three sides,</li>
+    <li>the feet of the three altitudes (where the altitudes touch the sides),</li>
+    <li>and the midpoints of the segments from each corner to the orthocenter,</li>
+    </ul>
+    <p>you get <strong>nine points</strong>. Amazingly, all nine lie perfectly on one circle!</p>
+    <p>Even more magical: the center of this nine-point circle lies on the same line (the <strong>Euler line</strong>) as the centroid, circumcenter, and orthocenter. It’s as if the triangle is whispering, “All my secrets are connected.”</p>
+    <h3>Last Words</h3>
+    <p>Studying triangle centers wasn’t just a game. These ideas helped with architecture, navigation, astronomy, physics, and even computer graphics today. Triangles are the building blocks of 3D models, and their centers help with calculations of balance, rotation, and symmetry.</p>
+    </section>
+    <section class="page-list">
+      <h3>More about Triangular Geometry</h3>
+      <ul>
+        <li><a href="./triangle-overview.html">The Triangle</a> <a class="page-list-open" href="/run/trikona/?name=triangle-overview" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a>
+          <ul>
+            <li><a href="./parallel-lines-intro.html">Parallel Lines and Transversals</a> <a class="page-list-open" href="/run/trikona/?name=parallel-lines-intro" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./triangle-congruence.html">Triangle Congruence Tests</a> <a class="page-list-open" href="/run/trikona/?name=triangle-congruence" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./triangle-similarity.html">Triangle Similarity Tests</a> <a class="page-list-open" href="/run/trikona/?name=triangle-similarity" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./angle-sum-proof.html">Triangle Angle Sum Theorem</a> <a class="page-list-open" href="/run/trikona/?name=angle-sum-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./exterior-angle-proof.html">Exterior Angle Theorem</a> <a class="page-list-open" href="/run/trikona/?name=exterior-angle-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./isosceles-triangle-proof.html">Isosceles Triangle Theorem</a> <a class="page-list-open" href="/run/trikona/?name=isosceles-triangle-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./angle-side-inequality.html">The Angle-Side Inequality</a> <a class="page-list-open" href="/run/trikona/?name=angle-side-inequality" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./triangle-inequality-proof.html">The Triangle Inequality</a> <a class="page-list-open" href="/run/trikona/?name=triangle-inequality-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./area-proof.html">Area of a Triangle: Half Base Times Height</a> <a class="page-list-open" href="/run/trikona/?name=area-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+          </ul>
+        </li>
+        <li><a href="./righttriangle-overview.html">The Right Triangle</a> <a class="page-list-open" href="/run/trikona/?name=righttriangle-overview" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a>
+          <ul>
+            <li><a href="./pythagorean-theorem.html">Pythagorean Theorem</a> <a class="page-list-open" href="/run/trikona/?name=pythagorean-theorem" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./right-triangle-similarity.html">Right Triangle Similarity and Congruence: the HL Theorem</a> <a class="page-list-open" href="/run/trikona/?name=right-triangle-similarity" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./1-euclids-windmill-proof.html">Proof 1 of Pythagorean Theorem: Euclid's Windmill</a> <a class="page-list-open" href="/run/trikona/?name=1-euclids-windmill-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./2-puzzle-shift-proof.html">Proof 2 of Pythagorean Theorem: The Puzzle Shift</a> <a class="page-list-open" href="/run/trikona/?name=2-puzzle-shift-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./3-algebraic-proofs.html">Proof 3 of Pythagorean Theorem: Three Algebraic Proofs</a> <a class="page-list-open" href="/run/trikona/?name=3-algebraic-proofs" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./4-dissection-proof.html">Proof 4: Liu Hui's Dissection (Cut-and-Paste)</a> <a class="page-list-open" href="/run/trikona/?name=4-dissection-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./geometric-mean-proof.html">The Geometric Mean Theorem</a> <a class="page-list-open" href="/run/trikona/?name=geometric-mean-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./special-right-triangles.html">Special Right Triangles: 30-60-90 and 45-45-90</a> <a class="page-list-open" href="/run/trikona/?name=special-right-triangles" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+          </ul>
+        </li>
+        <li><a href="./circumcenter-overview.html">Circumcenter (O)</a> <a class="page-list-open" href="/run/trikona/?name=circumcenter-overview" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a>
+          <ul>
+            <li><a href="./perp-bisect-proof.html">Perpendicular Bisector and Equidistance</a> <a class="page-list-open" href="/run/trikona/?name=perp-bisect-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./circumcenter-proof.html">Why Perpendicular Bisectors Meet at One Point</a> <a class="page-list-open" href="/run/trikona/?name=circumcenter-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./circle-angles-intro.html">Circle Angles: Central and Inscribed</a> <a class="page-list-open" href="/run/trikona/?name=circle-angles-intro" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./inscribed-angle-proof.html">The Inscribed Angle Theorem</a> <a class="page-list-open" href="/run/trikona/?name=inscribed-angle-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./thales-theorem-proof.html">Thales' Theorem</a> <a class="page-list-open" href="/run/trikona/?name=thales-theorem-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./cyclic-quadrilateral-proof.html">Cyclic Quadrilateral Theorem</a> <a class="page-list-open" href="/run/trikona/?name=cyclic-quadrilateral-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+          </ul>
+        </li>
+        <li><a href="./incenter-overview.html">Incenter (I)</a> <a class="page-list-open" href="/run/trikona/?name=incenter-overview" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a>
+          <ul>
+            <li><a href="./angle-bisect-proof.html">Angle Bisector Equidistance Theorem</a> <a class="page-list-open" href="/run/trikona/?name=angle-bisect-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./incenter-proof.html">Why Angle Bisectors Meet at One Point</a> <a class="page-list-open" href="/run/trikona/?name=incenter-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./herons-formula-proof.html">Proof of Heron's Formula</a> <a class="page-list-open" href="/run/trikona/?name=herons-formula-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./excircles-intro.html">Excircles and Excenters</a> <a class="page-list-open" href="/run/trikona/?name=excircles-intro" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./euler-oi-formula-proof.html">Euler's Formula for the Distance OI</a> <a class="page-list-open" href="/run/trikona/?name=euler-oi-formula-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./angle-bisect-prop-proof.html">Angle Bisector Proportionality Theorem</a> <a class="page-list-open" href="/run/trikona/?name=angle-bisect-prop-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./incenter-vector-proof.html">Incenter Coordinate Formula</a> <a class="page-list-open" href="/run/trikona/?name=incenter-vector-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+          </ul>
+        </li>
+        <li><a href="./centroid-overview.html">Centroid (G)</a> <a class="page-list-open" href="/run/trikona/?name=centroid-overview" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a>
+          <ul>
+            <li><a href="./midsegment-proof.html">The Midsegment Theorem</a> <a class="page-list-open" href="/run/trikona/?name=midsegment-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./centroid-proof.html">Why Medians Meet at One Point</a> <a class="page-list-open" href="/run/trikona/?name=centroid-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./six-equal-areas-proof.html">Six Equal-Area Triangles</a> <a class="page-list-open" href="/run/trikona/?name=six-equal-areas-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./centroid-balance-proof.html">The Centroid as Balance Point</a> <a class="page-list-open" href="/run/trikona/?name=centroid-balance-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./centroid-vector-proof.html">Centroid Coordinate Formula</a> <a class="page-list-open" href="/run/trikona/?name=centroid-vector-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+          </ul>
+        </li>
+        <li><a href="./orthocenter-overview.html">Orthocenter (H)</a> <a class="page-list-open" href="/run/trikona/?name=orthocenter-overview" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a>
+          <ul>
+            <li><a href="./orthocenter-proof.html">Why Altitudes Meet at One Point</a> <a class="page-list-open" href="/run/trikona/?name=orthocenter-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./bhc-identity-proof.html">The Orthocenter Angle Identity</a> <a class="page-list-open" href="/run/trikona/?name=bhc-identity-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./h-reflect-side-proof.html">Orthocenter Reflection over a Side</a> <a class="page-list-open" href="/run/trikona/?name=h-reflect-side-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./h-reflect-midpoint-proof.html">Orthocenter Reflection over a Midpoint</a> <a class="page-list-open" href="/run/trikona/?name=h-reflect-midpoint-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./orthocenter-vector-proof.html">Orthocenter Vector Formula</a> <a class="page-list-open" href="/run/trikona/?name=orthocenter-vector-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+          </ul>
+        </li>
+        <li><a href="./ninepointcenter-overview.html">Nine-Point Center (N)</a> <a class="page-list-open" href="/run/trikona/?name=ninepointcenter-overview" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a>
+          <ul>
+            <li><a href="./ninepointcircle-intro.html">The Nine-Point Circle</a> <a class="page-list-open" href="/run/trikona/?name=ninepointcircle-intro" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./ninepointcenter-proof.html">The Nine-Point Circle Theorem</a> <a class="page-list-open" href="/run/trikona/?name=ninepointcenter-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./feuerbach-theorem-proof.html">Feuerbach's Theorem (Metric Proof)</a> <a class="page-list-open" href="/run/trikona/?name=feuerbach-theorem-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./inversion-intro.html">Inversion in a Circle</a> <a class="page-list-open" href="/run/trikona/?name=inversion-intro" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./feuerbach-inversion-proof.html">Feuerbach's Theorem: an Inversion Proof</a> <a class="page-list-open" href="/run/trikona/?name=feuerbach-inversion-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./euler-line-proof.html">The Euler Line (e): O, G, N, H are Collinear</a> <a class="page-list-open" href="/run/trikona/?name=euler-line-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+          </ul>
+        </li>
+        <li><a href="./concurrency-overview.html">Concurrency Theorems</a> <a class="page-list-open" href="/run/trikona/?name=concurrency-overview" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a>
+          <ul>
+            <li><a href="./cevas-theorem-proof.html">Ceva's Theorem</a> <a class="page-list-open" href="/run/trikona/?name=cevas-theorem-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./menelaus-theorem-proof.html">Menelaus' Theorem</a> <a class="page-list-open" href="/run/trikona/?name=menelaus-theorem-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./gergonne-point-proof.html">The Gergonne Point Theorem</a> <a class="page-list-open" href="/run/trikona/?name=gergonne-point-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./nagel-point-proof.html">The Nagel Point Theorem</a> <a class="page-list-open" href="/run/trikona/?name=nagel-point-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+          </ul>
+        </li>
+        <li><a href="./advanced-overview.html">Advanced Topics</a> <a class="page-list-open" href="/run/trikona/?name=advanced-overview" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a>
+          <ul>
+            <li><a href="./simson-line-proof.html">The Simson Line Theorem</a> <a class="page-list-open" href="/run/trikona/?name=simson-line-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./miquel-point-proof.html">Miquel's Point Theorem</a> <a class="page-list-open" href="/run/trikona/?name=miquel-point-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./napoleons-theorem-proof.html">Napoleon's Theorem</a> <a class="page-list-open" href="/run/trikona/?name=napoleons-theorem-proof" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+            <li><a href="./sierpinski-pedal-intro.html">Pedal Triangles and Iteration</a> <a class="page-list-open" href="/run/trikona/?name=sierpinski-pedal-intro" title="Open in Triangular Geometry" aria-label="Open in Triangular Geometry">↗</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <hr>
+    <footer>
+      <p>© 2025 Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-06-09 00:40 UTC · 0a5b59c2</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

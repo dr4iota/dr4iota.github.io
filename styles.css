@@ -1,0 +1,665 @@
+:root {
+  --accent: #4f46e5;       /* indigo: site root — links and tinted UI */
+  --accent-strong: var(--accent); /* saturated; used as bg for white-on-accent buttons */
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1c1e21;
+  --text-muted: #5a6068;
+  --border: #e3e6ea;
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.10);
+}
+/* Per-app accent overrides are written to app-accents.css at deploy time
+   from each app's app-meta.yaml. */
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 1.5rem 1rem 3rem;
+  min-height: 100dvh;
+  line-height: 1.6;
+}
+
+.container {
+  background: var(--surface);
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.container--wide { max-width: 960px; }
+
+/* Narrow viewports: the desktop 1rem (body) + 2.5rem (container) gutters
+   eat ~31% of a 360px-wide phone. Tighten both so prose, app cards, and
+   the sample strip get their width back. Container keeps a touch of
+   inset so the rounded card edge still reads as a card. */
+@media (max-width: 560px) {
+  body { padding: 1.5rem 0.5rem 3rem; }
+  .container { padding: 1.5rem 1rem; border-radius: 10px; }
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Top nav */
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  row-gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.topnav .spacer { flex: 1; }
+.topnav a { font-weight: 500; }
+.topnav .brand {
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+/* On narrow screens force the spacer to break the line so the brand sits
+   on its own row and the right-side links wrap as a tidy second row. */
+@media (max-width: 640px) {
+  .topnav .spacer { flex-basis: 100%; height: 0; }
+}
+
+/* Site header (homepage hero) */
+.site-header { text-align: center; margin: 1rem 0 2.5rem; }
+.site-header h1 {
+  font-size: 2.4rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+.site-header .tagline {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+}
+
+/* Trust chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.hero .chips { justify-content: flex-start; }
+.chips li {
+  font-size: 0.8rem;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  padding: 0.28rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  font-weight: 500;
+}
+
+/* Announcement / news block (homepage) */
+.announce {
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  margin: 0 0 2rem;
+}
+.announce h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.005em;
+  color: var(--accent);
+}
+.announce p {
+  text-align: left;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+.announce ul,
+.announce ol {
+  text-align: left;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+.announce li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+.announce-alt {
+  color: var(--text-muted);
+  margin: 0.75rem 0 0;
+}
+
+/* App card grid */
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 720px) {
+  .app-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.app-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  border-top: 4px solid var(--accent);
+  transition: box-shadow 0.15s ease;
+}
+.app-card:hover { box-shadow: var(--shadow-card-hover); }
+.app-card .app-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+.app-card .info { flex: 1; min-width: 0; }
+.app-card h2 {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.005em;
+}
+.app-card .blurb {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+}
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.card-link {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Shared card chrome used by both the homepage grid (.sample-grid) and the
+   per-app landing strip (.sample-strip). The container chooses sizing
+   (grid cell vs. fixed strip height); the card stays consistent in hover
+   feedback and visual weight. Source data: site-meta.yaml's
+   homepage.samples (grid) and each app-meta.yaml's website.samples
+   (strip); images resolve under PREVIEW_STORE. */
+.sample-card {
+  background: var(--surface);
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.sample-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Homepage sample-pages grid — a responsive gallery of representative
+   screenshots across apps. 1 column on phones, 2 in the mid range, 3 on
+   desktop. Each card preserves its image's native aspect (width:100%,
+   height:auto) since the grid track widths are uniform. */
+.sample-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 560px) {
+  .sample-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .sample-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.sample-grid .sample-card {
+  display: block;
+}
+.sample-grid .sample-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Per-app sample strip — a horizontal "film strip" of screenshots for one
+   app, embedded above the essay on the app's landing page. Pure CSS
+   chrome (film-roll frame is two SVG-tiled bars top/bottom); arrows are
+   buttons wired up by a tiny inline script in composeSampleStrip. */
+.strip-frame {
+  position: relative;
+  margin: 0 0 2rem;
+}
+.sample-strip {
+  --film-bar: 26px;                   /* height of top and bottom bars */
+  --film-tile: 30px;                  /* horizontal pitch between sprockets */
+  --film-card-height: 168px;          /* frame height */
+  /* Sprocket-hole tile as an SVG data URI. Tile 30×26; rounded-rect
+     hole 12×14 with rx=2 punched by even-odd fill rule. Dark color
+     `#141618` is hard-coded inside the SVG — CSS variables can't be
+     threaded into url() data, so adjusting color/shape means editing
+     the SVG string. Path explained:
+       M0 0h30v26H0z         outer tile rect (filled)
+       M9 6 + rounded corners inner rect (the hole)
+     With `fill-rule:evenodd`, the inner subpath subtracts. */
+  --film-tile-svg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='26'><path fill='%23141618' fill-rule='evenodd' d='M0 0h30v26H0zM9 6h12a2 2 0 012 2v10a2 2 0 01-2 2H9a2 2 0 01-2-2V8a2 2 0 012-2z'/></svg>");
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: var(--film-bar) 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  /* Hide horizontal scrollbar — strip is driven by swipe (touch) and
+     the prev/next arrows (desktop). Wheel + trackpad still work. */
+  scrollbar-width: none;              /* Firefox */
+  /* Same SVG tiled across the top and bottom edges. Vertically the
+     gradient occupies exactly --film-bar; horizontally it repeats. */
+  background:
+    var(--film-tile-svg) top left / var(--film-tile) var(--film-bar) repeat-x,
+    var(--film-tile-svg) bottom left / var(--film-tile) var(--film-bar) repeat-x;
+}
+.sample-strip::-webkit-scrollbar {
+  display: none;                      /* Webkit / Blink */
+}
+.sample-strip .sample-card {
+  flex: 0 0 auto;                     /* width derives from image's native aspect */
+  height: var(--film-card-height);
+  display: flex;
+  scroll-snap-align: start;
+}
+.sample-strip .sample-card img {
+  display: block;
+  height: 100%;
+  width: auto;                        /* native aspect; card width follows */
+  max-width: 320px;                   /* clamp obscenely wide (panoramic) sources */
+}
+
+/* Nav arrows — only painted while the strip is hovered (or one of the
+   arrows has keyboard focus); fully hidden otherwise so they don't
+   clutter the row. Touch devices use swipe; arrows are hidden via
+   @media (hover: none) entirely. */
+.strip-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 22, 24, 0.5);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1;
+  z-index: 2;
+  user-select: none;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  /* 1px white ring for outline against any backdrop, plus a soft drop
+     shadow for depth so the buttons read on light surfaces too. The
+     ring is what lets us run the fill at 50% — without it the button
+     would lose its edge against the film bar. */
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 2px 8px rgba(0, 0, 0, 0.45);
+  transition:
+    opacity 0.18s ease,
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+.strip-frame:hover .strip-nav,
+.strip-nav:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.strip-nav:hover {
+  background: rgba(20, 22, 24, 0.75);
+  text-decoration: none;
+  transform: translateY(-50%) scale(1.06);
+}
+.strip-nav--prev { left: -10px; }
+.strip-nav--next { right: -10px; }
+/* Chevrons as inline-SVG backgrounds on the ::before pseudo-element.
+   A 16-unit viewBox guarantees consistent centering regardless of the
+   page font's punctuation metrics. The pseudo's explicit width/height
+   makes flexbox center it predictably inside the round button. */
+.strip-nav::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.strip-nav--prev::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='10 3 5 8 10 13'/></svg>");
+}
+.strip-nav--next::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 3 11 8 6 13'/></svg>");
+}
+@media (hover: none) {
+  .strip-nav { display: none; }
+  .sample-card { transition: none; }
+}
+
+/* Landing-page hero (split: text left, icon right on wide) */
+.hero { margin-bottom: 1.5rem; }
+.hero-split {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+@media (min-width: 560px) {
+  .hero-split { grid-template-columns: 1fr auto; }
+}
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+.hero .lede {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+}
+.hero .hero-art {
+  width: 96px;
+  height: 96px;
+  border-radius: 18px;
+  flex-shrink: 0;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+/* CTA buttons */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+.btn:hover {
+  background: color-mix(in srgb, var(--text) 4%, transparent);
+  text-decoration: none;
+}
+.btn.primary {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #fff;
+}
+.btn.primary:hover {
+  filter: brightness(1.08);
+  background: var(--accent-strong);
+}
+.btn-sm {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.9rem;
+}
+
+/* Platform-link chips, shown directly under the CTA row.
+   Visually echo the trust chips above the CTA, but interactive. */
+.cta-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: -0.75rem 0 1.5rem;
+}
+.cta-platforms .cta-platform {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.cta-platforms .cta-platform:hover {
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+  text-decoration: none;
+}
+.cta-platforms .cta-platform-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+}
+/* "planned" / coming-soon chips read as ghosted: dashed border, lower
+   opacity, tinted-down background. Still clickable (link to explainer). */
+.cta-platforms .cta-platform--planned {
+  background: transparent;
+  border-style: dashed;
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  color: color-mix(in srgb, var(--accent) 75%, var(--text-muted));
+}
+.cta-platforms .cta-platform--planned:hover {
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+/* Caption beneath the chip row — surfaces the install gate (Google
+   Group) for preview apps so it's visible on touch devices that won't
+   see the chip's hover tooltip. Wraps naturally on narrow viewports. */
+.cta-platforms-note {
+  margin: -1rem 0 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+/* Embedded YouTube intro on the per-app landing page. Rendered by
+   composeVideoEmbed() in section-render.mjs when site-meta.yaml has
+   `apps.<name>.demo_youtube_id`. Sits between the sample strip and
+   the essay; `aspect-ratio: 16/9` keeps the iframe responsive without
+   the historic padding-top hack. `max-width` clamps it on wide
+   viewports so the video doesn't dominate longer screens. */
+.video-tour {
+  margin: 2rem 0 0;
+}
+.video-embed {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Inline essay on the per-app landing page */
+.essay {
+  margin: 1.75rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Sub-page list */
+.page-list {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+.page-list h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+.page-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.page-list li { margin-bottom: 0.5rem; }
+/* Extra breathing room between top-level groups (chapter→next chapter). */
+.page-list > ul > li { margin-bottom: 1rem; }
+.page-list > ul > li:last-child { margin-bottom: 0; }
+.page-list li ul {
+  margin-top: 0.5rem;
+  margin-left: 1.25rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--border);
+  font-size: 0.95em;
+}
+.page-list li ul li {
+  margin-bottom: 0.5rem;
+  /* Sub-entries: muted accent (keeps the app-color thread from parent,
+     without dominating). Mixed with `--text` so it stays readable on
+     both themes; full accent saved for hover. */
+  color: color-mix(in srgb, var(--accent) 60%, var(--text));
+}
+.page-list li ul li:last-child { margin-bottom: 0; }
+.page-list li ul li a { color: inherit; }
+.page-list li ul li a:hover { color: var(--accent); }
+.page-list-desc {
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+/* Trailing "↗" chip per item — deep-link into the SPA route for that
+   scene/fractal. Wordless; the title/aria-label carries the meaning.
+   Coloured with the app accent (slightly faded) so it reads as an
+   action distinct from the muted-accent sub-entry text. */
+.page-list-open {
+  margin-left: 0.4rem;
+  font-size: 1em;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: 0.65;
+}
+.page-list-open:hover { opacity: 1; text-decoration: none; }
+
+/* Prose (rendered markdown) */
+.prose {
+  text-align: left;
+  font-size: 1rem;
+}
+.prose h1 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.prose h2, .prose h3, .prose h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.prose h2 { font-size: 1.35rem; }
+.prose h3 { font-size: 1.15rem; }
+.prose ul, .prose ol { padding-left: 1.5rem; }
+.prose li { margin-bottom: 0.25rem; }
+.prose p { margin: 0.6rem 0; }
+
+/* Per-page "Open in <App>" CTA on manifest-driven sub-pages (trikona
+   scenes, fractal math). Floated to the top-right of the article so it
+   sits beside the H1; the heading text wraps naturally beside it.
+   Falls back to a full-width row on narrow viewports where the float
+   would crowd the title. */
+.prose .open-in-app {
+  float: right;
+  margin: 0.1rem 0 0.5rem 1rem;
+}
+@media (max-width: 540px) {
+  .prose .open-in-app {
+    float: none;
+    margin: 0 0 0.75rem;
+  }
+}
+
+/* KaTeX display blocks: a touch of vertical breathing room and gentle
+   horizontal scroll for very wide formulas on narrow viewports. */
+.prose .katex-display {
+  margin: 1rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Footer */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0 1rem;
+}
+footer p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+footer small a { color: var(--text-muted); }
+footer small a:hover { color: var(--accent); }
+.build-info {
+  display: block;
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Dark mode.
+   `--accent` brightens for legible links / tinted UI on the dark surface;
+   `--accent-strong` keeps the saturated 600-level shade for white-on-accent
+   button backgrounds (where the brightened accent would fail contrast). */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #818cf8;        /* indigo-400 */
+    --accent-strong: #4f46e5; /* indigo-600 */
+    --bg: #18191a;
+    --surface: #242526;
+    --text: #e4e6eb;
+    --text-muted: #b0b3b8;
+    --border: #3a3b3c;
+    --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.4);
+    --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.5);
+  }
+  .topnav .brand { color: var(--text); }
+  .btn:hover {
+    background: color-mix(in srgb, #fff 5%, transparent);
+  }
+}

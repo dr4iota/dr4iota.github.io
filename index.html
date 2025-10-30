@@ -3,153 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/example/images/app-icon-96.webp">
+  <title>Doctor Iota — Interactive math you can play with</title>
+  <meta name="description" content="A small set of focused web apps for fractals, geometry, and other interactive mathematics.">
+  <link rel="canonical" href="https://driota.xyz/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Doctor Iota — Interactive math you can play with">
+  <meta property="og:description" content="A small set of focused web apps for fractals, geometry, and other interactive mathematics.">
+  <meta property="og:url" content="https://driota.xyz/">
+  <meta property="og:image" content="https://driota.xyz/run/example/images/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Doctor Iota — Interactive math you can play with">
+  <meta name="twitter:description" content="A small set of focused web apps for fractals, geometry, and other interactive mathematics.">
+  <meta name="twitter:image" content="https://driota.xyz/run/example/images/app-icon-512.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
   <meta name="google-adsense-account" content="ca-pub-5400548434612970">
-  <title>Doctor Iota's Applications</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f0f2f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      color: #333;
-    }
-    .container {
-      background: #ffffff;
-      padding: 2rem 3rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 768px;
-    }
-    h1 {
-      color: #1c1e21;
-      font-size: 1.75rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    ul.applist {
-      list-style: none;
-      padding: 16px;
-      margin: 0 0 1.5rem 0;
-    }
-    ul.applist > li {
-      margin-bottom: 1rem;
-    }
-    a {
-      color: #007bff;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 1.5rem 0;
-    }
-    p {
-      color: #666;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-    details {
-      padding-left: 1em;
-      padding-right: 1em;
-      margin-top: 0.5rem;
-    }
-    details summary {
-      font-style: italic;
-      cursor: pointer;
-    }
-    details summary:hover {
-      color: blue;
-    }
-
-    /* Compact Headings */
-    .tab-content h1, .tab-content h2, .tab-content h3, .tab-content h4 {
-        margin-top: 0.8rem;
-        margin-bottom: 0.4rem;
-        padding-bottom: 0.2rem;
-        border-bottom: 1px solid #eee;
-    }
-    .tab-content p {
-        text-align: left;
-    }
-
-    /* Tabs */
-    .tab-container {
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .tab-container input[type="radio"] {
-        display: none;
-    }
-    .tab-container label {
-        display: inline-block;
-        padding: 8px 16px;
-        cursor: pointer;
-        border: 1px solid #ccc;
-        border-bottom: none;
-        border-radius: 4px 4px 0 0;
-        background-color: #f1f1f1;
-        margin-right: 4px;
-        font-size: 0.9em;
-        position: relative;
-        bottom: -1px;
-        transition: background-color 0.2s ease-in-out;
-    }
-    .tab-container label:hover {
-        background-color: #e0e0e0;
-    }
-    .tab-container input[type="radio"]:checked + label {
-        background-color: #fff;
-        border-color: #ccc;
-        border-bottom: 1px solid #fff;
-    }
-    .tab-content {
-        display: none;
-        order: 99;
-        width: 100%;
-        padding: 16px;
-        border: 1px solid #ccc;
-        border-radius: 0 4px 4px 4px;
-    }
-    .tab-container input[type="radio"]:checked + label + .tab-content {
-        display: block;
-    }
-  </style>
   <script
      async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
      crossorigin="anonymous"></script>
+  -->
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Doctor Iota's Interactive Learning Site</h1>
+  <div class="container container--wide">
+    <nav class="topnav">
+      <span class="brand">Doctor Iota</span>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <header class="site-header">
+      <h1>Interactive math you can play with</h1>
+      <p class="tagline">Drag the geometry. Zoom into fractals. Step through animated proofs — the math reacts in real time.</p>
+      <ul class="chips">
+        <li>Browser</li>
+        <li>Desktop</li>
+        <li>Mobile</li>
+      </ul>
     </header>
-    <ul class="applist">
-<!-- APP_LINKS_START -->
-
-<!-- APP_LINKS_END -->
+    <section class="announce" aria-label="Announcement">
+      <h2>Preview release on Android</h2>
+      <p>Iotic Fractal and Iotic Trikona are now available on Google Play as preview releases. To install:</p>
+      <ol class="announce-steps">
+        <li>
+          Visit our announcement-only Google Group
+          <a href="https://groups.google.com/g/driota"><strong>driota</strong></a>
+          and click <em>Join the group</em>. If you don't see that option,
+          sign in first with the same Google account you use on Google Play.
+        </li>
+        <li>
+          <em>Fantastic Fractals</em>, app name <strong>Iotic Fractal</strong>:
+          <a href="https://play.google.com/apps/testing/xyz.driota.fractal">Opt in to become a tester</a>,
+          and then <a href="https://play.google.com/store/apps/details?id=xyz.driota.fractal">Install <em>Fantastic Fractals</em></a>
+          (free) from Google Play.
+        </li>
+        <li>
+          <em>Triangular Geometry</em>, app name <strong>Iotic Trikona</strong>:
+          <a href="https://play.google.com/apps/testing/xyz.driota.trikona">Opt in to become a tester</a>,
+          and then <a href="https://play.google.com/store/apps/details?id=xyz.driota.trikona">Install <em>Triangular Geometry</em></a>
+          (<strong>free 5/17/2026 to 5/30/2026</strong>) from Google Play.
+        </li>
+      </ol>
+      <p class="announce-alt"><small>The driota group carries announcements of major app releases only — very low volume, no spam. Already in the broader <a href="https://groups.google.com/g/testers-community">testers-community</a> Google Group? That works as well.</small></p>
+    </section>
+    <ul class="app-grid">
+      <li>
+        <article class="app-card app-fractal">
+          <img class="app-icon" src="/run/fractal/images/app-icon-64.webp" alt="Fantastic Fractals icon" width="64" height="64">
+          <div class="info">
+            <h2>Fantastic Fractals</h2>
+            <p class="blurb">Generate and explore Mandelbrot, Julia, and other fractals interactively.</p>
+            <div class="card-actions">
+              <a class="btn primary btn-sm" href="/run/fractal/">Open →</a>
+              <a class="card-link" href="./fractal/">Learn more</a>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li>
+        <article class="app-card app-trikona">
+          <img class="app-icon" src="/run/trikona/images/app-icon-64.webp" alt="Triangular Geometry icon" width="64" height="64">
+          <div class="info">
+            <h2>Triangular Geometry</h2>
+            <p class="blurb">Learn triangular geometry with interactive visuals and animated proofs.</p>
+            <div class="card-actions">
+              <a class="btn primary btn-sm" href="/run/trikona/">Open →</a>
+              <a class="card-link" href="./trikona/">Learn more</a>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <ul class="sample-grid" aria-label="Sample pages">
+      <li>
+        <a class="sample-card" href="/run/trikona/?name=pythagorean-theorem">
+          <img src="/images/preview/trikona/pythagorean-theorem.webp" alt="Pythagorean theorem dissection" title="Pythagorean theorem dissection" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li>
+        <a class="sample-card" href="/run/fractal/?name=mandelbrot">
+          <img src="/images/preview/fractal/mandelbrot.webp" alt="Mandelbrot set" title="Mandelbrot set" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li>
+        <a class="sample-card" href="/run/trikona/?name=simson-line-proof">
+          <img src="/images/preview/trikona/simson-line-proof.webp" alt="Simson line construction" title="Simson line construction" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li>
+        <a class="sample-card" href="/run/fractal/?name=julia">
+          <img src="/images/preview/fractal/julia.webp" alt="Julia set" title="Julia set" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li>
+        <a class="sample-card" href="/run/trikona/?name=ninepointcircle-intro">
+          <img src="/images/preview/trikona/ninepointcircle-intro.webp" alt="Nine-point circle" title="Nine-point circle" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li>
+        <a class="sample-card" href="/run/fractal/?name=newton">
+          <img src="/images/preview/fractal/newton.webp" alt="Newton's method basins" title="Newton's method basins" loading="lazy" decoding="async">
+        </a>
+      </li>
+      <li>
+        <a class="sample-card" href="/run/fractal/?name=burningShip">
+          <img src="/images/preview/fractal/burningShip.webp" alt="Burning Ship fractal" title="Burning Ship fractal" loading="lazy" decoding="async">
+        </a>
+      </li>
     </ul>
     <hr>
     <footer>
-      <p>More apps and games are coming soon. © 2025 Doctor Iota.
-        <a href="./privacy.html"><small>Privacy policy</small></a>
+      <p>© 2025 Doctor Iota.
+        <small>
+          <a href="./privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
       </p>
+      <small class="build-info">Built 2026-06-09 00:40 UTC · 0a5b59c2</small>
     </footer>
+    <!-- AdSense disabled — uncomment to re-enable
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-5400548434612970"
          data-ad-slot="5745481735"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
   </div>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 </body>
 </html>
