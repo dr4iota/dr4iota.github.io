@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>The terminal — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.5.0 — <a href="../changes.html#v0-5-0">what's new in it</a>.</p>
+<h1 id="the-terminal">The terminal</h1>
+<p>A shell on the server you are browsing, in the same window. It uses the SSH
+connection that is already open, so it needs no second login and no second
+password.</p>
+<p>It starts in the folder you are looking at. Opened from a server&#39;s row, with
+none of its folders on screen, it starts in the server&#39;s <strong>Initial path</strong>. A
+folder that cannot be entered ends the session, with the reason on screen.</p>
+<p>If the server has a <strong>Remote command</strong>, that runs instead of your login shell,
+in the same folder.</p>
+<h2 id="a-size-of-your-own">A size of your own</h2>
+<p>By default the terminal fits the screen. On a phone held upright that is about
+33 columns, which is too narrow for tmux, htop or anything with a table (see
+<strong>Size</strong> in <a href="servers.html">Servers</a>).</p>
+<p><strong>Fixed</strong>, on the server&#39;s Terminal tab, keeps a set number of columns and rows
+(<code>80×24</code>, <code>100×30</code> and <code>132×43</code> are a tap away). Programs are never told another
+size, and <strong>the header shows it</strong> beside the host, where the screen is wide
+enough for both (a phone held sideways, a desktop). So if a program does not
+reflow when you resize the window, the setting is working. The screen is a
+window onto that fixed-size terminal:</p>
+<ul>
+<li><strong>Two fingers pan</strong>, and <strong>a pinch changes the type size</strong>. That changes how
+much of the terminal is on screen, never the size programs see. On the
+on-screen keyboard those two fingers stay keys — both thumbs typing, or a
+chord on <strong>Laptop keys</strong> or <strong>Coder keys</strong> — until they spread into a pinch
+or slide into a pan.
+On those two, a finger held on Ctrl, Alt, Shift or Fn keeps the pair a
+chord however it moves. The extra keys&#39; Ctrl and Alt apply to the next key
+rather than being held, so there a pinch that starts on one simply leaves it
+off.</li>
+<li><strong>You can pan and zoom anywhere while your fingers are down.</strong> When you let
+go, a pinch past the smallest or largest size glides back to it (it goes
+only a little past the largest: see <strong>Largest zoom</strong> in
+<a href="servers.html">Servers</a>), and an
+edge let go close to the edge of the screen (or of the header, or the
+status bar) settles onto it; with both edges close, the type size changes a
+little so the terminal meets both. And if
+there is empty screen on one side while the terminal runs off the other, or
+it is pushed off altogether, it glides back until an edge meets the
+screen&#39;s edge or it is wholly on screen. Wholly on screen, or covering it,
+it stays where you left it.</li>
+<li><strong>One finger goes to the shell</strong>: a drag scrolls the history, a tap brings the
+keyboard back, and where a program has asked for a mouse, a tap is a click
+(see below).</li>
+<li><strong>Start by</strong> decides how the terminal first opens: <strong>Fit</strong> (the whole grid
+in view, small type), <strong>Fill</strong> (the screen covered, one side cropped), the
+<strong>Default type size</strong> (pan both ways), or a <strong>Saved view</strong>. <strong>Position</strong> says
+where it rests: Top, Middle or Bottom, and Left, Center or Right. With
+<strong>Fixed columns</strong> the rows fill the screen, so vertically it only places what
+is left below one row. Neither limits where you can pan.</li>
+<li><strong>Save the view on screen as the start</strong>: on the keyboard menu, the
+<strong>wrench</strong>, then <strong>Save</strong> under <strong>Zoom and position</strong>. It keeps the type
+size and where you panned to, for this shape — portrait, landscape, or a
+desktop window that does not fill the screen each have their own — and sets
+<strong>Start by</strong> to <strong>Saved view</strong>. It says when it was saved, and <strong>Forget</strong>
+drops it; the Terminal tab shows what is saved. <strong>Reset view</strong> comes back to
+it. A screen more than a fifth wider or narrower than the one it was saved
+on opens at the default type size instead.</li>
+<li><strong>Any type size</strong>, on the keyboard menu, lets <strong>Fit</strong> and <strong>Fill</strong> meet the
+screen&#39;s edges exactly. Without it the type is drawn at a sharp size, which
+can stop short of an edge by up to a character; with it the type is scaled a
+little to close the gap, and may look slightly soft. It is off by default,
+and set per device.</li>
+<li><strong>Follow the cursor</strong> moves the view after you type, for about a second and a
+half, so you see the answer. A cursor a program moves on its own — a clock in
+a tmux bar — leaves the view where you put it. It waits two seconds after you
+pan, and typing ends that wait. When it is off, the view stays where you put
+it.</li>
+<li><strong>Reset the view</strong> by holding <strong>two fingers still</strong> on the terminal. After a
+moment a note at the top says <em>Keep holding to reset view</em>; a moment later it says
+<em>Release to reset view</em>, and when you lift your fingers the view resets,
+placed by the server&#39;s <strong>Position</strong>. After you have panned or zoomed, that
+means back to how the terminal opens (its <strong>Start by</strong>). With nothing moved
+since the last reset, or since it opened, it steps on instead: between
+<strong>Fit</strong> (the whole grid in view) and <strong>Fill</strong> (the screen covered, one side
+cropped), and from a <strong>Type</strong> size to Fit, then Fill, then back to the type
+size. None of this changes the size programs see: that is the server&#39;s
+columns × rows, whatever the type size on screen. With <strong>Fixed columns</strong>
+there is no Fill: from Fit every reset fits the columns again, and from a
+Type size it turns between that size and Fit. Programs are told how many
+rows that makes.
+Moving your fingers before you lift them makes it an ordinary pinch or pan.
+It works over <strong>Laptop keys</strong> and <strong>Coder keys</strong> too, with both fingers on the keys or
+one on the keys and one on the terminal, and types nothing — unless one of
+them is on Ctrl, Alt, Shift or Fn, which makes it a key combination. On the
+extra keys two fingers are keys, as above.</li>
+<li>The terminal fills the whole screen, including around the camera cutout. A
+row hidden under the cutout can be dragged back into view, and the terminal
+never puts the cursor there.</li>
+</ul>
+<p>On a desktop <strong>Ctrl+drag</strong> (<strong>Cmd+drag</strong> on a Mac) pans the terminal (across
+only with <strong>Fixed columns</strong>) and <strong>Ctrl+wheel</strong> zooms it; the type size is
+settled when you let go of Ctrl. A
+link opens with a click, or with <strong>Ctrl+click</strong> (<strong>Cmd+click</strong> on a Mac) where a
+program has taken the mouse; a Ctrl+click that does not move is still a click.
+A plain wheel scrolls the history. <strong>Ctrl+double-click</strong> or <strong>Ctrl+0</strong>
+(<strong>Cmd</strong> on a Mac) resets the view the way two fingers held do on a phone:
+back to how it opens after a pan or zoom, otherwise on to the next size of
+its cycle. A Ctrl+double-click on a link opens the link as well.</p>
+<h2 id="the-lens">The lens</h2>
+<p>With <strong>Fixed</strong> or <strong>Fixed columns</strong>, <strong>View</strong> on the server&#39;s Terminal tab can
+be <strong>Lens</strong> instead of <strong>Flat</strong>. The whole terminal then stays on screen:
+the part you are working in, the <strong>focus</strong>, is drawn at full size, and the
+rest is squeezed toward the screen&#39;s edges, more the further away it is. You
+see what is happening elsewhere at a glance, and bring it in when you need
+it. Programs see the same columns and rows either way.</p>
+<ul>
+<li><strong>Focus width</strong> and <strong>Focus height</strong> set how much of the screen the focus
+takes (with Fixed columns there is only the width, since the rows fill the
+screen). At 0 the focus is a point; at 100 % that direction pans as
+<strong>Flat</strong> does.</li>
+<li><strong>Two fingers pan</strong> the focus over the terminal, and <strong>a pinch</strong> changes the
+type size, as without the lens, but never below <strong>Fit</strong>: the whole terminal
+at one size, nothing squeezed, with room left on one side, which stays put
+while you pan. <strong>Fill</strong> covers the screen, the edges squeezed, and is how a
+lens terminal opens unless you choose otherwise under <strong>Start by</strong>.
+<strong>Position</strong> says where the focus starts, where <strong>Reset view</strong> brings it
+back, and where the terminal sits in the room Fit leaves.</li>
+<li><strong>A tap on a squeezed part</strong> brings what you tapped into the focus after a
+moment. Where the characters there are big enough to aim at, the tap also
+reaches the program, as a tap anywhere does; where they are too small, it
+only brings them in. A second finger before the moment is up calls it off.</li>
+<li><strong>The cursor is followed into the focus</strong> after you type, clear of the
+header and of a keyboard floating over the terminal, and the cursor is
+never drawn too small to find.</li>
+<li><strong>Selecting</strong> past the focus&#39;s edge pans the focus along, faster the deeper
+you go. The history scrolls only when you drag beyond the terminal itself.
+<strong>Find</strong> brings each match into the focus, clear of its box.</li>
+<li><strong>Fast output</strong> reaches the focus at once; the squeezed edges catch up a few
+times a second, and settle when the output stops.</li>
+<li>The keyboard&#39;s keys never move the lens, wherever the keyboard is.</li>
+<li><strong>The lens needs graphics acceleration.</strong> Where there is none, on Linux, or
+while a screen reader is exploring by touch, the terminal pans as Flat
+does, and the setting is kept for when the lens can be drawn.</li>
+</ul>
+<h2 id="the-keyboard">The keyboard</h2>
+<p>The keyboard stays up while you use the buttons, and what you type goes to the
+shell. If it does go away, tap the terminal to bring it back.</p>
+<p><strong>Send taps to programs that ask for a mouse</strong>, on the Terminal tab, decides
+what one finger does where a program is listening for clicks: tmux, vim and
+htop can take a tap as a click and a drag as a scroll wheel. When it is off, one
+finger always selects and scrolls. The extra keys send keys either way, never
+clicks. On the extra keys, <strong>Laptop keys</strong> and <strong>Coder keys</strong>, a tap in the gap between keys,
+or on the margin beside them, does nothing: it types no key and does not reach
+the shell.</p>
+<h2 id="the-extra-keys">The extra keys</h2>
+<p>Fourteen keys a phone keyboard lacks: <code>Esc</code>, <code>Tab</code>, <code>Ctrl</code>, <code>Alt</code>, the arrows,
+<code>Home</code>, <code>End</code>, <code>PgUp</code>, <code>PgDn</code>, <code>Ins</code> and <code>Del</code>. Where there is room for two
+rows, they are laid out like a keyboard:</p>
+<pre><code>Esc  Tab  Home  ↑   End  PgUp  Ins
+Ctrl Alt   ←    ↓    →   PgDn  Del
+</code></pre>
+<p>The arrows are an inverted T, and Ctrl and Alt are bottom left, where a keyboard
+has them. Where the width allows a single row, the modifiers are on the left and
+the arrows on the right:</p>
+<pre><code>Ctrl  Alt  Esc  Tab   Ins  Del  PgUp  PgDn   Home  ←  ↓  ↑  →  End
+</code></pre>
+<p><strong>Ctrl</strong> and <strong>Alt</strong> apply to the next key when tapped: press Ctrl, then C.
+Held, they work as on a real keyboard: hold Ctrl and tap ← to move a word. An
+arrow or Del held down repeats. In the header, where the keys sit among the
+page&#39;s own buttons, each is a single press. Arrows work in the shell and in
+<code>vim</code> alike. <strong>Del</strong> is not
+Backspace: Backspace deletes the character before the cursor, Del the one under
+it. <strong>Ins</strong> is there for <code>vi</code>.</p>
+<p>The keys show signs rather than names, the same on the extra keys and on <strong>All
+keys</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Sign</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a circle with an arrow leaving it</td>
+<td>Esc</td>
+</tr>
+<tr>
+<td>an arrow into a bar (pointing left while Shift is on)</td>
+<td>Tab (Shift+Tab)</td>
+</tr>
+<tr>
+<td>a key shape with a cross, pointing left or right</td>
+<td>Backspace, Del</td>
+</tr>
+<tr>
+<td>a text cursor with a plus</td>
+<td>Ins</td>
+</tr>
+<tr>
+<td>a bar and a triangle</td>
+<td>Home, End</td>
+</tr>
+<tr>
+<td>two stacked triangles</td>
+<td>PgUp, PgDn</td>
+</tr>
+<tr>
+<td>a caret; the Option sign</td>
+<td>Ctrl; Alt</td>
+</tr>
+<tr>
+<td>three bars</td>
+<td>the keyboard key, on <strong>Laptop keys</strong> and <strong>Coder keys</strong></td>
+</tr>
+</tbody></table>
+<p><strong>You choose which keyboard you use and where the extra keys sit.</strong> The <strong>Keys</strong>
+button in the header puts the keyboard away and brings it back; a long press on
+it, or the small arrow beside it, opens the <strong>On-screen keyboard</strong> menu:</p>
+<ul>
+<li><p><strong>None</strong>: no on-screen keyboard.</p>
+</li>
+<li><p><strong>System keyboard</strong>, with <strong>Extra keys</strong> in one of three places:</p>
+<ul>
+<li><strong>None</strong>: the keys go in the header, on a window wide enough for the whole
+row.</li>
+<li><strong>Floating</strong>: two rows over the shell, see-through so the text under them
+stays readable. <strong>Drag the tab to move them anywhere</strong>, or <strong>tap the tab</strong>
+to move them round the edges and corners. The default in landscape on a
+phone, at the top right, since the prompt is at the bottom, and on a
+desktop, switched off until the Keys button brings them back.</li>
+<li><strong>Above it</strong>: one or two rows above the system keyboard, or at the bottom
+edge when it is down. They cover nothing; the shell gets fewer rows
+instead. The default in portrait on a phone, as in most phone terminals.</li>
+</ul>
+<p>The system keyboard&#39;s <strong>suggestions and corrections work</strong>: choosing a word
+sends the Backspaces and letters that turn what you typed into it, and the
+keyboard sees the line you are typing. Moving the keyboard&#39;s cursor (a
+swipe along the space bar) moves the shell&#39;s, and the left and right arrows
+move both. After Tab, the up and down arrows or any other key that lets the
+shell change the line, it starts again from there. Where a keyboard
+composes a word first, as for Chinese or Japanese, the word shows at the
+cursor as you type and the shell gets it when you commit it. A password is
+kept out of the keyboard&#39;s view.</p>
+</li>
+<li><p><strong>Our own keyboard</strong>, which hides the system keyboard: the full keyboard,
+with <strong>Type</strong> choosing <strong>Laptop</strong> or <strong>Coder</strong> keys (below). Where neither
+fits, as on a phone held upright, it is greyed. The extra keys on their
+own, without the system keyboard, are no longer offered here: if you had
+chosen them, they now float beside the system keyboard.</p>
+</li>
+</ul>
+<p>The button at the right of each of those two rows opens that keyboard&#39;s
+colours: the floating extra keys&#39;, and the full keyboard&#39;s, which both its
+types share.</p>
+<h3 id="keeping-your-keyboard-setup">Keeping your keyboard setup</h3>
+<p>What you choose in this menu — which keyboard, its type, keys, size, split,
+colours and ink, where you dragged it, whether the header and the system
+keyboard float — and the colours you tune are your <strong>keyboard setup</strong>. Where
+things sit is kept separately for each shape: portrait and landscape, on a
+phone or tablet or a desktop filling its screen, and a desktop window that
+does not. Ink and colours are kept separately for the light and dark themes.</p>
+<ul>
+<li>Tick <strong>Autosave for this server</strong> near the bottom of the menu, and
+everything you change from then on is saved for this server as you change
+it. Untick it to stop; what is saved stays.</li>
+<li>Unticked, what you change lasts until you close the terminal, unless you
+save it from the wrench. A colour sheet&#39;s button says which: <strong>Apply</strong>
+while unticked, <strong>Save</strong> while ticked.</li>
+<li>The <strong>wrench</strong> beside it opens <strong>Keyboard setup</strong>, with <strong>View setup</strong> at
+the bottom for a fixed size:<ul>
+<li>Two blocks for the keyboard on screen: this shape and theme (say
+<strong>Portrait, dark</strong>), and this shape in both themes. Each says whether it
+has <strong>Changed</strong> since you saved, and when. <strong>Save to Server</strong> or <strong>Save
+to App</strong> keeps it; <strong>App</strong> is what every server without its own setup
+uses. <strong>Revert</strong> goes back to what is saved; <strong>Use App</strong> and <strong>Use
+Built-in</strong> try those instead, with Autosave off.</li>
+<li><strong>This server</strong>: when its setup was saved, the <strong>Autosave</strong> box,
+<strong>Save all</strong> (every shape, both themes) and <strong>Forget</strong>.</li>
+<li><strong>App</strong>: the same, for servers with none saved.</li>
+<li><strong>Zoom and position</strong>, for a fixed size: the type size and where you
+panned to, saved as the server&#39;s start for this shape.</li>
+</ul>
+</li>
+</ul>
+<p>Until you have placed it, the full keyboard opens a few rows above the
+bottom, as the server&#39;s settings say, so the prompt stays in sight.
+<strong>Copy what I select</strong> and <strong>Any type size</strong>, below the line, are this
+device&#39;s and part of no setup.
+The same menu has <strong>Header floats</strong>: when it is on, the header floats
+see-through over the top row, so a short screen spends none of its height on
+it. Floating, it shows icons rather than words, in amber so it is not taken
+for keys. Either keyboard of ours
+may be dragged up over it; a key over one of its buttons is the key. It is
+remembered per orientation like the rest of this menu, and is on by default in
+landscape on a phone.</p>
+<p>Where the screen is too short for it — a phone held sideways with its keyboard
+up — <strong>the header steps aside</strong>, floating or not, and comes back when you put
+the keyboard away. Messages then show at the top of the screen for a few
+seconds. The extra keys move to a strip above the keyboard, and where even
+that leaves the terminal too little room, they step aside as well.</p>
+<h2 id="leaving-the-terminal-from-the-keyboard">Leaving the terminal from the keyboard</h2>
+<p><code>Tab</code> and <code>Esc</code> go to the shell, so they cannot also move you out of it. Press
+<code>Ctrl+Shift+Tab</code> to go back to the header, or <code>Ctrl+Tab</code> to go on to the keys at
+the bottom. Nothing you had typed is lost. <code>Tab</code> from the header, <code>Shift+Tab</code>
+from the first key, or a click puts you back where you were.</p>
+<h2 id="copying-and-pasting">Copying and pasting</h2>
+<p><code>Ctrl+C</code> and <code>Ctrl+V</code> belong to the shell (one stops a program, the other types
+the next key literally), so copy and paste use the keys other terminals use:</p>
+<ul>
+<li><code>Ctrl+Insert</code> or <code>Ctrl+Shift+C</code> copies the selection.</li>
+<li><code>Shift+Insert</code> or <code>Ctrl+Shift+V</code> pastes, and so does a <strong>middle click</strong>.</li>
+<li>On a Mac, <code>Cmd+C</code> and <code>Cmd+V</code>.</li>
+</ul>
+<p><strong>Copy what I select</strong>, on the keyboard menu, copies a selection as soon as you
+let go, as many desktop terminals do. It is on by default. Turn it off if you want to
+keep something on the clipboard while you read.</p>
+<p>In a program that uses the mouse, such as tmux, zellij or an editor, the
+selection belongs to that program, so what <em>it</em> copies reaches your clipboard.
+Hold <strong>Shift while you drag</strong> to select in the terminal instead, as in any
+terminal.</p>
+<p><strong>With a finger</strong>, a quick drag scrolls, so selecting starts with a hold:</p>
+<ul>
+<li><strong>Hold, then drag</strong> selects, the way a mouse drag does. In a program that uses
+the mouse, the drag goes to that program, and its copy reaches your clipboard.</li>
+<li><strong>Tap twice and keep the second tap down, then drag</strong> always selects in the
+terminal, even in such a program: the finger&#39;s Shift+drag.</li>
+<li><strong>Tap</strong> anywhere on the shell to clear a selection.</li>
+</ul>
+<p>On a phone there is no Ctrl or Insert key. <strong>Hold a finger on the shell</strong> without
+moving and a small menu offers Paste, and Copy when something is selected.
+Held on a link the program printed, it also offers <strong>Open link</strong>, which opens
+it in your browser, and <strong>Copy link</strong>. The <code>Ins</code> key
+among the extra keys pastes when you hold it, and copies when you press <code>Ctrl</code>
+first. On <strong>Laptop keys</strong> and <strong>Coder keys</strong>, <code>Ctrl+Ins</code> and <code>Shift+Ins</code> work as they do anywhere.</p>
+<p>It is the device&#39;s normal clipboard, shared with every other app.</p>
+<h2 id="finding-in-what-the-shell-printed">Finding in what the shell printed</h2>
+<p>The <strong>magnifier</strong> in the header, or <code>Ctrl+Shift+F</code> (<code>Cmd+F</code> on a Mac), opens
+<strong>Find</strong> under the header. Type, and every match is marked, the newest first.
+Case counts only when you type a capital. Text you had selected is the search
+to begin with.</p>
+<p>Whichever keyboard is up types into the box: the system keyboard, or Laptop
+keys and Coder keys. Tap the shell to type there with Find still open; tap the
+box to go back to it.</p>
+<p>Nothing changes size while Find is open, so a program never redraws under it.
+In a program with a screen of its own, such as tmux, vim or less, only that
+screen is searched, because the program keeps its own history. The box shows
+<strong>ⓘ</strong> there; tap it for the program&#39;s own search keys. The box moves out of the
+match&#39;s way.</p>
+<h2 id="laptop-keys-and-coder-keys">Laptop keys and Coder keys</h2>
+<p>A phone in landscape with the system keyboard up has three or four rows of
+shell left. <strong>Laptop keys</strong>, under <strong>Our own keyboard</strong> on the menu, hides the
+system keyboard and shows the app&#39;s own: a number row, the letters, Esc, Tab,
+Del, the arrows and the modifiers, laid out like a laptop&#39;s. It is offered where the screen is wide
+enough: a phone turned sideways, or a tablet. On a phone held upright there is
+no room for it, so <strong>Our own keyboard</strong> is greyed and says <em>none fits</em>; where
+only one of the two types fits, the other is greyed, and holding the pointer
+over it says why. In portrait the extra keys over the system keyboard fit better.</p>
+<p>It is drawn <strong>behind the terminal&#39;s text</strong> by default: the background is
+see-through over the keys and the text stays solid. <strong>Full keyboard</strong> on the
+server&#39;s <strong>Terminal</strong> tab can put it <strong>in front</strong> instead, see-through, so the
+text underneath stays readable and a coloured status line keeps its colour
+through the keys.</p>
+<p><strong>Coder keys</strong>, the other <strong>Type</strong>, is a second keyboard of the same kind for
+typing code: a row on top holds <code>~ ! @ # $ % ^ &amp; * ( ) _ +</code>, and the sides add
+PgUp, PgDn, <code>{ } &lt; &gt; ? : &quot; |</code>, Ins, Home and End, each on a key of its own.
+There is no Fn key. <strong>Shift on a digit is an F-key</strong> (Shift+1 is F1, Shift+=
+is F12), and Shift on a symbol above it is Shift and that F-key. <strong>Caps Lock</strong>,
+at the left of the home row, types letters in capitals and leaves digits and
+symbols alone; Shift turns a letter back to lower case. Programs see
+the keys a real keyboard would send. It needs a little more width than <strong>Laptop
+keys</strong>, so a screen that fits one may grey the other. The settings below are
+shared between the two.</p>
+<p>Five settings on the menu go with both:</p>
+<ul>
+<li><strong>Keys</strong> chooses the shape of the keys: <strong>Short</strong>, <strong>Square</strong> or <strong>Tall</strong>.
+Short gives the shell the most rows, for a phone on its side. Where the
+shape you chose does not fit, the next shorter one is drawn instead.</li>
+<li><strong>Ink</strong> — <em>−−</em>, <em>−</em>, <em>Tuned</em>, <em>+</em> or <em>++</em> — sets how solid it looks, from half
+to twice as strong as tuned. The extra keys have the same setting.</li>
+<li><strong>Size</strong>: five steps, <em>XS</em> to <em>XL</em>. <em>M</em> is the standard size, the same on
+every screen with room for it, since a thumb is the same size on a phone and
+a tablet; <em>L</em> and <em>XL</em> are for tablets. A size this screen cannot quite give
+is drawn as large as it can, and one it cannot give at all is greyed out.</li>
+<li><strong>Split</strong> puts half the keyboard at each edge of the screen, one under each
+thumb, with the shell between them. <em>Auto</em> splits it on a wide screen.</li>
+<li><strong>Colors</strong> tints the keys by kind so you can find one at a glance: <em>Base</em>
+is one color; <em>Plain</em> gives digits, letters, symbols, modifiers, the arrow
+and page keys, and the editing keys a color each; <em>Fingers</em> adds two
+shades by finger column on the letters and digits; <em>Math</em> shades the primes
+and i–m and leaves 0, 1, a b c and x y z plain. The colors follow the base
+hue you tune.</li>
+</ul>
+<p>The keyboard opens a row or two above the bottom of the screen, so the line you
+are typing is never under it. <strong>Drag it by either keyboard key</strong> — the keys
+with three bars — to move it up or down; a tap on one still does what it always
+did. How far up it
+opens is set per server, as <em>Keyboard opens this many rows up</em> on the Terminal
+tab, so a status line at the bottom stays visible on every device.</p>
+<p>On this keyboard <strong>Ctrl, Alt, Shift and Fn work as real modifier keys</strong>: hold one
+and tap another key, or tap it alone to apply it to the next key. Backspace,
+Delete, the arrows and Space repeat while held, when no other key is down
+beside them but a modifier: Shift+→ held keeps selecting. Shift works on Tab
+and the arrows too — Shift+Tab steps back through completions — and
+Alt+Backspace deletes a word.</p>
+<p><strong>Fn</strong> reaches the keys a laptop hides behind it:</p>
+<table>
+<thead>
+<tr>
+<th>Fn and</th>
+<th>sends</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>1</code> … <code>0</code>, <code>-</code>, <code>=</code></td>
+<td>F1 … F12</td>
+</tr>
+<tr>
+<td>↑ / ↓</td>
+<td>PgUp / PgDn</td>
+</tr>
+<tr>
+<td>← / →</td>
+<td>Home / End</td>
+</tr>
+<tr>
+<td>Del</td>
+<td>Ins</td>
+</tr>
+<tr>
+<td>⌫</td>
+<td>Del</td>
+</tr>
+</tbody></table>
+<p>It combines with the others, so Ctrl+Fn+↓ is Ctrl+PgDn and Shift+Fn+Del is
+Shift+Ins, the paste.</p>
+<p>A program that asks for the kitty keyboard protocol gets it from these keys, so
+<strong>Shift+Enter</strong> starts a new line rather than sending in programs that tell the
+two apart, and Esc answers at once in helix and zellij.</p>
+<p><strong>Shift locks</strong> with two quick taps, or when held on its own: it then stays on
+for every key, symbols included, and the Shift keys show a thicker ring. One
+more tap lets it go.</p>
+<p>The keys are labelled with what they will send: capitals and the shifted
+symbols while Shift is on, and F1–F12 and the signs for PgUp/PgDn, Home/End and
+Ins while Fn is. A tap on the <strong>keyboard key</strong> (three bars) brings back the
+system keyboard for anything this one cannot type; the Keys button in the header
+brings this one back.</p>
+<p><strong>System keyboard floats</strong>, also on the menu, asks the system keyboard to sit
+over the terminal instead of pushing it up, so a floating or one-handed keyboard
+works over a fixed-size shell. It is off by default, and shows <em>N/A</em> where the
+device cannot do it, which includes Android.</p>
+<h2 id="passwords-and-passphrases">Passwords and passphrases</h2>
+<p>When a password or key passphrase is needed, the box asking for it appears over
+whatever is on screen, in the same window. On a phone that is the only place it
+can go, and on a desktop it keeps the box from opening behind another window.</p>
+<h2 id="keeping-a-terminal">Keeping a terminal</h2>
+<p><strong>Keep</strong>, in the header, keeps the terminal running when you leave it. Go to
+the files or to Servers and come back, and it is there as you left it, with
+what it printed meanwhile. Tap Keep again to turn it off; the terminal then
+closes when you leave it, as any terminal does without Keep.</p>
+<ul>
+<li>A server&#39;s terminal icon, in the sidebar or on the start page, brings back
+the terminal you last saw on it. <strong>Terminal</strong> in the file tree&#39;s header
+always opens a new one, in the folder on screen.</li>
+<li>The arrow beside Keep opens a list of the terminals you left open, with the
+one you are in ticked. It shows when Keep is on here or another terminal is
+left open, and always on a desktop. Choose a terminal to switch to it; <strong>×</strong>
+closes one. <strong>New terminal on ⟨server⟩</strong> opens another on the same server,
+in the folder its files are open at, with Keep on or off as that server&#39;s <strong>Terminal</strong> tab says. Switching away
+from a terminal with Keep off closes it, and the list warns you first.</li>
+<li>On a narrow phone the arrows beside Keep and beside <strong>Keys</strong> are hidden;
+hold Keep or <strong>Keys</strong> instead. A small mark under the button shows when
+holding it opens a menu.</li>
+<li>On the <strong>Servers</strong> page, a server&#39;s row lists the terminals you left open
+on it, under <strong>Open terminals</strong>, as numbered chips — green running, amber ended
+— each a way back to it. The row&#39;s <strong>New terminal</strong> button opens another.</li>
+<li><strong>Keep new terminals running when you leave them</strong>, on a server&#39;s
+<strong>Terminal</strong> tab, turns on Keep for every new terminal on that server. Keep,
+in a terminal&#39;s header, still changes it for that one terminal.</li>
+<li>When the shell in a terminal you left open has ended, the list and the
+Servers page say <em>ended</em>, and the terminal shows <strong>Reconnect</strong>, which starts
+a new shell under what the old one printed. The bar, and the last line of
+the terminal, say why: <em>The shell exited</em> (with its status when it is not
+0), <em>The connection was lost</em>, or <em>The session ended</em> for anything else —
+<strong>Disconnect</strong>, or a shell ended from elsewhere. On a narrow screen, tap
+the bar to read it in full. <strong>Close terminals that have
+ended</strong>, in the list, closes them all.</li>
+<li><strong>Disconnect</strong> ends the shells in the server&#39;s terminals; they stay in the
+list, ready to reconnect. Deleting the server closes them.</li>
+<li>On a desktop, <strong>Show in a separate window</strong>, in the list, moves the terminal
+into a window of its own, and the main window goes back to the files or the
+start page. In the terminal&#39;s window, <strong>Main window</strong> brings the main window
+forward. Closing the terminal&#39;s window is leaving the terminal: with Keep on
+it goes back into the main window&#39;s list; otherwise it closes. While it has
+a window of its own, the list says <em>in its own window</em>, and choosing it
+brings that window forward — as does its chip on the Servers page, and a
+server&#39;s terminal icon when that is the terminal it would go back to. A password asked for in that window, for a
+<strong>Reconnect</strong> say, is asked there.</li>
+<li>The number beside a server&#39;s green dot is how many terminals you left open
+on it. The tooltip says, for example, <em>Connected · 2 terminals left open</em>.</li>
+<li>On a desktop, quitting asks first when terminals are left open, or when a
+terminal has a window of its own: <em>Quit Telechore? The 2 terminals you left
+open will close.</em>, or <em>…The terminal in its own window will close.</em></li>
+<li>On a phone, a terminal can end while the app is in the background. When you
+come back, one that lost its connection reconnects on its own, once, under
+what it printed; one you ended with <code>exit</code> or <strong>Disconnect</strong> does not.</li>
+<li>A connection that drops while you watch reconnects on its own as well, as
+soon as there is a network. If it keeps dropping, it waits a little longer
+each time and then stops trying on its own. If a connection
+cannot be made, <strong>Try again</strong> takes the place of the keys. When it was a
+reconnect that could not be made, it is also tried on its own: on a phone
+when the phone moves between Wi-Fi and mobile data — so a server on your
+home Wi-Fi comes back as Wi-Fi does — and on a computer every 30 seconds for
+ten minutes — when the network may be why. A wrong password, a refused key
+or host key, or a box you cancelled leaves it to you.</li>
+<li>The free edition keeps as many terminals running as it saves servers. When
+you reach the limit, Keep offers <strong>Get Pro</strong> right there, where your store
+sells it (see <a href="servers.html#the-free-edition-and-pro">Servers</a>).</li>
+</ul>
+<h2 id="what-it-does-not-do-yet">What it does not do yet</h2>
+<ul>
+<li><strong>Leaving a terminal with Keep off ends its shell</strong> — turn on Keep (above)
+if you want to come back to it. The SSH connection stays open, so coming back starts a
+new shell without logging in again.</li>
+<li><strong>A connection that keeps dropping is reconnected three times in a row at
+most.</strong> After that, and after <code>exit</code>, <strong>Reconnect</strong> takes the place of the keys
+in the header and opens a new shell under what the old one printed. A
+dropped session also shows greyed out in the sidebar; tapping it reconnects
+too. <strong>Disconnect</strong>, on the server&#39;s settings, closes the connection and
+ends the shell in any terminal using it.</li>
+<li>Pasting a very large amount of text is slow.</li>
+<li><strong>On Android the terminal needs Android System WebView 111 or newer</strong>, the
+part of the phone that draws it. On an older one it says so, and asks you to
+update it from Google Play, rather than showing a blank screen.</li>
+<li>The type size a pinch sets lasts only for the session; the next time, the
+terminal opens with the Terminal tab&#39;s setting, unless you save it under
+<strong>Zoom and position</strong> on the keyboard menu&#39;s wrench page.</li>
+</ul>
+</main>
+<footer class="foot">
+  <p>Built 2026-10-27 18:17 UTC from Telechore 0.5.0; the site at b864439f, 12 commits after v0.5.0, with treesight 5ffd66e.</p>
+</footer>
+</body>
+</html>

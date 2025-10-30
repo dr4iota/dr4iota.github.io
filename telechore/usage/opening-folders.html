@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Opening folders — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.5.0 — <a href="../changes.html#v0-5-0">what's new in it</a>.</p>
+<h1 id="opening-folders">Opening folders</h1>
+<p>The app opens on the start page, which lists what you can open.</p>
+<h2 id="places">Places</h2>
+<p>Standard folders from the system: your home directory, the desktop,
+documents and downloads where the system has them, the drive letters on Windows,
+and the filesystem root elsewhere. The same rows every launch. Nothing you open
+is added here.</p>
+<p>Each row is checked after the list appears. A greyed row says why:</p>
+<ul>
+<li><strong>gone</strong> — it answered, and there is nothing there any more.</li>
+<li><strong>denied</strong> — it is there and would not let you in.</li>
+<li><strong>N/A</strong> — it did not answer: a drive that is not ready, or a share whose host
+is gone.</li>
+</ul>
+<p>The row stays a link, so you can try it again.</p>
+<p>On a phone there are no such folders to browse without asking. The row there
+is <strong>Files</strong>, a folder of the app&#39;s own. Where a download asks where to save
+it, nothing new lands in Files, and the row is listed only while it holds
+something.</p>
+<h2 id="starred">Starred</h2>
+<p>What you chose to keep. <strong>Star</strong> is on the <strong>Files</strong> heading, over the tree. It
+stars the folder that is open, not one you have walked into, and the folder gets
+a row of its own, kept across launches. Press it again, or the cross on the row
+(<strong>Remove from Starred</strong>), and the row goes.</p>
+<p>To star a folder further down, start the tree there first — open it, then
+<strong>As root</strong> in its header — and then star it.</p>
+<p>A starred row that has gone missing greys and says so, and stays until you
+remove it.</p>
+<h2 id="recent">Recent</h2>
+<p>What you have opened, newest first, kept across launches. Each row has a cross
+(<strong>Forget this folder</strong>). A folder that is gone is dropped on the next launch,
+not while the list is on screen.</p>
+<h2 id="open-a-folder">Open a folder…</h2>
+<p>The system&#39;s folder dialog, or <code>Ctrl+O</code>. The same control is in the status line
+once a folder is open. What you choose is opened and remembered in Recent.</p>
+<h2 id="once-something-is-open">Once something is open</h2>
+<p>The header shows the path, and each part of it opens that folder. In a folder
+below the top, <strong>As root</strong> starts the tree at that folder, so you can open it
+without the dialog.</p>
+<p><strong>Close</strong> (the arrow leaving a frame, on the <strong>Files</strong> heading) returns to the start page. At the
+top of the open folder the header button is <strong>Start</strong> and does the same thing.
+Nothing asks you to confirm; the folder is in Recent. <strong>Up</strong> is the parent
+folder.</p>
+<p>Back, <code>Alt+Left</code> or the phone&#39;s gesture, walks through the folders you opened
+and then leaves you on the start page. On a phone, one more press leaves the
+app.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-10-27 18:17 UTC from Telechore 0.5.0; the site at b864439f, 12 commits after v0.5.0, with treesight 5ffd66e.</p>
+</footer>
+</body>
+</html>

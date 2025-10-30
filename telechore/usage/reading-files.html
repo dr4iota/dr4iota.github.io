@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Reading files — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.5.0 — <a href="../changes.html#v0-5-0">what's new in it</a>.</p>
+<h1 id="reading-files">Reading files</h1>
+<p>Select a file to see it beside the tree:</p>
+<ul>
+<li><strong>Source</strong> — syntax highlighted, with line numbers unless you turn them off.</li>
+<li><strong>Markdown</strong> — rendered, including maths in <code>$…$</code> and <code>$$…$$</code>, and <code>mermaid</code>
+blocks drawn as diagrams.</li>
+<li><strong>CSV and TSV</strong> — a table, with the heading row kept in view as you scroll;
+the first 5000 rows are shown.</li>
+<li><strong>JSON</strong> — laid out, and JSON Lines a record at a time. A file that does not
+parse is shown as written.</li>
+<li><strong>HTML</strong> — the page drawn, with its scripts off.</li>
+<li><strong>A <code>.gz</code> file</strong> — unpacked, and shown as what its name says under the
+<code>.gz</code>: <code>syslog.2.gz</code> as text, <code>data.csv.gz</code> as a table. A packed picture,
+recording or PDF is left packed.</li>
+<li><strong>Images</strong>, <strong>audio</strong> and <strong>video</strong> — shown and played in place.</li>
+<li><strong>PDF</strong> — the platform&#39;s viewer.</li>
+<li><strong>Anything else that is text</strong> — as text.</li>
+</ul>
+<h2 id="preview-source-raw-and-download">Preview, Source, Raw, and Download</h2>
+<p>The header shows how the file is shown as one set of buttons — <strong>Preview</strong>
+(an eye), <strong>Source</strong> (<code>&lt;/&gt;</code>) and <strong>Raw</strong> (a sheet) — with the one on screen
+lit. <strong>Preview</strong> is the file as this app draws it, <strong>Source</strong> the highlighted
+text, and <strong>Raw</strong> the file as it is, as text, with the header still shown, so
+you can get back. An HTML file&#39;s Raw is the HTML as written. A picture, film,
+PDF, binary or <code>.gz</code> file has no Raw.</p>
+<p>What can be done with the file — <strong>Print</strong>, <strong>Download</strong>, and any action the
+app adds — is a second set. <strong>Download</strong> saves a copy as stored. A file can
+also be saved without opening it, from its row in the folder: see below.</p>
+<p>While a copy is saved, the status line at the bottom says how far it has got,
+with <strong>Cancel</strong>.</p>
+<h2 id="a-folders-rows">A folder&#39;s rows</h2>
+<p>Each row shows its name and size and when it was last modified, with how
+long ago; on a narrow screen the time goes under the name. The first row,
+<strong>.. (to folder …)</strong>, names the folder above and goes up to it. At a row&#39;s
+right end are its buttons:</p>
+<ul>
+<li><strong>Download</strong> (the downward arrow), on a file, saves a copy, as above.</li>
+<li><strong>Delete</strong> (the bin), on a computer&#39;s own folders, moves the file or folder
+to the Trash (the Recycle Bin on Windows), after asking. Where the Trash
+will not take it, such as a network drive, a file or an empty folder can
+still be deleted for good, asked again in those words; a folder with things
+in it is never deleted that way.</li>
+</ul>
+<p>The app may add its own: a line under the row with words to tap, and a
+bookmark on the row&#39;s icon that switches something on and off — tapping the
+icon toggles it.</p>
+<p><strong>New folder</strong> turns the filter box into a box for the new folder&#39;s name;
+<strong>Cancel</strong> brings the filter back.</p>
+<h2 id="big-files">Big files</h2>
+<p>A text file over 2 MB is too big to highlight: it opens in <strong>Raw</strong>, with
+<strong>Source</strong> dimmed. A big archive or other file that is not text says so, and
+offers a download. Video, audio, and large PDFs play without being read all at
+once.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-10-27 18:17 UTC from Telechore 0.5.0; the site at b864439f, 12 commits after v0.5.0, with treesight 5ffd66e.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Servers — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<p class="note">These pages are for Telechore 0.5.0 — <a href="../changes.html#v0-5-0">what's new in it</a>.</p>
+<h1 id="servers">Servers</h1>
+<p>A server is a saved connection: where the machine is, who you are on it, and how
+to log in.</p>
+<p>On the start page, the button under <strong>Open a folder…</strong> reads <strong>Add a server</strong>
+while you have none and <strong>Manage servers</strong> once you have one. The <strong>Servers</strong>
+heading below it has the same two as icons: the <strong>plus</strong> opens the form for a
+new server, and the <strong>sliders</strong> open the list.</p>
+<p>The page lists your saved servers. <strong>Add a server</strong> opens the form under the
+list, a row&#39;s <strong>Edit</strong> opens the same form for that server, and <strong>Close</strong> puts
+it away. An existing server shows its id instead of letting you edit it, because
+the id cannot change once saved.</p>
+<p>A green dot before a server&#39;s name means it is connected. Beside <strong>Edit</strong> and
+<strong>Delete</strong>, <strong>New terminal</strong> (a terminal with a plus) opens a new terminal on
+that server; it is hidden while a form is open. A server with terminals you
+left open (see <strong>Keep</strong> in <a href="terminal.html">the terminal</a>) lists them under its
+row, after <strong>Open terminals</strong>, as numbered chips: a green dot for one that is
+running, an amber dot and <em>ended</em> for one whose shell has ended. Tap a chip to
+go back to that terminal; on a desktop, one in a window of its own is listed
+too, and its chip brings that window forward.</p>
+<p><strong>Delete</strong> on a row removes the server from this device, with its saved
+password or passphrase, and closes its connection and any terminals you left
+open on it. It asks first; nothing on the server itself changes.</p>
+<h2 id="a-servers-folders">A server&#39;s folders</h2>
+<p>A server&#39;s folder is browsed like one on this device (see
+<a href="tree-and-pane.html">Tree and sidebar</a>). Its header has <strong>New folder</strong> and
+<strong>Upload</strong>, which takes files from the system&#39;s picker, on a desktop and on
+Android, and never replaces a folder with a file. Each row ends in
+<strong>Delete</strong>; a file&#39;s also has <strong>Download</strong>, and its icon and the line under it
+are what this device keeps of it (see <a href="offline.html">Files offline</a>).</p>
+<p>A server that offers no file access (SFTP) still logs in: its terminal opens,
+and its row says <em>This server offers no file access (SFTP). Its terminal still
+opens.</em> in place of its folders.</p>
+<p>A folder whose connection has dropped connects again on its own when you next
+use it. On a phone that happens often: Android cuts the network a few seconds
+after the app leaves the screen, including while you choose files to upload. A
+download cut off that way picks up where it stopped once the app is back.</p>
+<h2 id="the-free-edition-and-pro">The free edition and Pro</h2>
+<p>A copy installed from an app store is the <strong>free edition</strong>, which saves a few
+servers: two from Google Play, four from the Microsoft Store. Where the store
+sells it, <strong>Unlock Pro</strong> saves as many as you like, for one payment with no
+subscription, and <strong>Restore purchase</strong> gets it back on a new device or after a
+reinstall. Google Play sells Pro; the Microsoft Store does not yet, so a copy
+from there keeps its four.</p>
+<p>A copy downloaded as a file, such as the Windows <code>.exe</code> or an APK, has no store
+to buy from and no limit.</p>
+<p>Past the limit, servers you already have keep working and can still be edited
+and deleted; only adding another needs Pro, where the store sells it. The free edition also keeps that
+many terminals running after you leave them (see <strong>Keep</strong> in
+<a href="terminal.html">the terminal</a>); keeping more running needs Pro too, where the
+store sells it.
+Files, the terminal and keys are free either way.</p>
+<h2 id="moving-servers-to-another-device">Moving servers to another device</h2>
+<p><strong>Export…</strong> on the list shows a QR image for another device running Telechore
+to scan. Tick what to include: which servers, their host keys, the passwords
+and passphrases saved on this device, and any key this app made that those
+servers use. A key this app did <em>not</em> make is never included in a configuration
+code, and the sheet names any server that will arrive without its key.</p>
+<p>The meter shows how much fits. It measures size, not servers: a short host name
+with no host key takes a third of the room of a long one with a key. The limit
+is well below what a QR image can hold, because a denser image is harder to
+scan.</p>
+<p><strong>The password beside Export encrypts the code</strong>, and you type the same one on
+the other device. The box is there when the code carries a password, a
+passphrase or a key; it is <strong>optional, and any length will do</strong>, and the sheet
+warns you when it is empty or short, but still lets you go ahead. When there is
+no password, the sheet says so: anyone who photographs the QR image has what is
+inside. A code with only servers and host keys has no password box and needs
+none: all it reveals is each server&#39;s host, user and starting folder, how it
+logs in — by password, a key, or the SSH agent — and, from a computer, your
+user name on it as the sender.</p>
+<p>The QR image stays on screen for a minute; closing the sheet removes it sooner.
+The other device can read the code for <strong>three minutes</strong> if it was scanned, and
+for <strong>fifteen</strong> if it was pasted as text, since text is usually sent by email or
+message. Nothing is written to disk on either device. The time limit stops the
+code being used again later, but it does not help against a photo someone has
+already taken: a photo can be turned back into text and pasted. Against that,
+only the password protects you.</p>
+<p><strong>Copy as text</strong> is beside the QR image on every device. The QR image is for a
+device in front of you; the text is for one that is not, and it is the only way
+to get a code from a phone to a desktop. It is the same code, and the same
+password opens it.</p>
+<p><strong>Import…</strong> reads a code. Paste it or scan it, and before anything is saved the
+next screen shows what the code holds: one row per server, with its state, then
+the host keys, secrets and keys that came with them. Untick anything you do not
+want.</p>
+<p>Each server row has a state:</p>
+<ul>
+<li><strong>new</strong>: this device does not have the server. It is saved as it arrived.</li>
+<li><strong>already here</strong>: the id is taken. A free one is offered, such as
+<code>prod-web-2</code>, to keep both; or type the old name back to overwrite the one you
+have.</li>
+<li><strong>arrives without its key</strong>: the server uses a key the other device did not
+make, so the key is not in the code. The server is saved with a password
+login; give it a key on the Auth tab afterwards. If it overwrites a server
+already here, it keeps that server&#39;s key.</li>
+</ul>
+<p>A row can be both <em>already here</em> and without its key; the label shows the first
+and the note under it the second.</p>
+<p>Host keys are imported only for hosts this device has no key for yet. A host
+you have already verified keeps its key, whatever the code says.</p>
+<p>If a key in the code has the same name as a <em>different</em> key on this device, it
+is saved under a free name, and the servers that use it are pointed at the new
+name. The same key arriving twice is saved only once.</p>
+<p><strong>In the free edition</strong>, servers over the limit arrive unticked. A renamed
+server counts as new; overwriting an existing one does not.</p>
+<p>Nothing is saved until you press <strong>Import</strong>, and <strong>Cancel</strong> discards the code.</p>
+<h2 id="the-form">The form</h2>
+<p>The form has three tabs: <strong>Server</strong>, <strong>Auth</strong> and <strong>Terminal</strong>. The label and the
+id sit above them, and <strong>Save</strong>, <strong>Test</strong>, <strong>Disconnect</strong> and <strong>Close</strong> below. On
+a phone this keeps what you are typing into on screen above the keyboard.</p>
+<p>If Save finds a problem, it opens the tab with the problem, so pressing Save
+with no host from the Terminal tab takes you to Server. A tab shows a dot while
+it holds a message you have not seen.</p>
+<h2 id="the-fields">The fields</h2>
+<p>Above the tabs:</p>
+<ul>
+<li><strong>Label</strong> is the name you see. <strong>Id</strong> is the name the app uses internally.
+It starts out based on the host, or on the SSH alias when that is all there
+is, and it <strong>cannot change once saved</strong>: a new id would make a second server.</li>
+</ul>
+<p>On the <strong>Server</strong> tab:</p>
+<ul>
+<li><strong>Host</strong> is what you would type after <code>ssh</code>.</li>
+<li><strong>User</strong> may be empty on a desktop, and then your local user name is used, as
+with <code>ssh host</code>. <strong>On Android it is required</strong>, since a phone has no user name
+to fall back on.</li>
+<li><strong>Port</strong> is usually best left empty. That lets an alias in <code>~/.ssh/config</code> set
+the port; otherwise 22 is used, which is what the greyed 22 means.</li>
+<li><strong>Initial path</strong> is where browsing and a terminal start. <code>~</code> suits most
+accounts.</li>
+<li><strong>Through</strong> reaches the server by way of another server you saved, a jump
+host or bastion, as <code>ssh -J</code> does. Its host is then the address as that
+server sees it. <strong>Directly</strong> is the default. Where the SSH alias already
+names a jump host (<code>ProxyJump</code>), the first choice is <strong>As the alias says</strong>,
+and choosing a server or <strong>Directly</strong> goes another way. Deleting a server
+others go through says which, and they connect directly from then on.</li>
+<li><strong>SSH alias</strong> fills in any empty host, user and port from <code>~/.ssh/config</code>.
+Values you type here take priority. Desktop only, since a phone has no
+<code>~/.ssh/config</code>. Its <code>ProxyJump</code> is followed too: a jump host that is one of
+your servers connects as that server.</li>
+<li><strong>Cache this server&#39;s files</strong> keeps what you open on this server on this
+device, with how much it takes and <strong>Clear cache…</strong> below it. It is on by
+default; see <a href="offline.html">Files offline</a>.</li>
+</ul>
+<p>On the <strong>Terminal</strong> tab:</p>
+<ul>
+<li><strong>Size</strong> is one of three.<ul>
+<li><strong>Fit the screen</strong>: programs get whatever fits, about 33 columns on a phone
+held upright, too narrow for tmux or htop.</li>
+<li><strong>Fixed</strong> at a number of columns and rows, with <code>80×24</code>, <code>100×30</code> and
+<code>132×43</code> a tap away. Programs always see that size; you zoom and pan
+around it.</li>
+<li><strong>Fixed columns</strong>: the columns fill the width, and programs get as many
+rows as fit at that size. The rows change when the screen does (the
+keyboard, turning the phone) and when you zoom. You can pan and zoom
+across, never up or down: the rows always fill the screen.</li>
+</ul>
+</li>
+<li><strong>View</strong>, for <strong>Fixed</strong> and <strong>Fixed columns</strong>, is <strong>Flat</strong> (the terminal
+pans and zooms as a whole) or <strong>Lens</strong> (the whole terminal stays on screen,
+full size round where you are and squeezed toward the edges). Under Lens,
+<strong>Focus width</strong> and <strong>Focus height</strong> set how much of the screen is at full
+size; see <a href="terminal.html#the-lens">the lens</a>. <strong>Largest zoom</strong>, under it,
+is how far you can zoom in, as a multiple of the default type size: 1× to
+5×, 2× unless you change it (32 px at 16 px), and never less than the
+screen&#39;s <strong>Fill</strong>, so on a large screen you can always zoom to where
+Reset view goes. Under Lens it is the part at full size that zooms that
+far.</li>
+<li><strong>Start by</strong> decides how the terminal opens, and where <strong>Reset view</strong> goes:<ul>
+<li><strong>Fit</strong>: the whole grid in view, one side meeting the screen&#39;s edges and
+room left on the other. Under <strong>Lens</strong> nothing is squeezed at Fit.</li>
+<li><strong>Fill</strong> (<strong>Fixed</strong> only): the screen covered, one side meeting its edges
+and the other cropped — under <strong>Lens</strong>, the edges squeezed instead. For
+<strong>Fixed columns</strong> fit and fill are the same picture, so it is not
+offered.</li>
+<li>With nothing chosen, <strong>Flat</strong> opens at Fit and <strong>Lens</strong> at Fill; what
+you choose is kept when you switch between them.</li>
+<li><strong>Default type size</strong>, the one under <strong>Font</strong>, to pan around.</li>
+<li><strong>Saved view</strong>: the view you saved from the terminal&#39;s keyboard menu
+(the <strong>wrench</strong>, then <strong>Save</strong> under <strong>Zoom and position</strong>), one for each
+shape — portrait, landscape, and a desktop window that does not fill the
+screen: its type size and where it was panned, ↔ horizontally and ↕
+vertically. A shape with none saved opens at the default type size;
+<strong>✕</strong> forgets one.
+Fit is the default. With <strong>Fit the screen</strong> there is nothing to choose: it
+always opens at the default type size.</li>
+</ul>
+</li>
+<li><strong>Position</strong> says where the terminal sits when it opens and when <strong>Reset
+view</strong> puts it back: where it rests when it leaves room on the screen, and
+which part shows when it is cropped: <strong>Top</strong>, <strong>Middle</strong> or <strong>Bottom</strong>, and
+<strong>Left</strong>, <strong>Center</strong> or <strong>Right</strong>. With <strong>Fixed columns</strong> the rows fill the
+screen, so vertically it only places what is left below one row. Bottom left is the
+default, which keeps the last line next to the keyboard. With Bottom, spare
+room goes above the terminal, and a crop takes off the top. With Middle or
+Center it&#39;s split evenly. It does not limit where you can pan.</li>
+<li><strong>Typeface</strong> is the device&#39;s own monospace, <strong>System</strong>, or <strong>JetBrains
+Mono</strong>, which comes with Telechore and looks the same everywhere. With
+JetBrains Mono, <strong>Weight</strong> sets how heavy the text is, from <strong>Thin</strong> to
+<strong>Medium</strong>; <strong>Book</strong> is the default. Lighter text covers less of a keyboard
+behind it. The system font has no weights, so Weight is greyed with it.</li>
+<li><strong>Default type size</strong>, 16 pixels unless you change it, is the size <strong>Fit the
+screen</strong> draws at, so it decides how many columns and rows programs get. With
+a fixed size it is the size <strong>Start by</strong> opens at when it says so, and where
+an orientation has no saved view. Greyed under <strong>Fit</strong> and <strong>Fill</strong>, which
+size the type to the screen.</li>
+<li><strong>Follow the cursor</strong> keeps the cursor on screen for a short while after you
+type, so you see the answer. A cursor a program moves on its own leaves the
+view where you put it.</li>
+<li><strong>Send taps to programs that ask for a mouse</strong> decides what one finger does
+where a program is listening for clicks. When it is off, one finger always
+selects and scrolls. The extra keys send keys either way.</li>
+<li><strong>Keyboard opens this many rows up</strong> sets how many shell rows stay visible
+below the app&#39;s keyboard when it opens. Raise it to keep a tmux status line or
+a wrapped prompt in view. You can drag the keyboard from there; its position is
+remembered on that device.</li>
+<li><strong>Full keyboard</strong> puts the app&#39;s full keyboard <em>Behind</em> the terminal, the
+default, where the terminal&#39;s background is see-through and the text stays
+solid over the keys, or <em>In front</em> of it, where the keyboard is
+see-through. Behind needs graphics acceleration; without it the keyboard is
+in front.</li>
+<li><strong>Keep new terminals running when you leave them</strong> turns on Keep for every
+new terminal on this server, so leaving one does not close it. Off by
+default. It applies to new terminals only; Keep, in a terminal&#39;s header,
+changes it for that one terminal.</li>
+<li><strong>Scrollback</strong> is how many lines of history are kept.</li>
+<li><strong>Remote command</strong> runs in the terminal instead of your shell. Browsing files
+does not use it.</li>
+</ul>
+<p>Under <strong>Advanced</strong> on that tab: <strong>TERM</strong>, the <strong>keepalive</strong> in seconds, and the
+<strong>environment</strong> variables for the server, one <code>NAME=value</code> per line.</p>
+<p>These settings are sent along when you export the server. How the terminal
+uses them is in <a href="terminal.html">the terminal</a>.</p>
+<h2 id="how-a-server-logs-in">How a server logs in</h2>
+<p>The <strong>Auth</strong> tab lists every key on this device, and the rows that are not
+keys:</p>
+<ul>
+<li><strong>Password</strong>: picking it switches the server to a password login, and shows
+the password box.</li>
+<li><strong>SSH agent</strong> (desktop only): picking it switches the server to the SSH agent
+this machine already runs, which signs for it — <code>ssh-agent</code> on Linux and
+macOS, the OpenSSH Authentication Agent or Pageant on Windows. Its keys are
+listed under the row. <strong>Any key the agent holds</strong> tries them in turn; choose
+one key instead where the agent holds more than the server allows tries.
+<strong>Copy Public Key</strong> copies a key&#39;s public line, for a server&#39;s
+<code>authorized_keys</code>. The agent asks for its own passphrases, so nothing is
+asked or stored here.</li>
+<li><strong>Key files from &quot;alias&quot;</strong> (desktop only), where the server has an SSH alias
+whose <code>~/.ssh/config</code> entry names <code>IdentityFile</code>: picking it switches the
+server to those files, tried in order and read from that file at each
+connect. <code>IdentitiesOnly</code>, <code>IdentityAgent</code> and <code>CertificateFile</code> there are
+followed.</li>
+<li><strong>Path to an SSH key</strong> (desktop only): picking it switches the server to a key
+file on this machine, given by its path, with <strong>Browse</strong> beside the box.</li>
+<li><strong>Add a key…</strong>: for a key that is not on the list yet.</li>
+</ul>
+<p>Picking a key only shows it; the server switches to it when you test, install or
+choose to use it (see Keys, below). A key with a passphrase shows a passphrase
+box.</p>
+<p>Each key in the list shows what kind it is:</p>
+<ul>
+<li><strong>A key this app made</strong>: kept in the app&#39;s own storage. It is the only kind
+included when you export servers.</li>
+<li><strong>A key you imported</strong>: a copy of a key file, often a <code>.pem</code> from a cloud
+provider, kept in the app&#39;s own storage under its file name. It is never
+included when you export servers, but it can be sent on its own as a key code.</li>
+<li><strong>A key file on this machine</strong>, such as <code>~/.ssh/id_ed25519</code>: used where it is
+and never copied. Desktop only.</li>
+</ul>
+<p>A path must start with <code>/</code> or <code>~</code>, or be the name of a key you imported.
+Relative paths such as <code>keys/mine</code> are refused.</p>
+<p>On a phone, a server that came from a desktop with a key path, the SSH agent
+or an alias&#39;s key files shows that row greyed out, since a phone has none of
+them. The same goes for a server whose key
+is no longer on this device. You can still pick the row to see why, but <strong>Save</strong>
+and <strong>Test</strong> stay disabled, with the reason beside them, until you choose a
+login this device can use.</p>
+<p>Moving a server to another key does not delete the old key: it stays in the list
+until you remove it with <strong>Remove key &quot;name&quot;</strong>.</p>
+<p><strong>The agent is used only where you choose it</strong>, with one exception that asks
+for less rather than more: where the agent already holds the key a server
+names, the agent signs with it, and the key&#39;s passphrase is not asked for. A
+<strong>certificate</strong> beside a key file (<code>id_ed25519-cert.pub</code>) is offered before the
+key, and shown on the key&#39;s card; an expired one is not offered. A key on a
+<strong>security key</strong> (<code>ed25519-sk</code>) works through the agent: add it with <code>ssh-add</code>,
+and touch the key when the app says the agent is waiting.</p>
+<p><strong>A server that takes only keys</strong> says so when you connect, instead of asking
+for a password it would refuse. Choose a key for it. A server that wants a key
+<em>and then</em> a password (OpenSSH&#39;s <code>AuthenticationMethods publickey,password</code>)
+offers only the key at first, so it reads the same way: with a key chosen, the
+password is asked for after the key is accepted.</p>
+<h2 id="where-passwords-are-kept">Where passwords are kept</h2>
+<p>Never in <code>servers.toml</code>, the list of servers. The form tells you where before
+you type anything:</p>
+<ul>
+<li><strong>On a desktop</strong>: in the system keyring (Keychain, Credential Manager or
+Secret Service). A key&#39;s passphrase is saved once for every server that uses
+that key, and <strong>Forget it</strong> forgets it for all of them.</li>
+<li><strong>On Android</strong>: encrypted with the Android Keystore. On a phone where the
+Keystore will not open, in a file only this app can read, <strong>not encrypted</strong>,
+and excluded from backups and device transfers; anyone who can unlock or root
+that phone can read it. The form says which, where you type.</li>
+<li><strong>Where there is no keyring</strong> (a Linux machine without Secret Service, or
+WSL): a secret is kept until the app closes, and asked for again next time.</li>
+</ul>
+<p>If you leave the box empty, you are asked when connecting. That box has two
+buttons: <strong>Connect</strong> uses the secret once, and <strong>Save and connect</strong> also keeps
+it. Pressing Enter is Connect, so it never saves anything. <strong>Save and connect</strong>
+is not offered where there is nowhere to keep a secret, or for a one-time code.</p>
+<p>A secret that works is also held in memory until the app closes, so a
+connection that has to reconnect does not ask again. One used with
+<strong>Connect</strong> and not saved shows as <em>held until the app closes</em> in the form,
+not as stored.</p>
+<p><strong>Forget it</strong> appears beside a saved secret. It removes the secret from this
+device and closes the connection it opened, so it cannot keep working. The box
+then says it will ask when connecting, since a saved secret is never shown.</p>
+<h2 id="keys">Keys</h2>
+<p>Picking a key in the list only <strong>shows</strong> it: its public key, and what you can do
+with it. The server keeps logging in as before. A newly generated key is shown
+the same way.</p>
+<p>To make a key the login, use one of the buttons in the key&#39;s card:</p>
+<ul>
+<li><strong>Test &quot;name&quot;</strong> tries one login with this key. Nothing is saved. If it works,
+the form switches to the key; press <strong>Save</strong> to keep it. If it fails, the note
+names the refused key: the server does not have its public key yet, so install
+it or add it yourself.</li>
+<li><strong>Install it now</strong> adds the public key to the server&#39;s
+<code>~/.ssh/authorized_keys</code>, logging in the way that works today (a password, or
+a key that already works), then switches the server to the new key. It asks
+only for what that login needs: the password, or the current key&#39;s passphrase,
+or nothing if it is saved. It also saves your other changes to the server. If
+the install fails, the server still logs in as before.</li>
+<li><strong>Use &quot;name&quot; for this server</strong> is for when you know the server already has the
+key. The app does not check.</li>
+</ul>
+<p>While a key is not yet the working login, its card is outlined in amber and says
+how the server logs in instead. In the list, the row the server is saved with
+has a <strong>current</strong> tag, and a key you picked but have not saved has a <strong>chosen</strong>
+tag. A saved key that nothing has logged in with yet shows <strong>not installed</strong>.</p>
+<p>You can save at any time. Saving keeps the key you chose, and also keeps the
+current password or passphrase until something has logged in with the new key.</p>
+<p>Under <strong>Add a key…</strong>:</p>
+<ul>
+<li><p><strong>Generate a key</strong> makes a new key on this device. It first asks for a name
+and a passphrase; leaving the passphrase blank is fine, since only this app can
+read the key file. A passphrase you type is saved with the key, for every
+server that uses it. Making a key does not switch the server to it.</p>
+<p><strong>To replace a key</strong>, generate a new one: it is named beside the old one, such
+as <code>laptop-2</code>, and the old key stays the login until the new one is installed.
+Remove the old key from its row when you are ready.</p>
+</li>
+<li><p><strong>Import a key file…</strong> copies a key into the app. On a phone it is the only
+way to use a key file, since access to a picked file does not last. If the
+file has a passphrase, you are asked for it: an encrypted <code>.pem</code> cannot be read
+without it, and for other keys you can choose to save it.</p>
+</li>
+<li><p><strong>Paste a key code…</strong> receives a key from another device running Telechore.
+It shows what arrived and the name it will be saved under; <strong>Keep the key</strong>
+saves it. Its passphrase, if any, comes with it. You can then test, install or
+use it as with any key; a key from another device is usually not on this
+server yet.</p>
+</li>
+<li><p><strong>Browse…</strong>, on the <strong>Path to an SSH key</strong> row, uses a key file where it is
+and copies nothing. That suits <code>~/.ssh/id_ed25519</code>. For a provider&#39;s <code>.pem</code> in
+Downloads, Import is the better choice. Desktop only.</p>
+</li>
+</ul>
+<p>Beside the public key:</p>
+<ul>
+<li><strong>Copy Public Key</strong> copies it to the clipboard, for adding to a server
+yourself. If the clipboard cannot be used, select the key by hand.</li>
+<li><strong>Copy Private Key…</strong> offers two ways to take the private key off this device:<ul>
+<li><strong>Show it as a QR image</strong>, for another device running Telechore to scan.
+You can set a password for it, of any length or none, and type the same one
+on the other device. The password is the only protection if someone
+photographs the QR image, and the box says so when it is empty. A saved
+passphrase for the key goes with it.</li>
+<li><strong>Copy it to this device&#39;s clipboard</strong>, only for a key this app made. The
+key is not encrypted, and clipboards may keep a history or sync to other
+devices, so use the QR image to reach another device. This is for pasting
+into a program on this machine.</li>
+</ul>
+</li>
+<li><strong>Remove key &quot;name&quot;</strong> deletes the key from this device and cannot be undone.
+It is offered only for keys this app made or imported, never for a key file on
+this machine, and not while another server still uses the key.</li>
+</ul>
+<p><strong>A key code can carry a key you imported; a configuration code never does.</strong>
+Exporting servers sends only keys this app made, while a key code is one key you
+chose to send. Neither can carry a key file on this machine. A key keeps its
+kind on the other device: a key this app made can be sent on again, and an
+imported one is still never included when exporting servers.</p>
+<h2 id="test-and-disconnect">Test and Disconnect</h2>
+<p><strong>Test</strong> at the bottom of the form logs in once with the settings as they are on
+the form, including unsaved edits, and says what happened. It saves nothing, so
+a working test still needs <strong>Save</strong>. It always makes a fresh connection, so the
+answer is about what is on screen now.</p>
+<p><strong>Disconnect</strong> appears when the server is connected. It closes the connection,
+and any terminal or file view using it stops; the next thing that needs the
+server logs in again. Terminals you left open stay listed, marked <em>ended</em>,
+and <strong>Reconnect</strong> in one starts a new shell. A connection also closes when its secret is replaced or
+forgotten, or when you change which key the server uses.</p>
+<h2 id="host-keys">Host keys</h2>
+<p>The server&#39;s identity is checked as in any SSH client. A new host asks you once.
+A host whose key has <em>changed</em> is refused, and the message shows the old key.</p>
+<p>New hosts are saved in the app&#39;s own file; the one <code>ssh</code> uses is never changed.
+On a desktop, <code>~/.ssh/known_hosts</code> is also read, so a host you have used from the
+command line does not ask again. A phone has no <code>~/.ssh</code>, so every host is new
+the first time. Hashed host names, the default on Debian and Ubuntu, are read
+too.</p>
+<p>Two kinds of line are treated specially:</p>
+<ul>
+<li>A key marked <strong><code>@revoked</code></strong> is refused. If the revocation is out of date,
+remove that line from the file that holds it.</li>
+<li><strong><code>@cert-authority</code></strong> lines are not used, because this app does not check
+host certificates, and an import does not copy them.</li>
+</ul>
+<p>A host with two keys of the same type on file, which is normal after a server is
+re-keyed, is accepted with either one.</p>
+<h2 id="the-file-behind-the-list">The file behind the list</h2>
+<p>The list is <code>servers.toml</code>, in the app&#39;s configuration folder beside
+<code>known_hosts</code> and the keys. It is TOML, starting with <code>version = 1</code>, with one
+<code>[[server]]</code> block per server. You can edit it by hand, or copy it to another
+computer, since it holds no secrets.</p>
+<p>It includes the <code>[server.terminal]</code> table from the Terminal tab, which holds
+only the settings you changed. Anything the app does not recognise, such as a
+misspelt name or a newer setting, is kept when the editor saves.</p>
+</main>
+<footer class="foot">
+  <p>Built 2026-10-27 18:17 UTC from Telechore 0.5.0; the site at b864439f, 12 commits after v0.5.0, with treesight 5ffd66e.</p>
+</footer>
+</body>
+</html>

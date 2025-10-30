@@ -1,0 +1,70 @@
+/* The feedback form (feedback.js). Two copies, kept the same: Telechore's
+   tools/site/feedback.css and iota's misc/website/feedback.css. Drawn with
+   the tokens both sites' stylesheets define; iota's muted text is
+   --text-muted, Telechore's --muted. */
+
+.feedback {
+  --fb-muted: var(--muted, var(--text-muted));
+  margin: 1.5rem 0 0;
+}
+
+.fb-nick, .fb-comment { display: block; margin: 0 0 1.25rem; }
+.fb-nick span, .fb-comment span { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+
+.feedback input[type="text"], .feedback textarea {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+.feedback textarea { resize: vertical; min-height: 6rem; }
+.feedback input:disabled, .feedback textarea:disabled { opacity: 0.5; }
+
+.fb-section {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  border: 0;
+}
+.fb-section legend { font-weight: 600; padding: 0; margin-bottom: 0.35rem; }
+
+.fb-entry { padding: 0.3rem 0; }
+.fb-entry label { display: flex; gap: 0.5rem; align-items: baseline; cursor: pointer; }
+.fb-entry input[type="checkbox"] { flex: none; width: 1.05rem; height: 1.05rem; accent-color: var(--accent); }
+.fb-entry label:has(input:disabled) { color: var(--fb-muted); cursor: default; }
+.feedback input.fb-detail { display: block; margin: 0.3rem 0 0 1.55rem; width: calc(100% - 1.55rem); }
+
+/* Off screen rather than display: none, which some bots know to skip. */
+.fb-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+/* Send stays in reach however long the list: the bar sticks to the bottom
+   of the window while the form runs past it. */
+.fb-bar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 1rem -0.5rem 0;
+  padding: 0.75rem 0.5rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+.fb-count { margin-right: auto; color: var(--fb-muted); font-size: 0.9rem; }
+.fb-count.fb-bad { color: #c0392b; }
+.fb-send {
+  padding: 0.55rem 1.4rem;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-text, #fff);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.fb-send:disabled { opacity: 0.45; cursor: default; }
+
+.fb-done { font-size: 1.1rem; }

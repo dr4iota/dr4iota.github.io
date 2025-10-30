@@ -1,0 +1,233 @@
+/* The Telechore website: the main page and the generated usage pages.
+   Plain, light or dark with the system, one column that fits a phone. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1c1e21;
+  --muted: #5a6068;
+  --border: #e1e4e8;
+  --accent: #0f6e5c;
+  --accent-text: #ffffff;
+  --code-bg: #eef1f4;
+  --keys-ground: #e6eaef;
+  --key-cap: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --text: #e6e8eb;
+    --muted: #9aa3ad;
+    --border: #2d333b;
+    --accent: #3fb59b;
+    --accent-text: #0d1117;
+    --code-bg: #1f2630;
+    --keys-ground: #262d37;
+    --key-cap: #353e4a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; }
+
+.bar, main, .foot {
+  max-width: 880px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.bar a { text-decoration: none; }
+.bar .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: auto;
+  color: var(--text);
+  font-weight: 600;
+}
+.bar span { color: var(--muted); }
+
+main {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow-wrap: break-word;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 600px) {
+  main { padding: 2rem 2.5rem 2.5rem; }
+}
+
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 2rem; margin: 0 0 1rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.75rem; }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em; }
+code { background: var(--code-bg); padding: 0.1em 0.3em; border-radius: 4px; }
+pre { background: var(--code-bg); padding: 0.75rem 1rem; border-radius: 8px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+
+table { border-collapse: collapse; display: block; overflow-x: auto; margin: 1rem 0; }
+th, td { border: 1px solid var(--border); padding: 0.35rem 0.6rem; text-align: left; vertical-align: top; }
+
+.foot { color: var(--muted); font-size: 0.85rem; padding-top: 1rem; padding-bottom: 2rem; }
+.foot a { color: inherit; }
+
+/* The main page */
+
+.lead { font-size: 1.15rem; }
+.hero { display: block; border-radius: 10px; margin: 1.5rem 0; }
+
+.get { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0 0.5rem; }
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.button.primary { background: var(--accent); color: var(--accent-text); }
+.note { color: var(--muted); font-size: 0.9rem; }
+
+/* What it does: a feature's words beside its screenshot, the picture on
+   alternate sides on a wide screen, under the words on a narrow one. An
+   upright phone's is held to a height a screen can show, its foot cut off as
+   the build's aspect-ratio says. */
+.feature { display: grid; gap: 0.75rem 1.5rem; align-items: center; margin: 1.5rem 0 2.25rem; }
+.feature h3, .feature-rows h3 { margin: 0 0 0.3rem; font-size: 1.1rem; }
+.feature p, .feature-rows p { margin: 0; color: var(--muted); }
+.feature img { display: block; border-radius: 8px; border: 1px solid var(--border); }
+.feature.upright img { width: auto; height: 420px; object-fit: cover; object-position: top; margin: 0 auto; }
+@media (min-width: 700px) {
+  .feature { grid-template-columns: 2fr 3fr; }
+  .feature.upright { grid-template-columns: 3fr 2fr; }
+  .feature.flip { grid-template-columns: 3fr 2fr; }
+  .feature.upright.flip { grid-template-columns: 2fr 3fr; }
+  .feature.flip > div { order: 1; }
+  .feature-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+}
+.feature-rows > div { margin: 1rem 0; }
+.videos figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; }
+
+/* YouTube's players: two 16:9 side by side, and the upright Shorts two to a
+   row on any width, so a phone shows both. */
+.videos { display: grid; gap: 1rem; grid-template-columns: 1fr; margin: 1rem 0; }
+@media (min-width: 700px) { .videos { grid-template-columns: 1fr 1fr; } }
+.videos.shorts { grid-template-columns: repeat(2, minmax(0, 260px)); justify-content: center; }
+.videos figure { margin: 0; }
+.videos .video { aspect-ratio: 16 / 9; background: #000; border-radius: 8px; overflow: hidden; }
+.videos.shorts .video { aspect-ratio: 9 / 16; }
+.videos iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+.pages { padding-left: 1.2rem; }
+.pages li { margin: 0.3rem 0; }
+
+/* What's new: a line that holds on one platform only */
+.tag {
+  display: inline-block;
+  padding: 0 0.4em;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+/* The games. frame.html is the game alone, filling its window: the frame
+   the play page and the main page show, and a page to play full screen.
+   The game UI's tokens come from the site's own, so both themes follow the
+   system as every page here does (docs/mockups/game-page.html, the token
+   table). */
+
+body.frame {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+body.frame #game {
+  position: absolute;
+  inset: 0;
+  --to-bg: var(--surface);
+  --to-fg: var(--text);
+  --to-muted: var(--muted);
+  --to-border: var(--border);
+  --to-accent: var(--accent);
+  /* The keys' ground a grey a step from the board, and the keys on it as a
+     phone's keyboard draws them, as in the app (`term-ui/src/game.html`). */
+  --to-keys-bg: var(--keys-ground);
+  --to-key-bg: var(--key-cap);
+  --to-key-fg: var(--text);
+  --to-key-active: color-mix(in srgb, var(--accent) 18%, var(--surface));
+  --to-panel-bg: var(--surface);
+  --to-head-bg: var(--bg);
+  --to-head-fg: var(--text);
+  --to-head-border: var(--border);
+}
+
+/* The frame on a page: landscape where the screen is wide — 16:10, and never
+   taller than most of the window, so the page around it stays in view — and
+   on a phone held upright, a tall portrait box, the width of the card and most
+   of the screen's height, which is the shape a phone plays in. */
+.game-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 80vh;
+  max-height: 80dvh;
+  margin: 1.25rem 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.game-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 700px) and (orientation: portrait) {
+  .game-frame {
+    aspect-ratio: auto;
+    height: 82vh;
+    height: 82svh;
+    max-height: none;
+  }
+}
+/* The play page's card is wider than the prose pages', for the frame. */
+main.games { max-width: 1100px; }
+@media (max-width: 600px) {
+  /* The frame goes edge to edge on a phone: every column is the game's. */
+  main.games { padding-left: 0; padding-right: 0; border-radius: 0; border-left: 0; border-right: 0; }
+  main.games > :not(.game-frame) { padding-left: 16px; padding-right: 16px; }
+  main.games .game-frame { border-left: 0; border-right: 0; border-radius: 0; }
+}
+/* The main page's frame, loaded only when asked for (Play here). */
+.game-slot { margin: 1rem 0; }
+.game-slot .game-frame { margin: 0; }

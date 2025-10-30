@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- A phone's keyboard shortens the page rather than sliding it up, so a
+     text game's line stays in sight while it is typed (Chrome's default is
+     resizes-visual; the UI also follows visualViewport, for Safari). -->
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+<meta name="color-scheme" content="light dark">
+<title>Termoasis — Telechore</title>
+<meta name="description" content="Termoasis's console games in the browser: the games Telechore carries, run here by their own engine.">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="./d6575ab9/termoasis-ui.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body class="frame">
+<!-- The games alone, filling the window: the frame the play page and the main
+     page show, and a page to play full screen. Written by tools/site/build.mjs
+     from tools/site/frame.html. d6575ab9/ is Termoasis's game UI, its engine
+     as WebAssembly and the worker that runs it, built from vendor/termoasis at
+     the commit it is named for (docs/website.md). -->
+<div id="game"></div>
+<script src="./d6575ab9/termoasis-ui.js"></script>
+<script src="./d6575ab9/play.js"></script>
+</body>
+</html>
