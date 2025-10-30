@@ -1,0 +1,1 @@
+import{j as o}from"./react-vendor-DGo2L9b6.js";import{f as n,M as s}from"./driota-common-view-BS2VQDWL.js";import{M as e,r as t,a as m}from"./markdown-CqBI0k6d.js";function f({content:r}){const a=n();return o.jsx(e,{remarkPlugins:[t,m],rehypePlugins:[a],components:{a:s},children:r})}export{f as default};

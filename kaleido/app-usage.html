@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/kaleido/images/app-icon-96.webp">
+  <title>How to use Tiling Patterns &amp; Symmetry</title>
+  <meta name="description" content="Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <link rel="canonical" href="https://driota.xyz/kaleido/app-usage.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How to use Tiling Patterns &amp; Symmetry">
+  <meta property="og:description" content="Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta property="og:url" content="https://driota.xyz/kaleido/app-usage.html">
+  <meta property="og:image" content="https://driota.xyz/run/kaleido/images/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to use Tiling Patterns &amp; Symmetry">
+  <meta name="twitter:description" content="Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta name="twitter:image" content="https://driota.xyz/run/kaleido/images/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-kaleido">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <h1>How to use Tiling Patterns &amp; Symmetry</h1>
+    <h3>Two ways to move, and why there are two</h3>
+    <p>Every other viewer in this family has one camera. Kaleido has two, and once you
+    know that, everything else about the controls makes sense.</p>
+    <h3>A one-minute first tour</h3>
+    <p>If you would rather learn by trying things, start here:</p>
+    <ol>
+    <li>Drag with one finger or the left mouse button. You are travelling across the
+    tiling, not sliding a sheet of paper.</li>
+    <li>Pinch or scroll. The frame grows or shrinks, but your place in the tiling
+    does not change.</li>
+    <li>Open the side menu and choose <code>{7,3}</code> from the <strong>Tilings</strong> section. This is
+    the clearest starting view of a curved tiling.</li>
+    <li>Open the gear menu and try <code>Tile outline</code>, then an ornament. The world stays
+    the same; only the design printed on it changes.</li>
+    <li>Drag the round turn handle. Release it near a snapping point and notice that
+    the pattern lines up with itself again.</li>
+    <li>Double-tap or double-click empty space to return home.</li>
+    </ol>
+    <p>The two menus answer different questions: the <strong>side menu</strong> asks &quot;which world am
+    I in?&quot; and the <strong>gear menu</strong> asks &quot;what is drawn on that world?&quot;</p>
+    <h3>Six useful words</h3>
+    <ul>
+    <li>A <strong>tile</strong> is one shape in the pattern. A <strong>tiling</strong> covers a surface with
+    tiles without gaps or overlaps.</li>
+    <li><strong>Regular</strong> means that all sides have equal length and all corners have equal
+    angles, measured within the geometry being used.</li>
+    <li>A <strong>symmetry</strong> is a move — such as a slide, turn, or reflection — that leaves
+    the complete pattern looking unchanged.</li>
+    <li>A <strong>motif</strong> is the artwork repeated by those symmetries.</li>
+    <li>A <strong>projection</strong> or <strong>model</strong> is one way to draw the curved world on a flat
+    screen. Different projections preserve different features.</li>
+    <li>The <strong>horizon</strong> is the boundary shown around some projections. It is
+    infinitely far away and is not an edge of the world.</li>
+    </ul>
+    <p>The curved scenes show a world with <strong>no zoom</strong>. That sounds odd, so here is what
+    it means. A hyperbolic plane has a built-in size — its heptagons are a
+    <em>particular</em> size, the way a metre is a particular length. You can travel closer
+    to any heptagon or move into its centre, but you cannot scale the world so that
+    every distance becomes twice as large. Making the picture bigger is a separate
+    act, like holding a magnifying glass over a map: it does not move you, it just
+    enlarges what you are already looking at.</p>
+    <p>So the two controls are:</p>
+    <ul>
+    <li><strong>Travel</strong> — you move through the world. Tiles slide past you and new ones
+    arrive from the horizon forever.</li>
+    <li><strong>Frame</strong> — you enlarge or shift the <em>picture</em> of the world, magnifying glass
+    style. Use it to inspect the crowd of tiles near the horizon without leaving
+    your current location.</li>
+    </ul>
+    <p>Travelling toward the rim never gets you there. The rim is infinitely far away.
+    That is not the app running out of room; it is what infinity looks like when it
+    has been drawn on a screen.</p>
+    <p>The flat scenes have no such distinction — there, one finger pans and two fingers
+    zoom, exactly as you would expect.</p>
+    <p>An everyday comparison may help. Walking toward a poster changes your position;
+    using a magnifying glass changes only the picture reaching your eye. <strong>Travel</strong>
+    is the walk. <strong>Frame</strong> is the magnifying glass. They may look similar for a
+    moment, but only travelling carries you to a new tile.</p>
+    <h3>Touch</h3>
+    <ul>
+    <li><strong>Travel:</strong> drag with one finger.</li>
+    <li><strong>Frame:</strong> pinch with two fingers to magnify, or drag with two fingers to shift
+    the picture.</li>
+    <li><strong>Turn the pattern:</strong> drag the small round handle. See below.</li>
+    <li><strong>Reset:</strong> double-tap an empty area to fly home.</li>
+    </ul>
+    <h3>Mouse and trackpad</h3>
+    <ul>
+    <li><strong>Travel:</strong> click and drag.</li>
+    <li><strong>Frame:</strong> scroll to magnify. To shift the picture, hold <strong>Shift</strong> and drag —
+    or drag with the middle or right button. A mouse has no second finger, so these
+    stand in for the two-finger gesture.</li>
+    <li><strong>Turn the pattern:</strong> drag the round handle, or press <code>[</code> and <code>]</code>.</li>
+    <li><strong>Reset:</strong> double-click an empty area.</li>
+    </ul>
+    <h3>The turn handle</h3>
+    <p>On the curved scenes there is a small round dot sitting on the pattern. It is not
+    a decoration — it is a grip. Drag it around and the whole world turns beneath
+    you.</p>
+    <p>It is stuck to one point of the tiling, like a pin pushed into the pattern, so
+    when you travel it travels too. Pin it in a cell and it stays in that cell, in
+    the same spot within it, for as long as you keep it. If you travel far enough
+    that it leaves the screen, it parks at the nearest edge and grows a little arrow
+    pointing to where it really is.</p>
+    <p>Turning snaps to the angles that map the tiling onto itself. On <code>{7,3}</code>, sevenths
+    of a turn snap; on <code>{5,4}</code>, fifths. Let go near one of those and the pattern
+    clicks back into place, which is a satisfying way to feel what &quot;7-fold symmetry&quot;
+    actually means. <code>[</code> and <code>]</code> step by exactly one of those angles, so the keyboard
+    gets there too.</p>
+    <h3>Choosing what you are looking at</h3>
+    <p>The <strong>side menu</strong> (the ☰ button, left) chooses the world, in sections. The flat
+    kaleidoscopes come first. Then <strong>Tilings</strong> lists the curved worlds: pick one and
+    it is shown through whichever picture you are already using. On a curved scene a
+    third section appears, <strong>Projections</strong>, listing the pictures: pick one and it
+    shows the tiling you are already in. Each section changes one thing and holds
+    the other still — its header says which — so you can compare tilings without
+    the picture changing, or pictures without the world changing. The flat scenes
+    have no Projections section because the flat plane needs no projecting: what
+    you see is the plane itself. Each scene has its own help page under the ? menu
+    explaining its tiling and, for the curved ones, the particular way its picture
+    distorts.</p>
+    <p>The <strong>gear menu</strong> (right) chooses the pattern drawn into the tiles. Four are
+    offered directly; <code>More patterns</code> holds the rest, including the line-only views
+    that show you the tiling&#39;s skeleton. <code>Custom</code> is where your own drawings live.</p>
+    <p>Two patterns are only offered where the geometry allows them, and say so when it
+    does not, because &quot;there is no such colouring for this tiling&quot; is a genuine fact
+    about the shape rather than a missing feature:</p>
+    <ul>
+    <li><strong>Checkerboard</strong> needs an even number of tiles meeting at each corner. <code>{5,4}</code>
+    has it; <code>{7,3}</code> cannot.</li>
+    <li><strong>Panels</strong> — the football pattern — needs the truncated form, which every
+    curved scene has and the flat ones do not yet.</li>
+    </ul>
+    <p>The names in braces are counting instructions. In <code>{7,3}</code>, every tile has seven
+    sides and three tiles meet at each corner. In <code>{4,5}</code>, the tiles are squares and
+    five meet at each corner. Try counting with the line-only <code>Tile outline</code> pattern
+    if an ornament makes the tile boundaries hard to see.</p>
+    <p>The names beginning with a star describe mirror symmetry. For example, <code>*632</code>
+    has three important rotation points: one that repeats after one-sixth of a turn,
+    one after one-third, and one after one-half. You do not need to memorize these
+    names to use the app; they are labels that let the help pages connect the
+    picture to standard mathematical notation.</p>
+    <h3>Drawing your own</h3>
+    <p>Open <code>Custom → New / manage…</code> in the gear menu and you can draw straight onto the
+    tiling; every mark is instantly repeated everywhere the symmetry says it should
+    be. That has its own help page, <em>Drawing your own motif</em>, which is worth reading
+    first — the surface you draw on is smaller and stranger than it looks.</p>
+    <h3>Light, dark and full screen</h3>
+    <p>The theme follows your system setting and can be switched in the menu. The
+    full-screen button on the canvas gives you the pattern and nothing else, which is
+    the best way to look at these.</p>
+    <h3>If the view becomes confusing</h3>
+    <ul>
+    <li><strong>Dragging moves the frame instead of the world:</strong> on touch, use one finger
+    for travel and two for the frame. With a mouse, release <strong>Shift</strong> and use the
+    left button.</li>
+    <li><strong>A pattern is greyed out:</strong> pause on its explanation. Some colourings are
+    mathematically impossible on the current tiling; choosing another scene can
+    make them available.</li>
+    <li><strong>The turn handle is at the edge:</strong> its pinned point is off-screen. The arrow
+    shows where it is. Reset if you want to bring it home.</li>
+    <li><strong>A custom drawing looks mirrored many times:</strong> that is the normal
+    kaleidoscope mode. The <em>Drawing your own motif</em> page explains how to use the
+    whole tile when you want an asymmetric design.</li>
+    </ul>
+    <h3>Sharing</h3>
+    <p>The scene, the pattern, and exactly where you have travelled to all live in the
+    address bar. Copy the link and whoever opens it arrives at the same place in the
+    same world, looking the same way.</p>
+    <h3>Three guided challenges</h3>
+    <p>Once the controls feel natural, try these:</p>
+    <ol>
+    <li><strong>Find the horizon.</strong> In the Poincaré disk, travel toward the rim for a while.
+    Watch tiny tiles grow as they approach the centre while new tiny tiles take
+    their place. The rim never gets closer.</li>
+    <li><strong>Compare two maps.</strong> Keep the <code>{7,3}</code> tiling and switch between Poincaré and
+    Klein. Which view preserves the shape of a corner? Which makes tile edges
+    look straight?</li>
+    <li><strong>Test a colouring.</strong> Try <code>Checkerboard</code> on <code>{5,4}</code> and <code>{7,3}</code>. Count the
+    tiles around a corner and explain why alternating two colours succeeds only
+    when that count is even.</li>
+    </ol>
+    </article>
+    <hr>
+    <footer>
+      <p>© 2025 Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-08-27 19:59 UTC · 8c7b89b2</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

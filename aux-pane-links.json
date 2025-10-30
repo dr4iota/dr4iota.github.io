@@ -1,0 +1,90 @@
+{
+  "sections": [
+    {
+      "title": "Android",
+      "icon": "GooglePlay",
+      "href": "https://play.google.com/store/apps/developer?id=Doctor+Iota",
+      "items": [
+        {
+          "label": "Puzzles",
+          "title": "Packing Puzzles",
+          "icon": "GooglePlay",
+          "href": "https://play.google.com/store/apps/details?id=xyz.driota.packing"
+        },
+        {
+          "label": "Geometry",
+          "title": "Animated Geometry",
+          "icon": "GooglePlay",
+          "href": "https://play.google.com/store/apps/details?id=xyz.driota.trikona"
+        },
+        {
+          "label": "Fractals",
+          "title": "Fantastic Fractals",
+          "icon": "GooglePlay",
+          "href": "https://play.google.com/store/apps/details?id=xyz.driota.fractal"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "items": [
+        {
+          "label": "iOS",
+          "title": "Coming Soon",
+          "info": "We are waiting for a modern apple silicon to build",
+          "icon": "iOS",
+          "href": "https://driota.xyz/ios.html"
+        },
+        {
+          "label": "Amazon",
+          "title": "Amazon Appstore",
+          "icon": "ShoppingBag",
+          "href": "https://www.amazon.com/s?i=mobile-apps&rh=p_4%3ADoctor%2BIota"
+        }
+      ]
+    },
+    {
+      "label": "driota.xyz",
+      "title": "driota.xyz",
+      "icon": "GlobeAlt",
+      "href": "https://driota.xyz",
+      "items": [
+        {
+          "label": "YT",
+          "title": "YouTube",
+          "icon": "YouTube",
+          "href": "https://www.youtube.com/@driota"
+        },
+        {
+          "label": "IG",
+          "title": "Instagram",
+          "icon": "Instagram",
+          "href": "https://www.instagram.com/driota.xyz/"
+        },
+        {
+          "label": "TT",
+          "title": "TikTok",
+          "icon": "TikTok",
+          "href": "https://www.tiktok.com/@driota.xyz"
+        },
+        {
+          "label": "Note",
+          "title": "Drop a Note",
+          "icon": "PencilSquare",
+          "href": "https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog"
+        },
+        {
+          "label": "BMaC",
+          "title": "Buy Me a Coffee",
+          "icon": "BuyMeACoffee",
+          "href": "https://www.buymeacoffee.com/driota"
+        },
+        {
+          "label": "Patreon",
+          "icon": "Patreon",
+          "href": "https://www.patreon.com/driota"
+        }
+      ]
+    }
+  ]
+}

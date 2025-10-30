@@ -1,0 +1,178 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><script>// Apply the persisted (or system) theme to <html> before first paint,
+      // so the loading splash and any gate message below render in the right
+      // colors and React doesn't flash the wrong theme on mount. Mirrors the
+      // `'theme'` localStorage key and light/dark values owned by
+      // PreferenceContext (common-view); that context re-applies the same
+      // class on mount, so this is a pure pre-paint head-start, not a second
+      // source of truth.
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var dark = stored === 'dark' || (stored !== 'light' &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) { /* localStorage may be blocked; fall back to light */ }
+      })();</script><script>// Boot diagnostics — completely invisible on a healthy start. Two parts:
+      //   1. Capture the FIRST uncaught error / rejection / failed resource
+      //      load during boot (capture phase, so a failed module/asset fetch
+      //      — the suspected `tauri://` scheme race — is caught too). This is
+      //      stored, not shown; the gate of whether anything appears is (2).
+      //   2. A watchdog: if the loading splash is STILL in the DOM after a
+      //      generous delay, React never mounted (or a top-level await
+      //      rejected). Only then do we swap the spinner for a calm card
+      //      carrying the captured error + environment and a Reload button.
+      //      On any normal start React clears #root long before the timer
+      //      fires, so nothing here ever paints. Tuned long enough that a
+      //      slow-but-OK Tauri / WebKit cold start won't trip it.
+      (function () {
+        var bootError = null;
+        function capture(label, detail) {
+          if (bootError) return; // keep the first — usually the root cause
+          bootError = label + ': ' + detail;
+        }
+        window.addEventListener('error', function (e) {
+          var t = e.target;
+          if (t && t !== window && (t.src || t.href)) {
+            capture('resource load failed', t.src || t.href);
+          } else if (e.error) {
+            capture('error', (e.error.message || e.error) +
+              (e.error.stack ? '\n' + e.error.stack : ''));
+          } else {
+            capture('error', e.message || 'unknown');
+          }
+        }, true);
+        window.addEventListener('unhandledrejection', function (e) {
+          var r = e.reason;
+          capture('unhandledrejection',
+            r && r.message ? r.message + (r.stack ? '\n' + r.stack : '') : String(r));
+        });
+
+        setTimeout(function () {
+          var splash = document.querySelector('.app-loading');
+          // No splash → React mounted, or the capability gate took over.
+          if (!splash || !splash.parentNode) return;
+
+          var card = document.createElement('div');
+          card.className = 'legacy-message';
+          var h = document.createElement('h2');
+          h.textContent = 'Still loading…';
+          var p = document.createElement('p');
+          p.textContent = 'This is taking longer than usual to start. ' +
+            'You can keep waiting, or reload.';
+          var btn = document.createElement('button');
+          btn.className = 'diag-reload';
+          btn.textContent = 'Reload';
+          btn.onclick = function () { window.location.reload(); };
+          var det = document.createElement('details');
+          var sum = document.createElement('summary');
+          sum.textContent = 'Diagnostics';
+          var pre = document.createElement('pre');
+          pre.className = 'diag-pre';
+          pre.textContent = [
+            'url: ' + location.href,
+            'protocol: ' + location.protocol,
+            'DecompressionStream: ' + (typeof DecompressionStream === 'function'),
+            'userAgent: ' + navigator.userAgent,
+            'error: ' + (bootError || '(none captured)')
+          ].join('\n');
+          det.appendChild(sum);
+          det.appendChild(pre);
+          card.appendChild(h);
+          card.appendChild(p);
+          card.appendChild(btn);
+          card.appendChild(det);
+          splash.parentNode.replaceChild(card, splash);
+        }, 15000);
+      })();</script><link rel="icon" type="image/webp" href="/run/trikona/images/app-icon-96.webp"/><link rel="apple-touch-icon" href="/run/trikona/images/app-icon-192.png"/><link rel="manifest" href="/run/trikona/site.webmanifest"/><meta name="theme-color" content="#1f5f5b"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover,interactive-widget=resizes-content"/><meta name="description" content="Animated Geometry — interactive visuals and step-by-step proofs."/><meta name="keywords" content="triangle, Triangular geometry, Geometry, Planar Geometry, Geometry Proof, Euclid&#39;s Elements, Animated proof, Mathematical education, Interactive learning, Centroid, Circumcenter, Incenter, Orthocenter, Euler line"/><link rel="canonical" href="https://driota.xyz/run/trikona/"/><meta property="og:type" content="website"/><meta property="og:title" content="Animated Geometry Proofs"/><meta property="og:description" content="Animated Geometry — interactive visuals and step-by-step proofs."/><meta property="og:url" content="https://driota.xyz/run/trikona/"/><meta property="og:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Animated Geometry Proofs"/><meta name="twitter:description" content="Animated Geometry — interactive visuals and step-by-step proofs."/><meta name="twitter:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png"/><title>Animated Geometry Proofs</title><style>:root{--iota-accent-frame:#1f5f5b}body{margin:0;background:#f9fafb;color:#1a1a1a}html.dark body{background:#111827;color:#f0f0f0}.app-loading{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--iota-accent-frame)}.app-loading svg{width:2rem;height:2rem;animation:app-spin 1s linear infinite}.app-loading circle{stroke:rgba(255,255,255,0.85)}.app-loading path{fill:rgba(255,255,255,0.85)}@keyframes app-spin{to{transform:rotate(360deg)}}.legacy-message{max-width:560px;margin:10vh auto;padding:24px 28px;font-family:system-ui,-apple-system,sans-serif;line-height:1.5;color:inherit;background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.08)}html.dark .legacy-message{background:#1f2937;border-color:#374151;box-shadow:none}.legacy-message h2{margin-top:0}.diag-reload{margin-top:4px;padding:6px 16px;font:inherit;cursor:pointer;border-radius:8px;border:1px solid #d1d5db;background:#f3f4f6;color:inherit}html.dark .diag-reload{border-color:#4b5563;background:#374151}.diag-pre{margin:12px 0 0;padding:12px;font-size:12px;white-space:pre-wrap;word-break:break-word;background:rgba(0,0,0,.04);border-radius:8px}html.dark .diag-pre{background:rgba(255,255,255,.06)}.legacy-message summary{cursor:pointer;margin-top:16px}</style><script type="module" crossorigin src="/run/trikona/assets/index-BnepTO1X.js"></script><link rel="modulepreload" crossorigin href="/run/trikona/assets/react-vendor-DGo2L9b6.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/other-DPJ6r_Wd.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/driota-common-base-BwUX8Fsu.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/icons-cIWyGl2O.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/driota-common-view-C8e-wOAP.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/driota-euclid-base-Bjvpbkr-.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/markdown-CbSz8Fs3.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/driota-euclid-view-C2agW3cf.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-DuP4038t.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-advanced-87rC3HUD.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-centroid-Bt3c0dqJ.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-circumcenter-B5QJ1gJx.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-concurrency-DhwPVW-7.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-incenter-BBSAXfq0.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-ninepointcenter-DM2CtF77.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-orthocenter-CP4u7rU-.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-righttriangle-BbVpnjdF.js"><link rel="modulepreload" crossorigin href="/run/trikona/assets/app-data-trikona-scenes-triangle-DHkglafR.js"><link rel="stylesheet" crossorigin href="/run/trikona/assets/driota-common-view-C2T6Bob9.css"><link rel="stylesheet" crossorigin href="/run/trikona/assets/driota-euclid-view-Db2feqKb.css"><link rel="stylesheet" crossorigin href="/run/trikona/assets/index-DAVC-bHc.css"></head><body><div id="root"><div class="app-loading" role="status" aria-label="Loading"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke-width="4" style="opacity:.25"/><path style="opacity:.75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/></svg></div><noscript><style>.app-loading{display:none}</style><div style="padding:16px"><p>This is an interactive application that requires JavaScript to run.</p><p>Please enable JavaScript in your browser and refresh the page.</p><hr/></div></noscript></div><template id="msg-update-webview"><div class="legacy-message"><h2>Update Android System WebView</h2><p>This app needs <strong>Android System WebView</strong> v<span data-slot="min"></span> or newer (this device has v<span data-slot="current"></span>).</p><p>Please update Android System WebView from the Play Store (or Amazon AppStore on Fire devices), then restart this app.</p></div></template><template id="msg-update-browser"><div class="legacy-message"><h2>Please update your browser</h2><p>This page needs Chrome or Edge v<span data-slot="min"></span> or newer (this browser is v<span data-slot="current"></span>).</p><p>Update via your browser's About / Settings menu, then reload.</p></div></template><template id="msg-update-safari"><div class="legacy-message"><h2>Please update your device</h2><p>This page needs Safari v<span data-slot="min"></span> or newer (this Safari is v<span data-slot="current"></span>). Safari ships with the operating system, so please install the latest update:</p><ul><li>Mac &mdash; System Settings &rarr; General &rarr; Software Update</li><li>iPad / iPhone &mdash; Settings &rarr; General &rarr; Software Update</li></ul><p>After updating, reload this page.</p></div></template><template id="msg-update-device"><div class="legacy-message"><h2>Please update your device</h2><p>This page needs a newer browser:</p><ul><li>iPad / iPhone &mdash; iOS 16.4 or later (March 2023)</li><li>Mac &mdash; macOS 13 Ventura or later</li><li>Other &mdash; update Chrome, Edge, or Firefox to the current version</li></ul><p>After updating, reload this page.</p></div></template><script>// Polyfill Object.hasOwn (ES2022) — needed by react-markdown@10's
+      // render loop. Shipping the shim drops the markdown floor from
+      // Chrome/WebView 93 down to ~80, covering Android WebView 80–92
+      // (Android 10–11 stock) which otherwise crash on help pages.
+      if (typeof Object.hasOwn !== 'function') {
+        Object.hasOwn = function (obj, key) {
+          return Object.prototype.hasOwnProperty.call(Object(obj), key);
+        };
+      }
+
+      // Browser capability gate. Three layers:
+      //   1. Per-app Chromium version floor (`APP_MIN_CHROME_VERSION` from
+      //      package.json). Catches apps like fractal-web that need a newer
+      //      WebView than the asset-pipeline floor — older Android System
+      //      WebView would render blank or crash on WebGL. The effective
+      //      floor is `max(APP_MIN_CHROME_VERSION, 80)` so apps that leave
+      //      the override at 0 still get the WebView/browser split
+      //      (DecompressionStream lands in Chromium 80; without this floor
+      //      old WebViews would fall through to the generic device message).
+      //   2. Per-app Safari/WebKit version floor (`APP_MIN_SAFARI_VERSION`).
+      //      Same idea for iOS / macOS / WKWebView — older WebKit also has
+      //      WebGL2 quirks. Skipped if a Chromium UA was detected (Chrome
+      //      gate already ran).
+      //   3. Asset-pipeline floor: DecompressionStream covers Safari 16.4+
+      //      / Chrome 80+ / Firefox 113+. Without it the app would load but
+      //      render blank (assets fail to decode silently). Reached only by
+      //      non-Chromium UAs (Firefox, old Safari with no per-app floor).
+      // Messages live in <template> blocks above; React mounts into #root
+      // and overwrites them on supported browsers. Each template may
+      // contain `<span data-slot="min">` / `<span data-slot="current">`
+      // markers, which `showMessage` fills with the gate's expected
+      // minimum and the detected version.
+      (function () {
+        function showMessage(id, min, current) {
+          var root = document.getElementById('root');
+          var tpl = document.getElementById(id);
+          // Defensive: pre-2014 browsers without <template> support would
+          // render the message contents directly to the page (visible
+          // fallback, but `tpl.content` is undefined). Bail out here.
+          if (!root || !tpl || !tpl.content) return;
+          root.textContent = '';
+          var frag = tpl.content.cloneNode(true);
+          var fill = function (slot, value) {
+            if (value == null) return;
+            var el = frag.querySelector('[data-slot="' + slot + '"]');
+            if (el) el.textContent = String(value);
+          };
+          fill('min', min);
+          fill('current', current);
+          root.appendChild(frag);
+          // Rename so the deferred entry module's `getElementById('root')`
+          // returns null and main.tsx bails out before React mounts. Without
+          // this the bundle still parses+runs and React overwrites the
+          // legacy message.
+          root.id = 'gate-blocked';
+        }
+
+        // Chromium 80 is where DecompressionStream landed — also the
+        // asset-pipeline floor. Used as the implicit Chrome floor when
+        // `APP_MIN_CHROME_VERSION` is 0 / unset, so the WebView/browser
+        // split below still fires on old Android System WebView.
+        var ASSET_MIN_CHROME = 80;
+        var minChrome = Math.max(89, ASSET_MIN_CHROME);
+        var minSafari = 0;
+        var ua = navigator.userAgent || '';
+        var chromeMatch = ua.match(/Chrome\/(\d+)/);
+        var chromeMajor = chromeMatch ? parseInt(chromeMatch[1], 10) : null;
+
+        // Chromium UA → run Chrome gate. Includes Android WebView (which
+        // also reports a `Version/4.0` placeholder); Chrome takes priority
+        // so the Safari gate below is bypassed.
+        if (chromeMajor !== null) {
+          if (chromeMajor < minChrome) {
+            showMessage(/\bwv\b/.test(ua) ? 'msg-update-webview' : 'msg-update-browser',
+                        minChrome, chromeMajor);
+            return;
+          }
+        } else if (minSafari > 0) {
+          // Non-Chromium UA. Safari and iOS/macOS WKWebView report WebKit
+          // version via `Version/X.Y`. Firefox has no `Version/` token, so
+          // it falls through to the DecompressionStream check below.
+          var safariMatch = ua.match(/Version\/(\d+)/);
+          var safariMajor = safariMatch ? parseInt(safariMatch[1], 10) : null;
+          if (safariMajor !== null && safariMajor < minSafari) {
+            showMessage('msg-update-safari', minSafari, safariMajor);
+            return;
+          }
+        }
+
+        if (typeof DecompressionStream !== 'function') {
+          showMessage('msg-update-device');
+        }
+      })();</script></body></html>

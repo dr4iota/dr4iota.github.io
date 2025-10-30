@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/kaleido/images/app-icon-96.webp">
+  <title>About Tiling Patterns &amp; Symmetry</title>
+  <meta name="description" content="Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <link rel="canonical" href="https://driota.xyz/kaleido/app-about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Tiling Patterns &amp; Symmetry">
+  <meta property="og:description" content="Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta property="og:url" content="https://driota.xyz/kaleido/app-about.html">
+  <meta property="og:image" content="https://driota.xyz/run/kaleido/images/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Tiling Patterns &amp; Symmetry">
+  <meta name="twitter:description" content="Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta name="twitter:image" content="https://driota.xyz/run/kaleido/images/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-kaleido">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <h1>About Tiling Patterns &amp; Symmetry</h1>
+    <h2>Infinite Tilings — flat and curved tilings on one canvas</h2>
+    <p>Infinite Tilings (ιKaleido) is a kaleidoscope you can walk around inside. It draws
+    repeating patterns the way a kaleidoscope makes them — one shape, reflected in
+    mirrors, forever — and lets you travel through the result, change the mirrors, and
+    draw your own shape into them.</p>
+    <p>Half the app is the flat patterns you already know from tiled floors and wallpaper.
+    The other half is the curved worlds where the rules are different: places where
+    seven-sided tiles meet three to a corner, or five squares fit around a point,
+    neither of which can happen on any flat surface anywhere.</p>
+    <p>You do not need to know advanced geometry before you begin. If you can count
+    sides, add angles, and compare patterns, you can investigate the main ideas.
+    The notation in scene names is explained when it appears, and the pictures are
+    meant to be tested by dragging, turning, and drawing rather than accepted on
+    faith.</p>
+    <h3>What you can explore</h3>
+    <ul>
+    <li><strong>Flat kaleidoscopes</strong> — three of the seventeen symmetry groups that any repeating
+    flat pattern must belong to, from the plainest rectangle of mirrors to the richest
+    symmetry a flat plane allows.</li>
+    <li><strong>Curved tilings</strong> — regular <code>{p,q}</code> tilings of the hyperbolic plane: heptagons
+    three to a corner, pentagons four, squares five, octagons three, and more.</li>
+    <li><strong>Seven different pictures of the same curved world</strong> — the Poincaré disk, the Klein
+    disk, the half-plane, the band both level and upright, the square and one fitted to
+    your window. Each is a complete and honest picture; each distorts something
+    different. Switch between them and watch the same tiling re-flow.</li>
+    <li><strong>A gallery of patterns</strong> to fill the tiles with, from ornamental rosettes to the
+    bare line-work that shows a tiling&#39;s skeleton — including a checkerboard and a
+    football pattern, each offered only on the tilings whose geometry permits it.</li>
+    <li><strong>Your own drawings.</strong> Draw one stroke and it appears everywhere the symmetry says
+    it should, instantly, as you draw. Save your motifs and carry them between worlds.</li>
+    </ul>
+    <h3>Travelling, not zooming</h3>
+    <p>The curved scenes have no zoom, because a curved world has a built-in size — its
+    heptagons are a <em>particular</em> size. You can travel closer to one, but you cannot scale
+    every distance in the world at once. So the app separates two things other viewers
+    often run together: <strong>travelling</strong> through the world and <strong>framing</strong> its picture. One
+    finger travels; two fingers frame. Travel toward the horizon and you never arrive,
+    because the horizon is infinitely far away and there are always more tiles.</p>
+    <h3>Every pixel worked out from scratch</h3>
+    <p>There is no list of polygons anywhere in this app. For every pixel on your screen, it
+    follows the pattern&#39;s mirrors backwards to find which part of the single master tile
+    lands there, and draws that. Every pixel answers independently.</p>
+    <p>That is why the app does not depend on a large saved patch that eventually runs out,
+    and why it can keep producing tiles toward the horizon. The mathematical rule is
+    unbounded, although the computer still has the usual limits of finite-precision
+    numbers.</p>
+    <h3>Learning as you go</h3>
+    <p>Every scene has its own page in the help menu explaining what its tiling is, why it
+    cannot exist on a flat plane if it cannot, and how its particular picture distorts the
+    world. There is a longer essay on where tilings came from — from the Alhambra to
+    Escher to the aperiodic monotile found in 2023. It introduces specialist terms as
+    they appear and uses only high-school algebra and geometry.</p>
+    <h3>A good place to begin</h3>
+    <p>Start with the flat hexagonal kaleidoscope and choose a line-only pattern so
+    that its mirrors are easy to see. Then open <code>{7,3}</code> in the Poincaré disk. Count
+    seven sides on one tile and three tiles at one corner. The first scene shows the
+    most symmetry possible on a flat plane; the second shows the smallest famous
+    step into hyperbolic geometry.</p>
+    <p>After that, keep <code>{7,3}</code> and change only the projection — the <strong>Projections</strong>
+    section of the side menu does exactly this, holding the tiling still while the
+    picture changes. You will see the same world drawn seven ways. Finally, create a
+    custom motif with one short stroke and watch the symmetry turn it into a
+    complete design.</p>
+    <h3>Who it is for</h3>
+    <ul>
+    <li><strong>Students</strong> can use the app to make angle sums, transformations, symmetry,
+    and curved geometry visible.</li>
+    <li><strong>Teachers</strong> can compare models live instead of relying on separate static
+    diagrams.</li>
+    <li><strong>Artists and designers</strong> can treat the mathematics as a pattern-making tool
+    without first learning the formal theory.</li>
+    <li><strong>Curious explorers</strong> can simply travel, draw, and ask why the world behaves
+    as it does.</li>
+    </ul>
+    <p>The help menu supports both approaches: open <em>How to Explore Interactively</em> for
+    the controls, <em>Drawing Your Own Motif</em> for the art tools, the current scene page
+    for the mathematics in front of you, or <em>A Short History of Tilings</em> for the
+    larger story.</p>
+    </article>
+    <hr>
+    <footer>
+      <p>© 2025 Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-08-27 19:59 UTC · 8c7b89b2</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

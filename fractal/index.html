@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/fractal/images/app-icon-96.webp">
+  <title>Fantastic Fractal Explorer</title>
+  <meta name="description" content="Fantastic Fractals — explore the beauty of generated fractals interactively.">
+  <link rel="canonical" href="https://driota.xyz/fractal/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fantastic Fractal Explorer">
+  <meta property="og:description" content="Fantastic Fractals — explore the beauty of generated fractals interactively.">
+  <meta property="og:url" content="https://driota.xyz/fractal/">
+  <meta property="og:image" content="https://driota.xyz/run/fractal/images/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fantastic Fractal Explorer">
+  <meta name="twitter:description" content="Fantastic Fractals — explore the beauty of generated fractals interactively.">
+  <meta name="twitter:image" content="https://driota.xyz/run/fractal/images/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-fractal">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <header class="hero hero-split">
+      <div>
+        <h1>Fantastic Fractal Explorer</h1>
+        <p class="lede">Fantastic Fractals — explore the beauty of generated fractals interactively.</p>
+        <ul class="chips">
+          <li>Browser</li>
+          <li>Desktop</li>
+          <li>Mobile</li>
+          <li>Free</li>
+        </ul>
+      </div>
+      <img class="hero-art" src="/run/fractal/images/app-icon-192.webp" alt="Fantastic Fractal Explorer icon" width="96" height="96">
+    </header>
+    <div class="cta-row">
+      <a class="btn primary" href="/run/fractal/">Open Fantastic Fractal Explorer →</a>
+      <a class="btn secondary" href="./app-usage.html">Usage</a>
+      <a class="btn secondary" href="./app-about.html">About</a>
+    </div>
+    <div class="cta-platforms">
+    <a class="cta-platform cta-platform--planned" title="Not yet on the App Store. Click for status details." href="https://driota.xyz/ios.html"><svg class="cta-platform-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>App Store (coming soon)</a>
+    <a class="cta-platform" href="https://play.google.com/store/apps/details?id=xyz.driota.fractal"><svg class="cta-platform-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg>Google Play</a>
+    <a class="cta-platform" href="https://www.amazon.com/dp/B0FNGZB5TN"><svg class="cta-platform-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z"/></svg>Amazon</a>
+    </div>
+    <div class="strip-frame">
+      <button type="button" class="strip-nav strip-nav--prev" aria-label="Scroll back"></button>
+      <section class="sample-strip" aria-label="Sample pages">
+        <a class="sample-card" href="/run/fractal/?name=mandelbrot">
+          <img src="/images/preview/fractal/mandelbrot.webp" alt="Mandelbrot set" title="Mandelbrot set" loading="lazy" decoding="async">
+        </a>
+        <a class="sample-card" href="/run/fractal/?name=julia">
+          <img src="/images/preview/fractal/julia.webp" alt="Julia set" title="Julia set" loading="lazy" decoding="async">
+        </a>
+        <a class="sample-card" href="/run/fractal/?name=newton">
+          <img src="/images/preview/fractal/newton.webp" alt="Newton's method basins" title="Newton's method basins" loading="lazy" decoding="async">
+        </a>
+        <a class="sample-card" href="/run/fractal/?name=burningShip">
+          <img src="/images/preview/fractal/burningShip.webp" alt="Burning Ship fractal" title="Burning Ship fractal" loading="lazy" decoding="async">
+        </a>
+      </section>
+      <button type="button" class="strip-nav strip-nav--next" aria-label="Scroll forward"></button>
+      <script>(function(){
+        var frame = document.currentScript.closest('.strip-frame');
+        var strip = frame.querySelector('.sample-strip');
+        function page(dir){ strip.scrollBy({ left: dir * strip.clientWidth * 0.9, behavior: 'smooth' }); }
+        frame.querySelector('.strip-nav--prev').addEventListener('click', function(){ page(-1); });
+        frame.querySelector('.strip-nav--next').addEventListener('click', function(){ page(1); });
+      })();</script>
+    </div>
+    <section class="video-tour" aria-label="Intro tour: Fantastic Fractal Explorer">
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/Cawd_Qzz2yQ?rel=0"
+          title="Intro tour: Fantastic Fractal Explorer"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="essay prose">
+    <h2>A Short History of Fractals</h2>
+    <p>Have you ever looked at a snowflake up close, or noticed how a fern’s leaves look like tiny versions of the whole plant? That repeating, “pattern inside a pattern” idea is what fractals are all about.</p>
+    <h3>Early Clues</h3>
+    <p>Long before anyone had the word <em>fractal</em>, mathematicians were stumbling onto strange shapes that didn’t fit the neat rules of geometry. In the 1800s, people like <strong>Georg Cantor</strong>, <strong>Helge von Koch</strong>, and <strong>Giuseppe Peano</strong> started drawing odd curves and sets. These shapes were puzzling because they were jagged, infinitely detailed, or didn’t seem to follow the normal rules of lines, squares, and circles. At the time, most mathematicians thought of them as “monsters” or curiosities rather than something useful.</p>
+    <ul>
+    <li><strong>Cantor Set (1883):</strong> Imagine starting with a line, cutting out the middle third, and then doing the same to every piece left, over and over. What remains is tiny dust-like points.</li>
+    <li><strong>Koch Snowflake (1904):</strong> Start with a triangle, keep adding little triangles to each side again and again, and you’ll get a snowflake-like shape with an infinitely long edge!</li>
+    </ul>
+    <h3>The Word “Fractal”</h3>
+    <p>It wasn’t until the 1970s that these wild shapes got their modern name. A mathematician named <strong>Benoît Mandelbrot</strong> studied these “monsters” and realized they were more than curiosities. He called them <strong>fractals</strong>, from the Latin word <em>fractus</em>, meaning “broken” or “irregular.”</p>
+    <p>Mandelbrot showed that fractals appear everywhere in nature: the branching of trees, the outlines of mountains, the swirls of clouds, even in your own blood vessels. Instead of being useless, fractals turned out to be one of the best ways to describe the messy, rough patterns of the real world.</p>
+    <h3>Computers Make Them Beautiful</h3>
+    <p>Before computers, drawing fractals by hand was almost impossible, since they repeat patterns over and over. But with computer graphics, Mandelbrot and others could “zoom in” endlessly and see the shapes blossom into stunning, colorful designs. The most famous of these is the <strong>Mandelbrot Set</strong>—a shape so rich that even today, people are still discovering new details when they zoom in.</p>
+    <h3>Usefulness of Fractals</h3>
+    <p>Fractals aren’t just pretty pictures. Scientists use them to understand things like coastlines, lightning, galaxy clusters, and even the stock market. Engineers use fractal ideas in antennas and image compression. Artists use them to make mesmerizing digital art.</p>
+    <h3>Last Words...</h3>
+    <p>Fractals show us that the world isn’t always smooth and simple. Nature likes to repeat itself in surprising, beautiful ways, and fractals help us see that order inside the chaos.</p>
+    </section>
+    <section class="page-list">
+      <h3>More about Fantastic Fractal Explorer</h3>
+      <ul>
+        <li><a href="./mandelbrot.html">Mandelbrot/Phoenix</a> <a class="page-list-open" href="/run/fractal/?name=mandelbrot" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./mandelbrot-high.html">Mandelbrot (high-order)</a> <a class="page-list-open" href="/run/fractal/?name=mandelbrot-high" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./julia.html">Julia</a> <a class="page-list-open" href="/run/fractal/?name=julia" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./julia-high.html">Julia (high-order)</a> <a class="page-list-open" href="/run/fractal/?name=julia-high" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./newton.html">Newton</a> <a class="page-list-open" href="/run/fractal/?name=newton" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./lambda.html">Lambda</a> <a class="page-list-open" href="/run/fractal/?name=lambda" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./magnet1.html">Magnet 1</a> <a class="page-list-open" href="/run/fractal/?name=magnet1" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./magnet2.html">Magnet 2</a> <a class="page-list-open" href="/run/fractal/?name=magnet2" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./nova.html">Nova</a> <a class="page-list-open" href="/run/fractal/?name=nova" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./burningShip.html">Burning Ship</a> <a class="page-list-open" href="/run/fractal/?name=burningShip" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+        <li><a href="./tricorn.html">Tricorn/Multicorn</a> <a class="page-list-open" href="/run/fractal/?name=tricorn" title="Open in Fantastic Fractal Explorer" aria-label="Open in Fantastic Fractal Explorer">↗</a></li>
+      </ul>
+    </section>
+    <hr>
+    <footer>
+      <p>© 2025 Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-08-27 19:59 UTC · 8c7b89b2</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

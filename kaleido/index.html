@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/kaleido/images/app-icon-96.webp">
+  <title>Tiling Patterns &amp; Symmetry</title>
+  <meta name="description" content="Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <link rel="canonical" href="https://driota.xyz/kaleido/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tiling Patterns &amp; Symmetry">
+  <meta property="og:description" content="Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta property="og:url" content="https://driota.xyz/kaleido/">
+  <meta property="og:image" content="https://driota.xyz/run/kaleido/images/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tiling Patterns &amp; Symmetry">
+  <meta name="twitter:description" content="Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.">
+  <meta name="twitter:image" content="https://driota.xyz/run/kaleido/images/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-kaleido">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <header class="hero hero-split">
+      <div>
+        <h1>Tiling Patterns &amp; Symmetry</h1>
+        <p class="lede">Infinite Tilings — wallpaper symmetry and hyperbolic tilings, explored on one canvas.</p>
+        <ul class="chips">
+          <li>Free</li>
+          <li>In your browser</li>
+          <li>Mobile-friendly</li>
+        </ul>
+      </div>
+      <img class="hero-art" src="/run/kaleido/images/app-icon-192.webp" alt="Tiling Patterns &amp; Symmetry icon" width="96" height="96">
+    </header>
+    <div class="cta-row">
+      <a class="btn primary" href="/run/kaleido/">Open Tiling Patterns &amp; Symmetry →</a>
+      <a class="btn secondary" href="./app-usage.html">Usage</a>
+      <a class="btn secondary" href="./app-about.html">About</a>
+    </div>
+    
+    
+    
+    <section class="essay prose">
+    <h2>Tilings: a short history of covering the plane</h2>
+    <p>Look down at a tiled floor. Look at a brick wall, a honeycomb, a chessboard, the
+    scales on a fish, a chain-link fence. Somebody — or something — has covered a
+    whole surface with copies of a few shapes, with no gaps and no overlaps. That is
+    a <strong>tiling</strong>, or a <strong>tessellation</strong>, and people have been making them for at
+    least five thousand years.</p>
+    <p>What makes tilings interesting is that they are not a free-for-all. You cannot
+    tile a floor with regular pentagons, no matter how clever you are. There are
+    exactly three ways to tile a flat floor with one regular shape, exactly
+    seventeen kinds of repeating flat pattern, and — if you are willing to leave the
+    flat floor behind — infinitely many more worlds where the rules change. This
+    essay is about how people worked all that out.</p>
+    <h3>Why only three regular tilings</h3>
+    <p>Start with the simplest question. Suppose you want to cover a floor with copies
+    of one regular shape — all sides the same length, all corners the same angle.
+    Which shapes work?</p>
+    <p>The answer comes from adding up angles at a corner. Wherever tiles meet, their
+    corners have to fill up a complete turn, which is 360°. An equilateral triangle
+    has 60° corners, and 6 × 60 = 360, so six triangles fit around a point. A square
+    has 90° corners, and four of them make 360. A regular hexagon has 120° corners,
+    and three make 360.</p>
+    <p>Now try a regular pentagon. Its corners are 108°. Three of them give 324° — a
+    gap. Four give 432° — an overlap. Nothing fits, so regular pentagons cannot
+    tile a flat floor. Go bigger and it gets worse: a regular heptagon has corners
+    of about 128.6°, and no whole number of those makes 360 either.</p>
+    <p>Here is the part that makes the proof complete. A regular shape with <code>n</code> sides
+    has an inside angle of</p>
+    <pre><code>180° × (n − 2) ÷ n
+    </code></pre>
+    <p>For six sides, that gives 120°, and three fit. For more than six sides, each
+    angle is greater than 120°, so even three overlap. Fewer than three polygons
+    cannot surround a point. We have now ruled out every regular polygon after the
+    hexagon, not just the pentagon and heptagon examples.</p>
+    <p>So there are <strong>exactly three</strong> regular tilings of the flat plane: triangles,
+    squares, hexagons. Not &quot;three that anyone has found&quot; — three, provably, and the
+    proof is the angle arithmetic above. This is the first taste of something that
+    runs through the whole subject: tilings are governed by counting, and the
+    counting is strict.</p>
+    <p>Bees, incidentally, use the hexagon. When a flat surface is divided into cells
+    of equal area, the honeycomb arrangement needs the least total wall. That
+    statement was conjectured for two thousand years and finally proved in 1999 by
+    Thomas Hales.</p>
+    <h3>A compact name for every regular tiling</h3>
+    <p>Writing &quot;regular heptagons, with three meeting at every corner&quot; soon gets
+    awkward, so mathematicians use a two-number name called a <strong>Schläfli symbol</strong>:
+    <code>{p,q}</code>.</p>
+    <ul>
+    <li><code>p</code> is the number of sides on each tile.</li>
+    <li><code>q</code> is the number of tiles that meet at each corner.</li>
+    </ul>
+    <p>The order matters. <code>{6,3}</code> is the honeycomb: six-sided tiles, three at a
+    corner. <code>{3,6}</code> uses triangles, six at a corner. These are different tilings,
+    even though they use the same two numbers. They are partners called <strong>duals</strong>:
+    put a dot at the centre of every tile in one pattern and connect dots in
+    neighbouring tiles, and you draw the other pattern.</p>
+    <p>This notation lets one question cover every regular tiling. Does <code>{p,q}</code> live
+    on a sphere, on a flat plane, or in the hyperbolic plane? Near the end of this
+    essay, one short calculation will answer all three cases.</p>
+    <p>Regular tilings are only the beginning. If you allow more than one kind of
+    regular polygon, the flat plane has eight <strong>semiregular</strong> tilings in which every
+    corner has the same arrangement. The familiar pattern of octagons with small
+    squares between them is one. If you allow irregular tiles, curved edges, or
+    corners with different arrangements, the possibilities grow enormously.</p>
+    <h3>Symmetry: the real subject</h3>
+    <p>Here is the shift in thinking that turned tilings from decoration into
+    mathematics. Instead of asking <em>what shapes are in the pattern</em>, ask <em>what can
+    you do to the pattern that leaves it looking exactly the same?</em></p>
+    <p>Slide a brick wall over by one brick and it looks unchanged. That slide is a
+    <strong>symmetry</strong> of the wall. Spin a chessboard a quarter turn about the centre of
+    any square and it looks unchanged: a <strong>rotation</strong>. Hold a mirror along the edge
+    of a row of tiles and the reflection matches what was already there: a
+    <strong>reflection</strong>. There is a fourth, sneakier one — slide <em>and</em> flip together,
+    like the trail of footprints you leave walking in snow — called a <strong>glide
+    reflection</strong>.</p>
+    <p>Collect every motion that leaves a pattern unchanged, and you have that
+    pattern&#39;s <strong>symmetry group</strong>. Two patterns that look completely different can
+    have the same group, and two patterns that look similar can have different
+    groups. The group is the pattern&#39;s skeleton.</p>
+    <p>Groups compose: do one symmetry, then another, and the result is a symmetry
+    too. That simple fact is what makes them mathematics rather than a list.</p>
+    <h3>Seventeen wallpapers</h3>
+    <p>If a flat pattern repeats in two different directions — like wallpaper, not like
+    a stripe — then its symmetry group has to be one of exactly <strong>seventeen</strong>. Not
+    sixteen, not eighteen. Any repeating flat pattern you have ever seen, or ever
+    will see, belongs to one of seventeen families.</p>
+    <p>The Russian crystallographer <strong>Evgraf Fedorov</strong> proved the classification in
+    1891. <strong>George Pólya</strong> independently derived the seventeen in 1924, the same
+    year <strong>Paul Niggli</strong> published another early account. Their work helped the
+    result reach a wide audience. Crystallographers cared because the same
+    reasoning in three dimensions tells you how atoms can stack, and there the
+    answer is 230.</p>
+    <p>Long before any of that, artisans had found most of the seventeen by hand.
+    Egyptian, Chinese, Roman and especially Islamic craftsmen filled walls with
+    patterns of extraordinary sophistication; the tilework of the <strong>Alhambra</strong> in
+    Granada, built in the 1300s, is the most famous example. It is often said that
+    all seventeen groups appear there. Careful counts by later mathematicians find
+    fewer — but many of the seventeen are unmistakably present, discovered by eye
+    and by tradition, five centuries before anyone could prove the list was
+    complete.</p>
+    <p>The Dutch artist <strong>M. C. Escher</strong> visited the Alhambra in 1922 and again in
+    1936, copied the patterns obsessively, and spent the rest of his life turning
+    them into interlocking fish, birds and lizards. He worked out much of the
+    underlying theory for himself, in his own private notation, without the formal
+    mathematics.</p>
+    <h3>Reading a symmetry group&#39;s name</h3>
+    <p>Mathematicians eventually needed short names for the seventeen. The one this app
+    uses is <strong>orbifold notation</strong>, invented by <strong>John Conway</strong>, and it is worth
+    learning because you can read it off a picture.</p>
+    <p>Two symbols do most of the work. A star <code>*</code> means &quot;there are mirror lines&quot;.
+    Digits after the star describe corners where two boundary mirrors cross. A
+    digit <code>n</code> means that the angle between those mirrors is <code>180° ÷ n</code>. Reflecting
+    in both mirrors, one after the other, produces a rotation of <code>360° ÷ n</code>, so the
+    digit also tells you the order of rotation at that point.</p>
+    <ul>
+    <li><code>*632</code> is the hexagonal kaleidoscope. Mirrors cross at a 6-fold corner, a
+    3-fold corner and a 2-fold corner. It is the richest symmetry a flat pattern
+    can have.</li>
+    <li><code>*442</code> is the square kaleidoscope: two 4-fold corners and one 2-fold corner.
+    The bathroom-floor pattern.</li>
+    <li><code>*2222</code> is a plain rectangle of mirrors — four corners, each a half turn.</li>
+    </ul>
+    <p>For example, the <code>6</code> in <code>*632</code> describes a 30° corner because <code>180 ÷ 6 = 30</code>.
+    Twelve copies of that narrow corner fit around a point, alternately reflected,
+    while the finished pattern repeats after a 60° rotation. The notation is
+    compact, but it records a complete recipe for rebuilding the pattern from one
+    small mirrored region.</p>
+    <p>Conway also found a beautiful way to <em>prove</em> the list of seventeen using this
+    notation. Each symbol is given a price, the total for any legal pattern must
+    come to exactly 2, and enumerating the ways to spend exactly 2 gives seventeen
+    possibilities and no more. He called it the <strong>magic theorem</strong>.</p>
+    <h3>Patterns that never repeat</h3>
+    <p>For a long time everyone assumed a tiling made from a few shapes would
+    eventually have to repeat. In the 1960s and 70s that assumption fell apart.</p>
+    <p><strong>Roger Penrose</strong> found, in 1974, a pair of simple four-sided tiles that cover
+    the plane in a pattern that never repeats — you can slide it as far as you like
+    and it never lines up with itself again. Yet it is not random: it is full of
+    five-fold rosettes, and any patch you find somewhere appears infinitely often
+    elsewhere. Order without repetition.</p>
+    <p>Then in 1982 <strong>Dan Shechtman</strong> found real crystals doing this, with the
+    &quot;impossible&quot; five-fold symmetry showing up in his diffraction pictures. His
+    result was rejected and ridiculed for years — he was asked to leave his research
+    group over it. He received the Nobel Prize in Chemistry for it in 2011.</p>
+    <p>The question that stayed open was whether a <em>single</em> shape could do it. In March
+    2023, <strong>David Smith</strong>, an amateur working at his kitchen table, found one: a
+    thirteen-sided shape now called the <strong>hat</strong>. With Joseph Myers, Craig Kaplan and
+    Chaim Goodman-Strauss he proved it works. Later the same year the team found the
+    <strong>spectre</strong>, which does it without needing mirror-image copies. A problem open
+    for sixty years was cracked, and it started with someone cutting out paper
+    shapes.</p>
+    <h3>Leaving the flat floor</h3>
+    <p>Now back to the pentagon that would not fit, and the heptagon that would not
+    either. They fail because the corner angles do not add to 360°. But <em>why</em> must
+    they add to 360°?</p>
+    <p>Because the floor is flat. That is the only reason.</p>
+    <p>Take a ball instead. Draw a triangle on it with three right angles — start at
+    the north pole, go down to the equator, along a quarter of the equator, and back
+    up. Its angles add to 270°, not 180°. On a sphere, triangles are fat: their
+    angles add to <em>more</em> than 180°, and shapes fit together differently. This is why
+    a football can be stitched from pentagons and hexagons even though pentagons
+    cannot tile a floor.</p>
+    <p>Now imagine bending the other way — a surface curved like a saddle or a Pringle
+    at <em>every</em> point, in every direction, forever. On such a surface triangles are
+    thin: their angles add up to <em>less</em> than 180°. There is more room around every
+    point than a flat plane has. And with more room, the shapes that did not fit
+    suddenly do.</p>
+    <p>The word &quot;surface&quot; can be misleading here. A saddle you can hold is only a
+    small patch, and it sits inside ordinary three-dimensional space. The
+    hyperbolic plane is the complete geometry obtained by continuing that negative
+    curvature everywhere. Mathematicians do not need to bend it inside a larger
+    room. People living in it could measure distances and angles entirely from
+    within, just as we can measure the Earth&#39;s curved surface without looking at it
+    from space.</p>
+    <p>This is the <strong>hyperbolic plane</strong>, and on it there are infinitely many regular
+    tilings. Seven heptagons around a point? Fine. Five squares? Fine. Any pair of
+    numbers works as long as there is enough room, which turns out to mean a single
+    clean condition: writing <code>{p,q}</code> for &quot;p-sided tiles, q of them around each
+    corner&quot;, the tiling is hyperbolic exactly when</p>
+    <pre><code>(p − 2) × (q − 2) &gt; 4
+    </code></pre>
+    <p>The test comes from the flat angle formula above. On a flat plane, <code>q</code> copies of
+    the polygon&#39;s inside angle must total 360°:</p>
+    <pre><code>q × 180° × (p − 2) ÷ p = 360°
+    </code></pre>
+    <p>Cancel 180°, rearrange, and you get <code>(p − 2) × (q − 2) = 4</code>. Hyperbolic
+    polygons have smaller angle sums than flat ones, so cases above 4 gain enough
+    room to fit. Spherical polygons have larger angle sums, giving the cases below
+    4.</p>
+    <p>Check it: <code>{6,3}</code>, the honeycomb, gives 4 × 1 = 4 — exactly flat. <code>{4,4}</code>, the
+    chessboard, gives 2 × 2 = 4 — flat again. <code>{3,6}</code>, the triangle tiling, also 4.
+    Those three are the three regular flat tilings from the beginning of this essay,
+    and they are precisely the cases where the product equals 4. Anything less than
+    4 lives on the sphere; anything more lives in hyperbolic space. One inequality
+    sorts every regular tiling into one of three worlds.</p>
+    <h3>Two hundred years of trouble</h3>
+    <p>The hyperbolic plane was not discovered by someone hunting tilings. It came out
+    of a two-thousand-year argument about a single line in Euclid&#39;s <em>Elements</em>.</p>
+    <p>Euclid&#39;s fifth postulate says, in effect, that through a point beside a line
+    there is exactly one parallel. It is wordier and less obvious than his other
+    four, and for twenty centuries mathematicians tried to prove it from them.
+    Everyone failed. Some published proofs that turned out to assume what they were
+    proving.</p>
+    <p>In the 1820s and 30s, <strong>Nikolai Lobachevsky</strong> in Russia and <strong>János Bolyai</strong> in
+    Hungary independently did the audacious thing: they assumed the postulate was
+    <em>false</em> — many parallels through the point — and worked out the consequences,
+    expecting a contradiction. None came. Instead a whole new geometry unfolded,
+    consistent and strange. <strong>Carl Friedrich Gauss</strong> had reached the same place
+    years earlier but published nothing, fearing the controversy.</p>
+    <p>Bolyai&#39;s father, himself a mathematician, had begged him to leave the problem
+    alone: &quot;I entreat you, leave the science of parallels alone... it may take all
+    your time, and deprive you of your health, your peace of mind and your
+    happiness in life.&quot; His son took no notice, and wrote to him instead: &quot;Out of
+    nothing I have created a strange new world.&quot;</p>
+    <p>That world is where <code>{7,3}</code> lives.</p>
+    <h3>Drawing an infinite world on a finite screen</h3>
+    <p>The hyperbolic plane has a practical problem: it does not fit. It has too much
+    room. You cannot lay it flat on a page without distorting it, in the same way
+    you cannot flatten an orange peel — which is why every world map lies about
+    something.</p>
+    <p>So mathematicians built <strong>models</strong>: honest, complete pictures of the hyperbolic
+    plane that each tell one particular kind of lie. <strong>Eugenio Beltrami</strong> built the
+    first ones in 1868, and <strong>Felix Klein</strong> and <strong>Henri Poincaré</strong> developed them
+    further; their names are on the two you meet first.</p>
+    <p>The <strong>Poincaré disk</strong> squeezes the entire infinite plane inside a circle. The
+    rim is infinitely far away — it is not an edge you can reach, it is the horizon.
+    Tiles look smaller and smaller as they approach it, but that is the picture
+    lying about size, not the tiles shrinking. Every one of them is the same size
+    as every other. What the disk gets <em>right</em> is angles: every angle in the picture
+    is the true angle, which is why the patterns look so convincing.</p>
+    <p>This trade-off is unavoidable. A map of Earth can preserve directions, areas,
+    distances, or straight routes, but not all of them at once. Pictures of the
+    hyperbolic plane face the same problem. The Poincaré disk preserves angles but
+    curves most straight lines. The Klein disk makes straight lines look straight
+    but changes angles. Neither picture is wrong; each is designed to answer a
+    different question.</p>
+    <p>Escher met this picture in 1958, when the geometer <strong>H. S. M. Coxeter</strong> sent him
+    a paper containing a hyperbolic tiling diagram. Escher had been struggling for
+    years with how to show infinity in a finite frame, and here was the answer,
+    handed to him in a journal offprint. He made the four <em>Circle Limit</em> prints from
+    it. The two men corresponded for years afterwards; Escher once complained,
+    affectionately, that Coxeter&#39;s mathematics was &quot;hocus-pocus&quot; to him, and Coxeter
+    later wrote papers analysing exactly how mathematically precise Escher&#39;s
+    construction had been.</p>
+    <h3>What this app is doing</h3>
+    <p>Everything above is what Kaleido lets you handle directly.</p>
+    <p>The flat scenes are three of the seventeen wallpaper groups. The curved scenes
+    are hyperbolic <code>{p,q}</code> tilings, shown through six different models — offered as
+    seven windows, since the band is worth having both level and upright — each an
+    honest picture of the same world, each lying about something different, and you
+    can switch between them and watch the same tiling re-flow.</p>
+    <p>The rendering does not build the tiling tile by tile. There is no list of
+    polygons anywhere in this app. Instead, for <strong>every pixel on your screen</strong>, it
+    asks a question: <em>if I follow the pattern&#39;s mirrors backwards from here, which
+    part of the single master tile do I land on?</em> Then it draws whatever is at that
+    spot. Every pixel answers independently, which is why the app does not need a
+    stored patch of tiles that eventually runs out. This is also how it keeps
+    producing new tiles as they crowd toward the rim.</p>
+    <p>The mathematical rule describes an unbounded pattern rather than one large
+    saved picture. The computer still uses finite-precision numbers, so at extreme
+    views it has ordinary numerical limits; infinity belongs to the rule, not to
+    the machine.</p>
+    <h3>Four experiments to try</h3>
+    <p>Reading gives you the vocabulary, but the quickest way to understand these
+    ideas is to test them.</p>
+    <ol>
+    <li>Open the flat hexagonal scene and choose a line-only pattern. Find the
+    6-fold, 3-fold and 2-fold points named by <code>*632</code>. Turn the pattern and watch
+    how far it moves before looking unchanged.</li>
+    <li>Compare <code>{7,3}</code> with <code>{3,7}</code>. In the first, count the sides of one tile and
+    the tiles at one corner. In the second, count again. The numbers exchange
+    places because the two tilings are duals.</li>
+    <li>Keep <code>{7,3}</code> and switch between the Poincaré and Klein disks. Follow the same
+    tile edge. In one view it bows but keeps its angles; in the other it stays
+    straight while the tile changes shape.</li>
+    <li>Draw one short stroke across a guide line. Its reflected copies should join
+    it. Move the stroke toward a corner and see how the order of rotation changes
+    the flower it creates.</li>
+    </ol>
+    <p>Each experiment asks you to compare something that changes with something that
+    does not. That habit — looking for what a transformation preserves — is the
+    central habit of geometry.</p>
+    <h3>Why any of this matters</h3>
+    <p>Symmetry groups turned out to be the language of crystals, and crystallography
+    built modern chemistry, materials science and molecular biology — the structure
+    of DNA was worked out with crucial evidence from diffraction photographs.
+    Hyperbolic geometry, invented by people trying to settle an argument about
+    parallel lines, now appears in relativity, network science, and the study of
+    curved surfaces. Lettuce leaves and some corals even grow with similar
+    negative-curvature patterns, crinkling because they cannot lie flat.</p>
+    <p>And none of that is why people make tilings. The craftsmen of the Alhambra were
+    not doing crystallography. They were covering a wall beautifully, and they found
+    their way to deep mathematics by paying close attention to what looked right.
+    That is still a reasonable way to explore this app.</p>
+    </section>
+    <hr>
+    <footer>
+      <p>© 2025 Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-08-27 19:59 UTC · 8c7b89b2</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

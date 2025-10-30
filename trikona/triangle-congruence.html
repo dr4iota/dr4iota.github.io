@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/webp" href="/run/trikona/images/app-icon-96.webp">
+  <title>Triangle Congruence Tests — Animated Geometry Proofs</title>
+  <meta name="description" content="Animated Geometry — interactive visuals and step-by-step proofs.">
+  <link rel="canonical" href="https://driota.xyz/trikona/triangle-congruence.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Triangle Congruence Tests — Animated Geometry Proofs">
+  <meta property="og:description" content="Animated Geometry — interactive visuals and step-by-step proofs.">
+  <meta property="og:url" content="https://driota.xyz/trikona/triangle-congruence.html">
+  <meta property="og:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Triangle Congruence Tests — Animated Geometry Proofs">
+  <meta name="twitter:description" content="Animated Geometry — interactive visuals and step-by-step proofs.">
+  <meta name="twitter:image" content="https://driota.xyz/run/trikona/images/app-icon-512.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../katex/katex.min.css">
+  <link rel="stylesheet" href="../app-accents.css">
+  <!-- AdSense disabled — uncomment to re-enable
+  <meta name="google-adsense-account" content="ca-pub-5400548434612970">
+  <script
+     async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5400548434612970"
+     crossorigin="anonymous"></script>
+  -->
+  <!-- Cloudflare Web Analytics — cookieless, no PII (see misc/website/privacy.md
+       → "Analytics and ads"). Injected into <head> of every rendered site page
+       (shell + homepage) via the ANALYTICS_HEAD placeholder. The token is public (it ships in
+       page HTML) — config, not a secret. To disable, wrap the <script> in an HTML
+       comment. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "0117ae5b1fac4c61a5d166f39cb61fee"}'></script>
+</head>
+<body class="app-trikona">
+  <div class="container">
+    <nav class="topnav">
+      <a href="../">← Doctor Iota</a>
+      <span class="spacer"></span>
+      <a href="https://www.youtube.com/@driota">YouTube</a>
+      <a href="https://www.instagram.com/driota.xyz/">Instagram</a>
+      <a href="https://www.tiktok.com/@driota.xyz">TikTok</a>
+      <a href="https://groups.google.com/g/driota">Google Group</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScyC0R1nBUOIg7OLLurmSB886AVjqVJPUc8G_c-WMK-BYV9mg/viewform?usp=dialog">Drop a Note</a>
+      <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+    </nav>
+    <article class="prose">
+    <div class="open-in-app"><a class="btn btn-sm primary" href="/run/trikona/?name=triangle-congruence">Open in Animated Geometry Proofs →</a></div>
+    <h1>Triangle Congruence Tests</h1>
+    <p><em>An interactive demonstration of the four main tests for triangle congruence: SSS, SAS, ASA, and AAS.</em></p>
+    <p><strong>Keywords:</strong> <em>congruence, SSS, SAS, ASA, AAS, triangle congruence tests</em></p>
+    <p><strong>Difficulty:</strong> beginner</p>
+    <p>Two triangles are <strong>congruent</strong> when they have exactly the same size and
+    shape, written <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span></span></span></span>. But how few measurements must match before
+    congruence is guaranteed?</p>
+    <p><strong>Strategy:</strong> we walk through the four tests that suffice — <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>,
+    <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal">A</span></span></span></span>, and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">AA</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span> — and then show why <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mord mathnormal">A</span></span></span></span> and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">AAA</span></span></span></span> do not.</p>
+    <h2>What are Congruent Triangles?</h2>
+    <p>Congruent triangles are identical — they have the same size and shape. Symbol: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span></span></span></span> means &quot;triangle ABC is congruent to triangle DEF.&quot;</p>
+    <h2>Test 1: SSS (Side-Side-Side)</h2>
+    <p>If all three sides of one triangle equal the three sides of another, the triangles are congruent.</p>
+    <h2>Test 2: SAS (Side-Angle-Side)</h2>
+    <p>If two sides and the INCLUDED angle (between them) are equal, the triangles are congruent. The angle must be BETWEEN the two sides!</p>
+    <h2>Test 3: ASA (Angle-Side-Angle)</h2>
+    <p>If two angles and the INCLUDED side (between them) are equal, the triangles are congruent. The side must be BETWEEN the two angles!</p>
+    <h2>Test 4: AAS (Angle-Angle-Side)</h2>
+    <p>If two angles and a NON-INCLUDED side are equal, the triangles are congruent. This works because the third angle is automatically determined!</p>
+    <h2>What Doesn&#39;t Work: SSA</h2>
+    <p><strong>SSA</strong> (Side-Side-Angle) is ambiguous — two different triangles can have the same two sides and the same non-included angle!</p>
+    <h2>What Doesn&#39;t Work: AAA</h2>
+    <p><strong>AAA</strong> (Angle-Angle-Angle) only proves similarity, not congruence — triangles can have the same angles but different sizes.</p>
+    <h2>Summary - The Four Congruence Tests</h2>
+    <p>The four congruence tests:</p>
+    <ul>
+    <li><strong>SSS</strong>: All three sides equal</li>
+    <li><strong>SAS</strong>: Two sides and included angle equal</li>
+    <li><strong>ASA</strong>: Two angles and included side equal</li>
+    <li><strong>AAS</strong>: Two angles and any side equal</li>
+    </ul>
+    <p>Remember: SSA and AAA do NOT prove congruence!</p>
+    <p>Triangle congruence means two triangles are exactly the same — same size, same
+    shape. You can prove congruence using:</p>
+    <ul>
+    <li><strong>SSS</strong>: Three sides equal</li>
+    <li><strong>SAS</strong>: Two sides and the included angle equal</li>
+    <li><strong>ASA</strong>: Two angles and the included side equal</li>
+    <li><strong>AAS</strong>: Two angles and any side equal</li>
+    </ul>
+    <p>Remember: SSA doesn&#39;t work (it&#39;s ambiguous), and AAA only proves similarity,
+    not congruence!</p>
+    <h2>Notes</h2>
+    <p>Two triangles are <strong>congruent</strong> if they have exactly the same size and shape:
+    every pair of corresponding sides is equal in length and every pair of
+    corresponding angles is equal in measure, so one triangle is an exact copy of
+    the other (possibly rotated or flipped). In symbols, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≅</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">△</span><span class="mord mathnormal" style="margin-right:0.0278em;">D</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span></span></span></span>.</p>
+    <h3>The Four Congruence Tests</h3>
+    <h4>1. SSS (Side-Side-Side)</h4>
+    <p>If all three sides of one triangle equal the three sides of another, the
+    triangles are congruent.</p>
+    <h4>2. SAS (Side-Angle-Side)</h4>
+    <p>If two sides and the <strong>included angle</strong> (the angle between those two sides) are
+    equal, the triangles are congruent. The angle must be BETWEEN the two sides!</p>
+    <h4>3. ASA (Angle-Side-Angle)</h4>
+    <p>If two angles and the <strong>included side</strong> (the side between those two angles) are
+    equal, the triangles are congruent. The side must be BETWEEN the two angles!</p>
+    <h4>4. AAS (Angle-Angle-Side)</h4>
+    <p>If two angles and any side are equal, the triangles are congruent. This works
+    because once two angles are fixed, the third angle is determined (the angles
+    sum to <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">180°</span></span></span></span>).</p>
+    <h3>What Doesn&#39;t Work?</h3>
+    <ul>
+    <li><strong>SSA (Side-Side-Angle)</strong>: ambiguous — two different triangles can satisfy
+    the same SSA conditions.</li>
+    <li><strong>AAA (Angle-Angle-Angle)</strong>: only proves similarity, not congruence —
+    triangles can have the same angles but different sizes.</li>
+    </ul>
+    </article>
+    <hr>
+    <footer>
+      <p>© 2025 Doctor Iota.
+        <small>
+          <a href="../privacy.html">Privacy policy</a> ·
+          <a href="https://github.com/dr4iota/dr4iota.github.io/releases">Releases</a>
+        </small>
+      </p>
+      <small class="build-info">Built 2026-08-27 19:59 UTC · 8c7b89b2</small>
+    </footer>
+    <!-- AdSense disabled — uncomment to re-enable
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5400548434612970"
+         data-ad-slot="5745481735"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+  </div>
+</body>
+</html>

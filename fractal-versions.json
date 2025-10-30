@@ -1,0 +1,14 @@
+{
+  "app": "fractal",
+  "channels": {
+    "play": {
+      "version": "0.5.1",
+      "gitCommitHash": "7cc9688d",
+      "url": "https://play.google.com/store/apps/details?id=xyz.driota.fractal"
+    },
+    "oid": {
+      "version": "0.3.1",
+      "gitCommitHash": "29ea84f1"
+    }
+  }
+}
