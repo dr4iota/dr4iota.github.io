@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Files offline — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+</header>
+<main class="prose">
+<h1 id="files-offline">Files offline</h1>
+<p>What you open on a server is kept on this device for a while, so the server
+can be browsed when it cannot be reached, and a file that has not changed is
+not fetched again.</p>
+<h2 id="a-rows">A row&#39;s ⋯</h2>
+<p>Each row in a server&#39;s folder ends in <strong>⋯</strong>. It opens a strip under the row:
+first what this device has of it — <em>No copy on this device</em>, or <em>Copy from</em>
+and when — then what you can do:</p>
+<ul>
+<li><strong>Forget copy</strong> removes the copy on this device. Nothing on the server
+changes.</li>
+<li><strong>Keep offline</strong> keeps the file on this device until you forget it. It is
+lit while the file is kept, and a bookmark follows the file&#39;s name. Press it
+again to stop keeping it. A file&#39;s own page has the same button.</li>
+<li><strong>Download</strong> saves a copy where you choose: a folder on a desktop, and the
+system&#39;s <em>Save to…</em> sheet on Android.</li>
+<li><strong>Delete…</strong> deletes the file, or an empty folder, from the server. It asks
+every time. A copy you kept offline stays, in Cache.</li>
+</ul>
+<h2 id="when-the-server-cannot-be-reached">When the server cannot be reached</h2>
+<p>A server&#39;s folder opens from what this device has, with <em>cannot be reached</em>
+over the page and when the copy is from. Folders you never opened, and files
+you never fetched, are grey. <strong>Try again</strong> connects once the network is back.</p>
+<h2 id="cache">Cache</h2>
+<p><strong>Cache</strong>, in Places, lists the servers this device holds files from. Inside a
+server, each folder with a copy is one row, named by its path on the server —
+a long one with its start cut, <code>… › pi › src</code> — and inside that, its copies. <strong>Forget</strong> and <strong>Keep offline</strong> work here too, and <strong>Clear…</strong> on a
+server&#39;s row removes everything held from it.</p>
+<p>Files you only opened are removed when they take more than 500 MB (200 MB on
+Android) — the oldest first — and Android may remove them when it needs room.
+Files you keep offline are never removed for you. A copy whose file has
+changed on the server says so, and is refreshed the next time you open the file
+there.</p>
+<h2 id="each-server">Each server</h2>
+<p>On the server&#39;s <strong>Server</strong> tab, <strong>Cache this server&#39;s files</strong> turns it off for
+that server: nothing from it is stored on this device. Below it, how much it
+takes here and <strong>Clear cache…</strong>. Deleting a server removes its cache.</p>
+</main>
+<footer class="foot">
+  <p>Built from Telechore 0.4.0; the site at b02311c, 3 commits after v0.4.0, with treesight 4f64429.</p>
+</footer>
+</body>
+</html>

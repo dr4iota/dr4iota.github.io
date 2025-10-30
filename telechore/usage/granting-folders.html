@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Granting folders — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+</header>
+<main class="prose">
+<h1 id="granting-folders">Granting folders</h1>
+<p>On Android, the app cannot browse your storage freely, so <strong>Open a folder…</strong>
+opens the system&#39;s folder picker, starting in Documents. The folder you choose
+is shared with the app, and Android remembers that across restarts.</p>
+<p>The app asks for no storage permission; it can read only the folders you
+choose.</p>
+<h2 id="what-that-means-in-practice">What that means in practice</h2>
+<ul>
+<li><strong>A folder you choose is pinned.</strong> It gets its own row under Pinned, so
+opening it again never needs the picker. You can unpin the row like any other;
+the folder stays shared with the app.</li>
+<li><strong>To stop sharing a folder, remove it</strong> — eject the card it is on, sign out
+of the provider that serves it, or delete it. Android has no screen for
+withdrawing access to a single folder. The row stays in Pinned; tapping it
+says the folder is no longer shared, and <strong>Open a folder…</strong> shares it again.
+If a page from that folder is already open, browsing further into it reports
+the file as not found instead of saying the folder is no longer shared. This
+is a known issue.</li>
+<li><strong>Places lists what is always there</strong>: on Android, these pages, and
+<strong>Cache</strong>, what this device keeps of your servers (see
+<a href="offline.html">Files offline</a>). Folders you choose go to Pinned instead, so
+Places stays the same on every launch.</li>
+</ul>
+<h2 id="files">Files</h2>
+<p>A folder of the app&#39;s own, private to it, which lasts until the app is
+uninstalled. It is listed in Places, as <strong>Files</strong>, only while something is in
+it: <strong>Download</strong> asks where to save a copy, so nothing new goes there, and a
+copy an older version of the app saved there is still offered.</p>
+</main>
+<footer class="foot">
+  <p>Built from Telechore 0.4.0; the site at b02311c, 3 commits after v0.4.0, with treesight 4f64429.</p>
+</footer>
+</body>
+</html>

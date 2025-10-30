@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Reading files — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+</header>
+<main class="prose">
+<h1 id="reading-files">Reading files</h1>
+<p>Select a file to see it beside the tree:</p>
+<ul>
+<li><strong>Source</strong> — syntax highlighted, with line numbers unless you turn them off.</li>
+<li><strong>Markdown</strong> — rendered, including maths in <code>$…$</code> and <code>$$…$$</code>, and <code>mermaid</code>
+blocks drawn as diagrams.</li>
+<li><strong>Images</strong>, <strong>audio</strong> and <strong>video</strong> — shown and played in place.</li>
+<li><strong>PDF</strong> — the platform&#39;s viewer.</li>
+<li><strong>Anything else that is text</strong> — as text.</li>
+</ul>
+<h2 id="source-raw-and-download">Source, Raw, and Download</h2>
+<p>On Markdown and diagrams, <strong>Source</strong> shows the highlighted source, and
+<strong>Rendered</strong> switches back.</p>
+<p><strong>Raw</strong> shows the file itself, with the header still shown, so you can get
+back. <strong>Download</strong> saves a copy. A file can also be saved without opening it,
+from its row in the folder&#39;s table: see <strong>⋯</strong> below.</p>
+<p>While a copy is saved, the status line at the bottom says how far it has got,
+with <strong>Cancel</strong>.</p>
+<h2 id="a-rows">A row&#39;s ⋯</h2>
+<p>Each row of a folder&#39;s table that has something to offer ends in <strong>⋯</strong>. It
+opens a strip under the row: first what is known about it, then what can be
+done with it.</p>
+<ul>
+<li><strong>Download</strong>, on a file, saves a copy, as above.</li>
+<li><strong>Delete…</strong>, on a computer&#39;s own folders, moves the file or folder to the
+Trash (the Recycle Bin on Windows), after asking. Where the Trash will not
+take it, such as a network drive, a file or an empty folder can still be
+deleted for good, asked again in those words; a folder with things in it is
+never deleted that way.</li>
+</ul>
+<p>The app may add its own actions to the strip.</p>
+<h2 id="big-files">Big files</h2>
+<p>A text file over 2 MB is not rendered. The page says it is too large, and
+offers <strong>View raw</strong> or a download. Video, audio, and large PDFs play without
+being read all at once.</p>
+</main>
+<footer class="foot">
+  <p>Built from Telechore 0.4.0; the site at b02311c, 3 commits after v0.4.0, with treesight 4f64429.</p>
+</footer>
+</body>
+</html>
