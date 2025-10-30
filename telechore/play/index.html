@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Play — Telechore</title>
+<meta name="description" content="Termoasis's console games in the browser: the games Telechore carries, run here by their own engine.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<!-- Written by tools/site/build.mjs from tools/site/play.html: the site's page
+     around the games, which play in frame.html beside it (docs/website.md). -->
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="../usage/">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <span>Play</span>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="games">
+<h1>Play</h1>
+<p>Termoasis's console games — 2048, Sudoku, Mines, Snake, Life and thirteen
+more — as <a href="../">Telechore</a> carries them, run here in your
+browser by the same engine. Pick one from the menu, or from the name at the top.
+On a touch screen each game draws its own keys; with a keyboard, its keys play
+it. Saves stay in this browser.</p>
+<div class="game-frame"><iframe title="Termoasis's games"></iframe></div>
+<p class="note"><a class="full" href="frame.html">Play full screen</a>, or get
+<a href="../#get">Telechore</a> to play them offline and keep one running while
+you work in a terminal.</p>
+<script>
+  // A game asked for in the address (play/?game=snake) is the frame's to
+  // open, and the full-screen link's: frame.html takes ?game= (play.js).
+  const ask = location.search;
+  document.querySelector('.game-frame iframe').src = 'frame.html' + ask;
+  document.querySelector('a.full').href = 'frame.html' + ask;
+</script>
+</main>
+<footer class="foot">
+  <p>The games from Termoasis d6575ab9.</p>
+</footer>
+</body>
+</html>

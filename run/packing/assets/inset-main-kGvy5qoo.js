@@ -1,0 +1,1 @@
+import{j as o}from"./react-vendor-DGo2L9b6.js";function a(t,i){return o.jsx("div",{className:"relative w-full h-full overflow-hidden",style:{paddingTop:t.top,paddingRight:t.right,paddingBottom:t.bottom,paddingLeft:t.left},children:i})}export{a as i};

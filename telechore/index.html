@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Telechore — SSH terminal and files</title>
+<meta name="description" content="Telechore: browse a server's files over SSH and work in its terminal, on Android, Windows and Linux.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body>
+<!-- Written to site/index.html by tools/site/build.mjs from tools/site/index.html.
+     Links are relative, so this works at driota.xyz/telechore/ whichever way
+     it is hosted (docs/website.md). img/ and usage/ are written by the same
+     script, and the list between the usage-nav markers: app/usage/README.md's
+     list, of the version the site describes. -->
+<header class="bar">
+  <a class="brand" href="./"><img src="img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="usage/">Usage</a>
+  <a href="changes.html">What's new</a>
+  <a href="play/">Play</a>
+  <a href="feedback.html">Feedback</a>
+  <a href="https://github.com/dr4iota/treesight/releases">Releases</a>
+</header>
+<main>
+<h1>Telechore</h1>
+<p class="lead">An SSH client for a phone or a desktop: browse a server's files
+as a tree, with the selected file beside it, and work in its terminal.</p>
+<p>Telechore shows a folder as a tree, on this device or on a server over SSH,
+and renders what you select: source with highlighting, Markdown, images, PDF.
+Its terminal uses the same connection, so it needs no second login. Nothing
+needs to be installed on the server; a standard SSH server is enough.</p>
+
+<img class="hero" src="img/feature.png" width="1024" height="500"
+     alt="Telechore's terminal with its own keyboard, laid out like a laptop's">
+
+<h2 id="get">Get Telechore</h2>
+<div class="get">
+  <a class="button primary" href="https://play.google.com/store/apps/details?id=xyz.driota.telechore">Google Play — Android</a>
+  <a class="button primary" href="https://apps.microsoft.com/detail/9NNCCS7Z1DPK">Microsoft Store — Windows</a>
+  <a class="button" href="https://github.com/dr4iota/treesight/releases">Download</a>
+</div>
+<p class="note">Download goes to the releases on GitHub, which carry
+Telechore for Linux — a <code>.deb</code>, an <code>.rpm</code>, and the
+plain binary — beside treesight. A copy from a store
+is the free edition: two servers, and two terminals kept running, on Google Play,
+where Pro lifts both for one payment with no subscription; four of each on the
+Microsoft Store, which does not sell Pro yet.
+<a href="changes.html">What's new</a> in each version.</p>
+
+<h2 id="what">What it does</h2>
+<ul>
+  <li><strong>Files on a server, as a tree.</strong> Open, render and download
+    them; make folders and upload. What you opened stays readable offline.</li>
+  <li><strong>A terminal that keeps its size</strong> while the keyboard comes
+    and goes, so full-screen programs keep their layout. Two fingers pan and
+    zoom.</li>
+  <li><strong>The keys a phone lacks</strong> — Esc, Tab, Ctrl, Alt, the
+    arrows — over the terminal or above the system keyboard, or a full
+    keyboard of its own with the phone on its side.</li>
+  <li><strong>Keep a terminal running</strong> when you leave it, and come
+    back to it as you left it.</li>
+  <li><strong>Servers move between devices</strong> by a QR code, encrypted
+    with a password if you set one. Host keys are checked as in any SSH client.</li>
+  <li><strong>No account, no analytics, no ads.</strong> The only traffic is
+    to the machine you connect to, and, for a copy from a store, to the store
+    you installed it from.</li>
+</ul>
+
+<h2 id="screenshots">Screenshots</h2>
+<div class="shots">
+  <figure>
+    <img src="img/terminal.png" width="1762" height="1350" loading="lazy"
+         alt="The terminal on Windows, under its header">
+    <figcaption>The terminal, on Windows.</figcaption>
+  </figure>
+  <figure>
+    <img src="img/files.png" width="1762" height="1350" loading="lazy"
+         alt="A project's folder as a tree, its files listed beside it and its README below">
+    <figcaption>A folder and its files.</figcaption>
+  </figure>
+</div>
+
+<h2 id="usage">Using Telechore</h2>
+<p>The same pages the app carries under <strong>Usage</strong>, for the latest
+release.</p>
+<!-- usage-nav -->
+<ul class="pages">
+  <li><a href="usage/servers.html">Servers</a> — saving one, how a login is chosen, keys, and host keys.</li>
+  <li><a href="usage/terminal.html">The terminal</a> — a shell on the machine you are browsing, and keeping it running when you leave it.</li>
+  <li><a href="usage/games.html">Games</a> — Termoasis's console games, kept like a terminal, and in a browser.</li>
+  <li><a href="usage/offline.html">Files offline</a> — what is kept of a server on this device, Keep offline, and the Cache place.</li>
+  <li><a href="usage/granting-folders.html">Granting folders</a> — how opening a folder works on Android, where there are no paths to browse.</li>
+  <li><a href="usage/opening-folders.html">Opening folders</a> — the start page, Places, Starred and Recent.</li>
+  <li><a href="usage/tree-and-pane.html">Tree and sidebar</a> — the two halves of the window.</li>
+  <li><a href="usage/reading-files.html">Reading files</a> — what gets rendered.</li>
+  <li><a href="usage/preferences.html">Preferences</a> — theme, line numbers, the sidebar, printing.</li>
+  <li><a href="usage/keyboard.html">Keyboard</a> — every shortcut there is.</li>
+  <li><a href="usage/licenses.html">Licences</a> — the open-source software Telechore is built with, and its licences.</li>
+</ul>
+<!-- /usage-nav -->
+
+<h2 id="games">Games</h2>
+<p>Telechore carries eighteen of Termoasis's console games — 2048, Sudoku,
+Mines, Snake, Life and more — under <b>Games</b> in its pane, run in
+the app and kept, like a terminal, if you want one to go on while you are
+elsewhere. They play here too, in the browser, by the same engine.</p>
+<!-- The games load only when asked for: a front page should not fetch an
+     engine for every visitor. Without script, the link goes to the play page. -->
+<div class="game-slot" id="game-slot">
+  <a class="button primary" href="play/" id="play-here">Play here</a>
+  <a class="button" href="play/">The play page</a>
+</div>
+<script>
+  document.getElementById('play-here').addEventListener('click', (event) => {
+    event.preventDefault();
+    const frame = document.createElement('div');
+    frame.className = 'game-frame';
+    frame.innerHTML = '<iframe src="play/frame.html" title="Termoasis\'s games"></iframe>';
+    document.getElementById('game-slot').replaceChildren(frame);
+    frame.querySelector('iframe').focus();
+  });
+</script>
+
+<h2 id="treesight">Just the file browser</h2>
+<p>Telechore is built on <a href="https://github.com/dr4iota/treesight">treesight</a>,
+an open-source tree browser for the folders on your own machine, without
+servers or the terminal. Its
+<a href="https://github.com/dr4iota/treesight/releases">releases</a> carry
+treesight on its own, and Telechore's Linux build.</p>
+</main>
+<footer class="foot">
+  <p><a href="https://driota.xyz/privacy.html">Privacy</a> ·
+  Support: <a href="mailto:driota.xyz@gmail.com">driota.xyz@gmail.com</a> ·
+  <a href="https://driota.xyz/">driota.xyz</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Feedback — Telechore</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="feedback.css">
+<link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="./"><img src="img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="usage/">Usage</a>
+  <a href="changes.html">What's new</a>
+  <a href="play/">Play</a>
+  <span>Feedback</span>
+</header>
+<main class="prose">
+<h1>Help us improve Telechore</h1>
+<p>Telechore is still under development. Tell us what we can improve: choose one to three, then send.</p>
+<form id="feedback" class="feedback" novalidate>
+<noscript><p>The form needs JavaScript.</p></noscript>
+</form>
+<script type="application/json" id="feedback-data">{"app":"telechore","endpoint":"https://script.google.com/macros/s/AKfycbxEuOuSa7dbHGathhBsrErMY3Kr_XmkqoYUzZ6XgYnfYb8eScP5mayNiV2f34LuhRs9/exec","title":"Help us improve Telechore","intro":"Telechore is still under development. Tell us what we can improve: choose one to three, then send.","nickname":"What should we call you?","most":3,"sections":[{"title":"The app","entries":[{"id":"APP_ICONS","label":"I can't tell what some icons mean","detail":"Which ones?"},{"id":"APP_TUTORIAL","label":"A short animated tour in the app would help"},{"id":"APP_DEVICE","label":"Make it for my device","detail":"Which? (iPhone, Mac, …)"},{"id":"APP_SLOW","label":"Slow, or uses too much battery"},{"id":"APP_HELP","label":"The help is unclear or missing something"},{"id":"APP_PRO","label":"Pro — the price or what it includes","detail":"What would you change?"},{"id":"APP_PRO_CANT_PAY","label":"Can't pay for Pro, but need more servers","detail":"How many do you need?"}]},{"title":"Files — browsing and viewing","entries":[{"id":"FILES_UI_DESIGN","label":"The layout and look could be better"},{"id":"FILES_UI_BUGS","label":"Something is broken","detail":"What, and where?"},{"id":"FILES_MORE_VIEWS","label":"Show more kinds of files","detail":"Which kinds?"},{"id":"FILES_EDIT","label":"Let me edit files"},{"id":"FILES_TRANSFER","label":"Uploading and downloading could be easier"},{"id":"FILES_OPEN_WITH","label":"Open a file in another app"}]},{"title":"Servers and keys","entries":[{"id":"SERVERS_HARD_TO_USE","label":"Not intuitive, hard to use"},{"id":"SERVERS_LOOK","label":"The look could be better"},{"id":"SERVERS_MISSING","label":"Missing settings","detail":"Which ones?"},{"id":"SERVERS_CANT_CONNECT","label":"Can't connect to a server","detail":"What does it say?"},{"id":"SERVERS_SSH_CONFIG","label":"Import my ~/.ssh/config"},{"id":"SERVERS_KEYS","label":"Support my keys or agent","detail":"Which? (YubiKey, 1Password, …)"},{"id":"SERVERS_TUNNELS","label":"Port forwarding (tunnels)"},{"id":"SERVERS_MOSH","label":"Mosh"}]},{"title":"Terminal","entries":[{"id":"TERM_HARD_TO_USE","label":"Not intuitive, not sure how to use it"},{"id":"TERM_TYPING_FLOATING","label":"Hard to type on the floating keyboard"},{"id":"TERM_SEEING_FLOATING","label":"Hard to see the text behind the floating keyboard"},{"id":"TERM_KEY_MISSING","label":"A key or shortcut is missing","detail":"Which?"},{"id":"TERM_SELECT_COPY","label":"Selecting and copying is hard"},{"id":"TERM_SIZE_VIEW","label":"Fit, Fill, Flat and the lens are confusing"},{"id":"TERM_SESSION_DROPS","label":"The session drops when I switch apps"},{"id":"TERM_LOOK","label":"More themes, colours or fonts"}]},{"title":"Games","entries":[{"id":"GAMES_MORE","label":"More games","detail":"Which?"},{"id":"GAMES_CONTROLS","label":"The controls are awkward"},{"id":"GAMES_BUGS","label":"Something is broken","detail":"In which game?"}]}],"comment":"Anything else?","done":"Thank you. It is on its way."}</script>
+<script type="module" src="feedback.js"></script>
+</main>
+<footer class="foot">
+  <p>What you send goes to a spreadsheet only the developer reads: the
+  entries you tick, what you type, your nickname or a random id kept in this
+  browser, the version you came from, and this device's time zone and
+  language.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+import{r as t}from"./react-vendor-DGo2L9b6.js";function c(r,s){const[l,e]=t.useState(null);return{cell:l,step:u=>e(n=>n===null?r():s(n,u)??n),can:u=>l===null?r()!==null:s(l,u)!==null,clear:()=>e(null),moveTo:e}}export{c as u};

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Files offline — Telechore</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../img/icon.png" type="image/png">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="../"><img src="../img/icon.png" alt="" width="24" height="24">Telechore</a>
+  <a href="./">Usage</a>
+  <a href="../changes.html">What's new</a>
+  <a href="../play/">Play</a>
+  <a href="../feedback.html">Feedback</a>
+</header>
+<main class="prose">
+<h1 id="files-offline">Files offline</h1>
+<p>What you open on a server is kept on this device for a while, so the server
+can be browsed when it cannot be reached, and a file that has not changed is
+not fetched again.</p>
+<h2 id="a-folders-rows">A folder&#39;s rows</h2>
+<p>Everything a row offers is on the row.</p>
+<ul>
+<li><strong>The icon is Keep offline.</strong> A bookmark on it is outlined while the file or
+folder is not kept and filled when it is; tap the icon to switch. A file&#39;s
+own page has the same button. A grey bookmark is kept by its folder — or is
+a kept copy the server has changed since — and is not switched from there.</li>
+<li><strong>A line under the row</strong> says what this device has: <strong>Offline</strong> and when,
+for a kept copy, or <strong>Cached</strong> and when, for a file you only opened. After it
+is <strong>Forget</strong>, which removes the copy here; nothing on the server changes.
+Where the server has a newer file, <strong>Update</strong> at the line&#39;s end fetches it
+without opening it.</li>
+<li><strong>Keeping a folder</strong> keeps it and everything in it. It counts the folder
+first, then says how many files and how much, and asks. Hidden files and
+folders (names starting with <code>.</code>), <code>node_modules</code>, disk images and files a
+program generated are left out. A folder bigger than 2 GB on Android or
+10 GB on a computer, or one that would leave this device with too little
+room, is refused. Files added or changed on the server come the next time
+you open their folder; when they come to more than 50 MB, <strong>Update</strong> on the
+folder&#39;s line fetches them. <strong>Forget</strong> on that line removes the folder&#39;s
+copies.</li>
+<li><strong>Download</strong> (the arrow at the row&#39;s end) saves a copy where you choose: a
+folder on a desktop, and the system&#39;s <em>Save to…</em> sheet on Android.</li>
+<li><strong>Delete</strong> (the bin) deletes the file, or an empty folder, from the server.
+It asks every time. A copy you kept offline stays, in Cache.</li>
+</ul>
+<p>In the sidebar&#39;s tree, a bookmark after a name marks what you keep offline.</p>
+<h2 id="when-the-server-cannot-be-reached">When the server cannot be reached</h2>
+<p>A server&#39;s folder opens from what this device has, with <em>cannot be reached</em>
+over the page and when the copy is from. Folders you never opened, and files
+you never fetched, are grey. <strong>Try again</strong> connects once the network is back.</p>
+<h2 id="cache">Cache</h2>
+<p><strong>Cache</strong>, in Places, lists the servers this device holds files from. Inside a
+server, each folder with a copy is one row, named by its path on the server —
+a long one with its start cut, <code>… › pi › src</code> — and inside that, its copies.
+A server&#39;s row says how much it holds in all, in how many folders and files,
+and how much of that is only cached and can be reclaimed; it and its folders
+show when their newest copy came. <strong>Forget</strong> and <strong>Keep offline</strong> work here
+too, and <strong>Clear…</strong> on a server&#39;s row removes everything held from it.</p>
+<p>Files you only opened are removed when they take more than 500 MB (200 MB on
+Android) — the oldest first — and Android may remove them when it needs room.
+Files you keep offline are never removed for you. A copy whose file has
+changed on the server says so, and is refreshed the next time you open the file
+there, or by <strong>Update</strong> on its line.</p>
+<h2 id="each-server">Each server</h2>
+<p>On the server&#39;s <strong>Server</strong> tab, <strong>Cache this server&#39;s files</strong> turns it off for
+that server: nothing from it is stored on this device. Below it, how much it
+takes here and <strong>Clear cache…</strong>. Deleting a server removes its cache.</p>
+</main>
+<footer class="foot">
+  <p>Built from Telechore 0.5.0, unreleased build v0.4.1-130-gd03d66a1, with treesight 5ffd66e.</p>
+</footer>
+</body>
+</html>
