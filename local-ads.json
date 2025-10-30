@@ -1,0 +1,59 @@
+{
+  "sections": [
+    {
+      "title": "Fantastic Fractals",
+      "items": [
+        {
+          "text": "[Web]",
+          "href": "https://driota.xyz/fractal/"
+        },
+        {
+          "text": "[Windows x64 MSI]",
+          "href": "https://github.com/dr4iota/public/releases/download/fractal-0.2.0/IoticFractal_0.2.0_x64_en-US.msi"
+        },
+        {
+          "text": "[Android APK]",
+          "href": "https://github.com/dr4iota/public/releases/download/fractal-0.2.0/iotic-fractal-0.2.0.apk"
+        },
+        {
+          "text": "[Kindle Fire]",
+          "href": "https://www.amazon.com/Doctor-Iota-Fantastic-Fractals/dp/B0FNGZB5TN"
+        }
+      ]
+    },
+    {
+      "title": "Triangular Geometry",
+      "items": [
+        {
+          "text": "[Web]",
+          "href": "https://driota.xyz/trikona/"
+        },
+        {
+          "text": "[Windows x64 MSI]",
+          "href": "https://github.com/dr4iota/public/releases/download/trikona-0.2.0-beta/IoticFractal_0.2.0-beta_x64_en-US.msi"
+        },
+        {
+          "text": "[Android APK]",
+          "href": "https://github.com/dr4iota/public/releases/download/trikona-0.2.0-beta/iotic-trikona-0.2.0-beta.apk"
+        }
+      ]
+    },
+    {
+      "title": "Support Us",
+      "items": [
+        {
+          "text": "Buy Me a Coffee",
+          "href": "https://www.buymeacoffee.com/driota"
+        },
+        {
+          "text": "Patreon",
+          "href": "https://www.patreon.com/driota"
+        },
+        {
+          "text": "Contact me <dr.4.iota at gmail>",
+          "href": "https://driota.xyz"
+        }
+      ]
+    }
+  ]
+}
