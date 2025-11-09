@@ -2,22 +2,27 @@
 layout: default
 title: Privacy Policy
 ---
-## Privacy Policy for Fantastic Fractals
+## Privacy Policy for Doctor Iota Applications
 
 Effective date: 2025-08-12
 
-This Privacy Policy explains what information the Fantastic Fractals app ("Fantastic Fractals", "we", "us") processes when you use it, why we process it, and the choices you have. We design for privacy and collect only what is necessary to provide the experience described in the app’s documentation.
+This Privacy Policy explains what information Doctor Iota's applications ("our apps", "our services", "we", "us") process when you use them, why we process it, and the choices you have. We design for privacy and collect only what is necessary to provide the experience described in each app’s documentation.
 
 If you have questions or requests, contact: <dr2iota@gmail.com>.
 
-## What this app does
+## What our applications do
 
-Fantastic Fractals is an interactive fractal explorer (e.g., Mandelbrot, Julia, Newton) with real‑time pan/zoom, color palettes, overlays for complex coordinates and view extents, and share‑by‑link. In the future, we may add optional user accounts and multi‑user experiences (e.g., shared sessions or games). We will continue to follow a strict data‑minimization approach.
+We create applications focused on mathematical art, education, and recreation. Our apps are designed to be interactive and educational. Examples include:
+
+- **Fantastic Fractals:** An interactive fractal explorer (e.g., Mandelbrot, Julia, Newton) with real‑time pan/zoom, color palettes, and share‑by‑link.
+- **Triangular Geometry:** An interactive geometry playground for exploring triangles, their properties, and animated proofs.
+
+In the future, we may add optional user accounts and multi‑user experiences (e.g., shared sessions or games) to our apps. We will continue to follow a strict data‑minimization approach across all our services.
 
 ## Summary
 
 - We do not sell your data, serve targeted ads, or share personal information with third parties for their own marketing.
-- By default, we do not require you to create an account to use the app.
+- By default, we do not require you to create an account to use our apps.
 - We store most settings locally on your device (e.g., palettes, last view, control points). Share links encode view/parameters in the URL.
 - Server logs may capture minimal technical data needed to operate the service (e.g., IP address, timestamps, error logs). We keep these for a limited time.
 - If we introduce accounts or multiplayer, we will only collect data necessary for those features (see below) and will update this policy as needed.
@@ -32,12 +37,12 @@ Fantastic Fractals is an interactive fractal explorer (e.g., Mandelbrot, Julia, 
 ### Information processed automatically
 
 - Basic service logs: Our hosting and security systems may log standard metadata such as IP address, request headers, timestamps, error details, and basic performance metrics. This is used for operations (e.g., troubleshooting, abuse prevention) and kept for a limited retention period.
-- Device/runtime capabilities: The app may read capabilities (e.g., WebGL features) locally to adapt rendering. This typically stays on-device; we do not send this to our servers unless strictly required for performance diagnostics.
+- Device/runtime capabilities: Our apps may read capabilities (e.g., WebGL features) locally to adapt rendering. This typically stays on-device; we do not send this to our servers unless strictly required for performance diagnostics.
 - Cookies and local storage: We use these to remember your settings and improve usability. We do not use third‑party advertising cookies.
 
 ### Future features (accounts and multiplayer)
 
-If we introduce accounts or multi‑user experiences, we will process only the minimum data required:
+If we introduce accounts or multi‑user experiences in any of our apps, we will process only the minimum data required:
 
 - Account identifiers: For example, an email address or an OAuth provider identifier, plus authentication tokens. We will not request profile details beyond what is necessary to authenticate and provide the service.
 - Display name (optional): If shown to other users in multiplayer contexts.
@@ -48,16 +53,16 @@ We will update this policy and, where required, request consent before launching
 
 ## How we use information
 
-- Provide and improve the app, including rendering, performance, and reliability.
+- Provide and improve our apps, including rendering, performance, and reliability.
 - Maintain security and prevent abuse.
 - Offer requested features such as share‑by‑link; links may contain parameters that reveal your current view/choices to anyone with the link.
-- Communicate with you about the app if you reach out to us.
+- Communicate with you about our apps if you reach out to us.
 
 ## Legal bases (EEA/UK users)
 
 Where applicable, we rely on the following legal bases:
 
-- Performance of a contract: To provide the app and requested features.
+- Performance of a contract: To provide our apps and requested features.
 - Legitimate interests: For security, fraud prevention, service quality, and basic analytics aligned with user expectations.
 - Consent: Where required (e.g., optional analytics or new features). You can withdraw consent at any time.
 
@@ -88,7 +93,7 @@ Depending on your location, you may have rights to access, correct, delete, or e
 
 ## Children’s privacy
 
-Fantastic Fractals is not directed to children under 13 (or the age required by your jurisdiction). We do not knowingly collect personal data from children. If you believe a child has provided personal data, please contact us to remove it.
+Our applications are not directed to children under 13 (or the age required by your jurisdiction). We do not knowingly collect personal data from children. If you believe a child has provided personal data, please contact us to remove it.
 
 ## Security
 
@@ -96,7 +101,7 @@ We use reasonable administrative, technical, and organizational measures to prot
 
 ## Changes to this policy
 
-We may update this policy to reflect changes in the app or law. We will post the updated version here and revise the effective date. Material changes will be highlighted within the app where appropriate.
+We may update this policy to reflect changes in our apps or law. We will post the updated version here and revise the effective date. Material changes will be highlighted within the relevant app(s) where appropriate.
 
 ## Contact
 
